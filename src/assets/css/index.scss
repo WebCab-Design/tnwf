@@ -1,9 +1,6 @@
 /*
-	green 6db4b1
-	light gray ccc
-	dark gray 888
-	black 222
-	white fff
+	blue 00b3b3
+
 */
 *  {
 	margin: 0;
@@ -22,6 +19,10 @@ body {
 }
 header, main, footer {
 	width: 100%;
+
+}
+header {
+	border-top: 10px solid #00b3b3;
 }
 ul {
 	list-style-position: inside;
@@ -53,8 +54,15 @@ h3 {
 /*
 	logo
 */
-
-
+.logo {
+	width: 19%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.logo img {
+	width: 100%;
+	display: block;
+}
 /*
 	menu
 */
