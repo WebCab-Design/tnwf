@@ -63,6 +63,17 @@ h3 {
 /*
 	logo
 */
+.logo {
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo img {
+    width: 100%;
+    display: block;
+}
+
 /*
 	menu
 */
@@ -70,7 +81,7 @@ h3 {
     z-index: 1;
     color: #888;
     background: #fff;
-    width: 80% !important;
+    width: 70% !important;
     display: inline-block;
     vertical-align: middle;
 }
