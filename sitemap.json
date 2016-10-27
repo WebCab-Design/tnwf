@@ -5,7 +5,13 @@
 
 	"upcoming-events": {
 		"/": "index.v.html",
-		"conference": "index.v.html",
+		"conference": {
+			"/": "index.v.html",
+			"conference-registration": "index.v.html",
+			"vendor-registration": "index.v.html",
+			"presenter-registration": "index.v.html",
+			"handouts": "index.v.html"
+		},
 		"gala": "index.v.html"
 	},
 
