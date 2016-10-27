@@ -17,6 +17,10 @@ Colors
     margin: 16px auto;
 }
 
+.col-xs-12, .col-sm-12, .col-md-12 {
+    margin-bottom: 16px;
+}
+
 body {
     background: #fff;
     overflow-x: hidden;
@@ -34,6 +38,7 @@ header {
 
 hr {
     margin: 20px 0 16px 0;
+    border: 0.8px solid #745850;
 }
 
 ul {
@@ -52,7 +57,7 @@ p, a {
 
 p {
     margin: 16px auto;
-    line-height: 1.2rem;
+    line-height: 1.8rem;
 }
 
 h1, h2, h3, h4 {
@@ -72,6 +77,7 @@ h2 {
 h3 {
     font-size: 1.6rem;
     line-height: 2rem;
+    margin-bottom: 16px;
 }
 
 a {
@@ -134,6 +140,11 @@ a:hover {
     padding: 0 16px 12px 0;
 }
 
+.float-right {
+    float: right;
+    padding: 0 0 16px 12px;
+}
+
 .foot-tp {
     left: 50%;
     color: #e2e2e2 !important;
@@ -180,6 +191,11 @@ a:hover {
     background: #fff;
     color: #00b3b3;
     border: 1px solid #00b3b3;
+}
+
+.presented {
+    text-align: center;
+    margin: auto;
 }
 
 /*
