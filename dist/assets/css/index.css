@@ -1,7 +1,5 @@
 /*
-	blue 00b3b3
-	brown 745850
-
+Colors
 */
 * {
     margin: 0;
@@ -13,6 +11,10 @@
     -moz-transition: all 300ms ease;
     -webkit-transition: all 300ms ease;
     font-family: 'Open Sans', sans-serif;
+}
+
+.row {
+    margin: 16px auto;
 }
 
 body {
@@ -30,8 +32,46 @@ header {
     box-shadow: 0px 2px 2px rgba(202, 202, 202, 0.8);
 }
 
+hr {
+    margin: 20px 0 16px 0;
+}
+
 ul {
     list-style-position: inside;
+}
+
+ul li {
+    margin: 12px auto;
+}
+
+p, a {
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin: 16px auto;
+    line-height: 1.2rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 2rem;
 }
 
 a {
@@ -42,7 +82,6 @@ a {
 
 a:hover {
     color: #888;
-    text-decoration: underline;
 }
 
 /*
@@ -86,6 +125,63 @@ a:hover {
 /*
 	Footer
 */
+.content {
+    margin: 16px;
+}
+
+.float-left {
+    float: left;
+    padding: 0 16px 12px 0;
+}
+
+.foot-tp {
+    left: 50%;
+    color: #e2e2e2 !important;
+    padding: 16px;
+    position: relative;
+    background: #262626;
+    transform: translate(-50%);
+}
+
+.foot-tp > div {
+    width: 25%;
+    padding: 24px;
+    display: inline-block;
+}
+
+.foot-tp > div:nth-child(3) {
+    width: 33%;
+}
+
+.foot-bp {
+    padding: 16px;
+    background: #191919;
+    color: #e3e3e3 !important;
+}
+
+.foot-bp > div {
+    display: inline-block;
+}
+
+.foot-bp > div:nth-child(2) {
+    float: right;
+}
+
+/*
+	buttons
+*/
+.button.blue {
+    padding: 16px;
+    background: #00b3b3;
+    color: #fff;
+}
+
+.button.blue:hover {
+    background: #fff;
+    color: #00b3b3;
+    border: 1px solid #00b3b3;
+}
+
 /*
 	mobile
 */
@@ -97,5 +193,12 @@ a:hover {
     .nav-list-main {
         background: #fff;
         box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    }
+    .foot-tp > div {
+        margin: auto;
+        display: block;
+    }
+    .hide-medium {
+        display: none;
     }
 }
