@@ -33,7 +33,7 @@ header, main, footer {
 header {
     border-top: 10px solid #00b3b3;
     padding: 16px;
-    box-shadow: 0px 2px 2px rgba(202, 202, 202, 0.8);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 hr {
@@ -248,6 +248,6 @@ table tr:nth-child(2) {
         display: block;
     }
     .hide-medium {
-        display: none;
+        display: none !important;
     }
 }
