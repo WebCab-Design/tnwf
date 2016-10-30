@@ -1,0 +1,22 @@
+{
+  "name": "tnwf",
+  "version": "1.0.0",
+  "description": "Tucson Nurses Week Foundation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebCab-Design/tnwf.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/WebCab-Design/tnwf/issues"
+  },
+  "homepage": "https://github.com/WebCab-Design/tnwf#readme",
+  "dependencies": {
+    "erbium": "^1.3.2"
+  }
+}
