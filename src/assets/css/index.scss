@@ -53,15 +53,16 @@ ul {
 }
 p, a, li {
 	font-size: 1rem;
-	font-weight: 100;
-	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-family: "europa",sans-serif;
 }
 p{
 	margin: 16px auto;
 	line-height: 1.8rem;
+	font-weight: 300;
 }
 h1, h2, h3, h4 {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "europa",sans-serif;
 	font-weight: 400;
 }
 h1 {
@@ -87,6 +88,7 @@ a {
     text-decoration: none;
 	display: inline-block;
 }
+
 a:hover {
 	color: #888;
 }
