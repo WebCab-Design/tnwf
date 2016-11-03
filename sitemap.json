@@ -3,13 +3,17 @@
 
 	"about": "index.v.html",
 
+	"registration": {
+		"conference": "index.v.html",
+		"gala": "index.v.html",
+		"presenter": "index.v.html",
+		"vendor": "index.v.html"
+	},
+
 	"upcoming-events": {
 		"/": "index.v.html",
 		"conference": {
 			"/": "index.v.html",
-			"conference-registration": "index.v.html",
-			"vendor-registration": "index.v.html",
-			"presenter-registration": "index.v.html",
 			"handouts": "index.v.html"
 		},
 		"gala": "index.v.html"

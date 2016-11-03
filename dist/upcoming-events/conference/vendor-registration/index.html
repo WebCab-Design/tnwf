@@ -15,6 +15,7 @@
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<script src="/assets/js/nav-bar.min.js"></script>
 		<script src="/assets/js/slider.min.js"></script>
+		<script src="/assets/js/astatine.min.js" defer></script>
 		<script src="/assets/js/index.js" defer></script>
 	</head>
 	<body>
@@ -66,6 +67,7 @@
 
 		<main>
 			
+
 <style>
 	.contain {
 		border: 1px solid #cacaca;
@@ -80,33 +82,113 @@
 	.contain-body {
 		padding: 8px;
 	}
-
 </style>
-<div class="content">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="contain">
-				<div class="contain-head">
-					<h3>2017 Vendor Registration</h3>
-				</div>
-				<div class="contain-body">
-					<h4>Event Properties</h4>
-					<table>
-						<tbody>
-							<tr>
-								<td>Event Date</td>
-								<td>May-06-2016 12:00 am</td>
-							</tr>
-							<tr>
-								<td>Event End Date</td>
-								<td>May-06-2016 12:00 am</td>
-							</tr>
-						</tbody>
-					</table>
-					<p>Registration form coming soon!</p>
-				</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="contain">
+			<div class="contain-head">
+				<h3>2017 Vendor Registration</h3>
+			</div>
+			<div class="contain-body">
+				<h4>Event Properties</h4>
+				<table>
+					<tbody>
+						<tr>
+							<td>Event Date</td>
+							<td>May-06-2016 12:00 am</td>
+						</tr>
+						<tr>
+							<td>Event End Date</td>
+							<td>May-06-2016 12:00 am</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Registration form coming soon!</p>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<form class="form row around-xs" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
+			<div class="col-xs-10">
+				<h4>Name</h4>
+				<input type="text" name="First Name" placeholder="First Name" required>
+				<input type="text" name="Last Name" placeholder="Last Name" required>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Company</h4>
+				<input type="text" name="Company" placeholder="Company" required>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Address</h4>
+				<input type="text" name="Street Address" placeholder="Street Address">
+				<input type="text" name="City" placeholder="City">
+				<input type="text" name="State" placeholder="State">
+				<input type="number" name="Zip" placeholder="Zip">
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Contact</h4>
+				<input type="tel" name="Phone Number" placeholder="Phone Number" required>
+				<input type="email" name="Email" placeholder="Email Address" required>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Type Of Registration</h4>
+				<select name="Registration Type">
+					<option value="300">Vender - &#36;300</option>
+					<option value="150">Nurse Vender - &#36;150</option>
+				</select>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Exhibit Requirements</h4>
+				<div>
+					<input type="checkbox" name="Exhibit Requirments" value="6ft Table">
+					<span>6ft Table</span>
+				</div>
+				<div>
+					<input type="checkbox" name="Exhibit Requirments" value="Electrical Outlet">
+					<span>Electrical Outlet</span>
+				</div>
+				<div>
+					<span>If other please list below:</span>
+					<textarea name="Exhibit Requirments Description" placeholder="Description"></textarea>
+				</div>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Other Requirments</h4>
+				<div>
+					<input type="checkbox" name="Wifi" value="yes">
+					<span>Wifi</span>
+				</div>
+				<div>
+					<input type="checkbox" name="Lunch" value="Lunch">
+					<span>Purchase Lunch &#36;45</span>
+				</div>
+			</div>
+
+			<div class="col-xs-10">
+				<textarea name="Floor Space Next To Table" placeholder="Floor Space Next To Table - Dimensions"></textarea>
+				<p>Additionally we ask that you consider donating a raffle item. The Raffle item will be listed as a donation from your company before and during the Conference. Please bring the item(s) the day of the conference.</p>
+			</div>
+
+			<div class="col-xs-10">
+				<textarea name="Healthy Fair Raffle Donation" placeholder="Healthy Fair Raffle Donation - Description"></textarea>
+				<p>Please mail check to PO Box 65085 Tucson, AZ. 85728. Payment must be received 9 days from registration.</p>
+			</div>
+
+			<div class="col-xs-10">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+		<div class="response"></div>
 	</div>
 </div>
 

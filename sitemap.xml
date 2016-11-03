@@ -3,18 +3,22 @@
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 		xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 		xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-	<url><loc>/index.v.html</loc></url>
-	<url><loc>/about/index.v.html</loc></url>
-	<url><loc>/upcoming-events/index.v.html</loc></url>
-	<url><loc>/upcoming-events/conference/index.v.html</loc></url>
-	<url><loc>/upcoming-events/gala/index.v.html</loc></url>
-	<url><loc>/awards/fabulous-50/index.v.html</loc></url>
-	<url><loc>/awards/most-inspirational-mentor/index.v.html</loc></url>
-	<url><loc>/awards/alex-stutze/index.v.html</loc></url>
-	<url><loc>/awards/research-grant/index.v.html</loc></url>
-	<url><loc>/awards/past-awardees/index.v.html</loc></url>
-	<url><loc>/sponsor-donate/index.v.html</loc></url>
-	<url><loc>/sponsor-donate/sponsors/index.v.html</loc></url>
-	<url><loc>/sponsor-donate/sponsor-zones/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/about/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/registration/conference/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/registration/gala/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/registration/presenter/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/registration/vendor/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/upcoming-events/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/upcoming-events/conference/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/upcoming-events/conference/handouts/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/upcoming-events/gala/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/awards/fabulous-50/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/awards/most-inspirational-mentor/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/awards/alex-stutze/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/awards/research-grant/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/awards/past-awardees/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/sponsor-donate/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/sponsor-donate/sponsors/index.v.html</loc></url>
+	<url><loc>http://tucsonnursesweekfoundation.com/sponsor-donate/sponsor-zones/index.v.html</loc></url>
 	</urlset>
-	

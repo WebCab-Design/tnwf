@@ -1,0 +1,103 @@
+<!-- { "title": "Conference Registration | Tucson Nurses Week Foundation" } -->
+
+<style>
+	.contain {
+		border: 1px solid #cacaca;
+		border-radius: 8px;
+		width: 50%;
+	}
+	.contain-head {
+		background: #f8f8f8;
+		padding: 8px;
+		border-radius: 8px;
+	}
+	.contain-body {
+		padding: 8px;
+	}
+</style>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div class="contain">
+			<div class="contain-head">
+				<h3>2017 Conference and Healthy Fair</h3>
+			</div>
+			<div class="contain-body">
+				<h4>Event Properties</h4>
+				<table>
+					<tbody>
+						<tr>
+							<td>Event Date</td>
+							<td>May-06-2016 12:00 am</td>
+						</tr>
+						<tr>
+							<td>Event End Date</td>
+							<td>May-06-2016 12:00 am</td>
+						</tr>
+						<tr>
+							<td>Individual Price</td>
+							<td>&#36;90.00</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Registration form coming soon!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<form class="form row around-xs" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
+			<div class="col-xs-10">
+				<h4>Name</h4>
+				<input type="text" name="First Name" placeholder="First Name" required>
+				<input type="text" name="Last Name" placeholder="Last Name" required>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Company</h4>
+				<input type="text" name="Company" placeholder="Company">
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Contact</h4>
+				<input type="tel" name="Phone Number" placeholder="Phone Number" required>
+				<input type="email" name="Email" placeholder="Email Address" required>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Type Of Registration</h4>
+				<select name="Registration Type">
+					<option value="80">Early Bird (ends 4/15/16) - &#36;80</option>
+					<!-- need other options -->
+				</select>
+			</div>
+
+			<div class="col-xs-10">
+				<p>
+
+				</p>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Number Of Attendees</h4>
+				<input type="number" name="Number Of Attendees" placeholder="1" min="1" required>
+			</div>
+
+			<div class="col-xs-10">
+				<h4>Names Of Attendees</h4>
+				<textarea name="Names Of Attendees" placeholder="Name One&#13;&#10;Name Two&#13;&#10;Name Three&#13;&#10;..."></textarea>
+			</div>
+
+			<div class="col-xs-10">
+				<p>For offline donations please mail check to <strong>PO Box 65085 Tucson, AZ. 85728</strong>. Payment must be received 9 days from registration.</p>
+			</div>
+
+			<div class="col-xs-10">
+				<input class="button blue" type="submit" value="Submit">
+			</div>
+		</form>
+		<div class="response"></div>
+	</div>
+</div>

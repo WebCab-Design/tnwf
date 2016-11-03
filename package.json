@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/WebCab-Design/tnwf#readme",
   "dependencies": {
+    "astatine": "^1.0.9",
     "erbium": "^1.3.2"
   }
 }
