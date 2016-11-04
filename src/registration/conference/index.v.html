@@ -48,50 +48,64 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<form class="form row around-xs" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
+		<form class="form row" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
 			<div class="col-xs-10">
-				<h4>Name</h4>
-				<input type="text" name="First Name" placeholder="First Name" required>
-				<input type="text" name="Last Name" placeholder="Last Name" required>
-			</div>
-
-			<div class="col-xs-10">
-				<h4>Company</h4>
-				<input type="text" name="Company" placeholder="Company">
-			</div>
-
-			<div class="col-xs-10">
-				<h4>Contact</h4>
-				<input type="tel" name="Phone Number" placeholder="Phone Number" required>
-				<input type="email" name="Email" placeholder="Email Address" required>
+				<h4>Your Info...</h4>
+				<hr width="25%">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<input type="text" name="First Name" placeholder="First Name" required>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<input type="text" name="Last Name" placeholder="Last Name" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="text" name="Company" placeholder="Company">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<input type="tel" name="Phone Number" placeholder="Phone Number" required>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<input type="email" name="Email" placeholder="Email Address" required>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-xs-10">
 				<h4>Type Of Registration</h4>
-				<select name="Registration Type">
-					<option value="80">Early Bird (ends 4/15/16) - &#36;80</option>
-					<!-- need other options -->
-				</select>
-			</div>
-
-			<div class="col-xs-10">
-				<p>
-
-				</p>
+				<div class="row">
+					<select name="Registration Type">
+						<option value="80">Early Bird (ends 4/15/16) - &#36;80</option>
+						<!-- need other options -->
+					</select>
+				</div>
 			</div>
 
 			<div class="col-xs-10">
 				<h4>Number Of Attendees</h4>
-				<input type="number" name="Number Of Attendees" placeholder="1" min="1" required>
+				<div class="row">
+					<div class="col-xs-12">
+						<input type="number" name="Number Of Attendees" placeholder="1" min="1" required>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-xs-10">
 				<h4>Names Of Attendees</h4>
-				<textarea name="Names Of Attendees" placeholder="Name One&#13;&#10;Name Two&#13;&#10;Name Three&#13;&#10;..."></textarea>
+				<div class="row">
+					<div class="col-xs-12">
+						<textarea name="Names Of Attendees" placeholder="Name One&#13;&#10;Name Two&#13;&#10;Name Three&#13;&#10;..."></textarea>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-xs-10">
-				<p>For offline donations please mail check to <strong>PO Box 65085 Tucson, AZ. 85728</strong>. Payment must be received 9 days from registration.</p>
+				<p>For credit card payments, you will be redirected to the PayPal site. You do NOT have to register or have a PayPal account to use this payment method.</p>
+				<p>For offline donations please mail check to <strong>PO Box 65085 Tucson, AZ 85728.</strong> Payments must be recieved 9 days from registration.</p>
 			</div>
 
 			<div class="col-xs-10">
