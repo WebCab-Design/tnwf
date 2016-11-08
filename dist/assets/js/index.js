@@ -4,47 +4,51 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	var form = document.querySelector('.form');
 
-	var guestList = form.querySelector('.guest-list');
-	var guestFirst = form.querySelector('.guest-first');
-	var guestLast = form.querySelector('.guest-last');
-	var guestHidden = form.querySelector('.guest-hidden');
-	var guestAdd = form.querySelector('.guest-add');
-	var guestTotalAmount = form.querySelector('.total-amount');
+	if (form) {
+		var guestList = form.querySelector('.guest-list');
+		var guestFirst = form.querySelector('.guest-first');
+		var guestLast = form.querySelector('.guest-last');
+		var guestHidden = form.querySelector('.guest-hidden');
+		var guestAdd = form.querySelector('.guest-add');
+		var guestTotal = form.querySelector('.guest-total');
 
-	var total = 0;
+		var guestCost= Number(guestAdd.getAttribute('data-cost'));
 
-	guestAdd.addEventListener('click', function () {
-		var li = document.createElement('li');
-		var guest = guestFirst.value + ' ' + guestLast.value;
+		var total = 0;
 
-		li.innerText = guest;
-		guestFirst.value = '';
-		guestLast.value = '';
-		guestHidden.value = guestHidden.value + ', ' + guest;
-		guestList.appendChild(li);
+		guestAdd.addEventListener('click', function () {
+			var li = document.createElement('li');
+			var guest = guestFirst.value + ' ' + guestLast.value;
 
-		total++;
+			li.innerText = guest;
+			guestFirst.value = '';
+			guestLast.value = '';
+			guestHidden.value = guestHidden.value + ', ' + guest;
+			guestList.appendChild(li);
 
-		guestTotalAmount.innerText = total;
-	});
+			total = total + guestCost;
 
-	At.submit({
-		query: form,
-		mimeType: 'json',
-		complete: function (error, success) {
-			var response = document.querySelector('.response');
+			guestTotal.innerText = total;
+		});
 
-			if (error) {
-				console.log(error);
-				response.style.color = 'red';
-				response.innerText = 'Error';
-			} else {
-				response.style.color = 'green';
-				response.innerText = 'Form Is Submitted';
+		Astatine.submit({
+			query: form,
+			mimeType: 'json',
+			complete: function (error, success) {
+				var response = document.querySelector('.response');
+
+				if (error) {
+					console.log(error);
+					response.style.color = 'red';
+					response.innerText = 'Error';
+				} else {
+					response.style.color = 'green';
+					response.innerText = 'Form Is Submitted';
+				}
+
 			}
-
-		}
-	});
+		});
+	}
 
 });
 }());

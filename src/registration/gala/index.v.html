@@ -10,6 +10,7 @@
 
 <div class="row">
 	<div class="col-sm-12">
+
 		<form class="form row" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
 			<div class="col-xs-10">
 				<div class="row">
@@ -53,12 +54,13 @@
 						<!-- <textarea name="Names Of Guests" placeholder="Guest One&#13;&#10;Guest Two&#13;&#10;Guest Three&#13;&#10;..."></textarea> -->
 						<ol class="guest-list"></ol>
 						<input class="guest-hidden" name="Names Of Guests" hidden/>
-						<input class="guest-first col-xs-3" placeholder="Guest Fist Name"/>
+						<input class="guest-first col-xs-3" placeholder="Guest First Name"/>
 						<input class="guest-last col-xs-3" placeholder="Guest Last Name"/>
-						<button class="guest-add button blue" type="button">Add</button>
+						<button class="guest-add button blue" data-cost="85" type="button">Add</button>
 					</div>
 				</div>
 			</div>
+
 			<div class="col-xs-10">
 				<p>If you would like to sit with guests from a particular organization that are registering separately or an award winner, please list first and last names below</p>
 				<div class="row">
@@ -67,11 +69,12 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-xs-3">
 				<div class="total">
 					<span>Total:</span>
 					<span>&#36;</span>
-					<span class="total-amount">0</span>
+					<span class="guest-total">0</span>
 				</div>
 			</div>
 
@@ -84,6 +87,8 @@
 				<input class="button blue" type="submit" value="Submit">
 			</div>
 		</form>
+
 		<div class="response"></div>
+
 	</div>
 </div>
