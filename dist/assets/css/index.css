@@ -1,5 +1,5 @@
 /*
-Colors
+	colors
 */
 * {
     margin: 0;
@@ -46,12 +46,18 @@ hr {
 }
 
 ul {
+    list-style: none;
+    margin: 1rem auto;
     list-style-position: inside;
-    margin: 16px auto;
 }
 
-ul li {
-    margin: 12px 18px auto;
+ol {
+    margin: 1rem auto;
+    list-style-position: inside;
+}
+
+li {
+    margin: 1rem auto;
 }
 
 p, a, li {
@@ -113,6 +119,7 @@ form > div:nth-last-child(1), form > div:nth-last-child(2) {
 
 button, input[type="submit"], input[type="button"] {
     border: none;
+    cursor: pointer;
 }
 
 input[type="submit"], .spinner {
@@ -185,10 +192,7 @@ label {
 }
 
 /*
-	header
-*/
-/*
-	Footer
+	footer
 */
 .content {
     margin: 16px;
@@ -262,7 +266,7 @@ label {
 }
 
 /*
-Tables
+	table
 */
 table {
     border: 1px solid #cacaca;
@@ -276,6 +280,20 @@ table tr td {
 
 table tr:nth-child(2) {
     background: #f8f8f8;
+}
+
+/*
+	globals
+*/
+.total {
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    background: rgba(0, 128, 0, 0.5);
+}
+
+.total span {
+    font-size: 1.5rem;
 }
 
 /*

@@ -1,10 +1,9 @@
 /*
-Colors
+	colors
 */
 $primary-blue: #00b3b3;
 $primary-brown: #745850;
 $primary-white: #e2e2e2;
-
 
 *  {
 	margin: 0;
@@ -30,7 +29,6 @@ body {
 }
 header, main, footer {
 	width: 100%;
-
 }
 header {
 	border-top: 10px solid #00b3b3;
@@ -45,12 +43,16 @@ hr {
 	border-bottom: 1px solid #ffffff;
 }
 ul {
+	list-style: none;
+	margin: 1rem auto;
 	list-style-position: inside;
-	margin: 16px auto;
-	li {
-		margin: 12px 18px auto;
-
-	}
+}
+ol {
+	margin: 1rem auto;
+	list-style-position: inside;
+}
+li {
+	margin: 1rem auto;
 }
 p, a, li {
 	font-size: 1rem;
@@ -100,6 +102,7 @@ form > div:nth-last-child(1), form > div:nth-last-child(2) {
 }
 button, input[type="submit"], input[type="button"] {
 	border: none;
+	cursor: pointer;
 }
 input[type="submit"], .spinner {
 	margin: auto;
@@ -127,7 +130,8 @@ label {
 	display: block;
 	font-size: 1.1rem;
 	font-weight: 400;
-	font-family: "europa",sans-serif;}
+	font-family: "europa",sans-serif;
+}
 /*
 	logo
 */
@@ -160,11 +164,7 @@ label {
 	min-width: 175px;
 }
 /*
-	header
-*/
-
-/*
-	Footer
+	footer
 */
 .content {
 	margin: 16px;
@@ -176,9 +176,6 @@ label {
 .float-right {
 	float: right;
 	padding: 0 0 16px 12px;
-}
-footer {
-
 }
 .foot-tp {
 	left: 50%;
@@ -207,7 +204,6 @@ footer {
 .foot-bp > div:nth-child(2) {
 	float: right;
 }
-
 /*
 	buttons
 */
@@ -221,7 +217,6 @@ footer {
 		border: 1px solid $primary-blue;
 	}
 }
-
 .presented {
 	text-align: center;
 	margin: auto;
@@ -229,9 +224,8 @@ footer {
 .presented > div {
 	margin: 24px auto;
 }
-
 /*
-Tables
+	table
 */
 table {
 	border: 1px solid #cacaca;
@@ -244,6 +238,18 @@ table tr td{
 }
 table tr:nth-child(2){
 	background: #f8f8f8;
+}
+/*
+	globals
+*/
+.total {
+	color: #fff;
+	padding: 0.5rem;
+	text-align: center;
+	background: rgba(0,128,0,0.5);
+}
+.total span {
+	font-size: 1.5rem;
 }
 /*
 	mobile
