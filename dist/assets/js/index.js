@@ -5,31 +5,39 @@ document.addEventListener('DOMContentLoaded', function () {
 	var form = document.querySelector('.form');
 
 	if (form) {
-		var guestList = form.querySelector('.guest-list');
-		var guestFirst = form.querySelector('.guest-first');
-		var guestLast = form.querySelector('.guest-last');
-		var guestHidden = form.querySelector('.guest-hidden');
-		var guestAdd = form.querySelector('.guest-add');
-		var guestTotal = form.querySelector('.guest-total');
 
-		var guestCost= Number(guestAdd.getAttribute('data-cost'));
+		var ticket = form.querySelector('.ticket');
 
-		var total = 0;
+		if (ticket) {
+			var ticketList = form.querySelector('.ticket-list');
+			var ticketFirst = form.querySelector('.ticket-first');
+			var ticketLast = form.querySelector('.ticket-last');
+			var ticketHidden = form.querySelector('.ticket-hidden');
+			var ticketAdd = form.querySelector('.ticket-add');
+			var ticketTotal = form.querySelector('.ticket-total');
 
-		guestAdd.addEventListener('click', function () {
-			var li = document.createElement('li');
-			var guest = guestFirst.value + ' ' + guestLast.value;
+			var ticketCost = Number(ticketAdd.getAttribute('data-cost'));
 
-			li.innerText = guest;
-			guestFirst.value = '';
-			guestLast.value = '';
-			guestHidden.value = guestHidden.value + ', ' + guest;
-			guestList.appendChild(li);
+			var total = 0;
 
-			total = total + guestCost;
+			ticketAdd.addEventListener('click', function () {
+				var li = document.createElement('li');
+				var ticket = ticketFirst.value + ' ' + ticketLast.value;
 
-			guestTotal.innerText = total;
-		});
+				li.innerText = ticket;
+				ticketFirst.value = '';
+				ticketLast.value = '';
+
+				if (ticketHidden.value.length === 0) ticketHidden.value = ticket;
+				else ticketHidden.value = ticketHidden.value + ', ' + ticket;
+
+				ticketList.appendChild(li);
+
+				total = total + ticketCost;
+
+				ticketTotal.value = total;
+			});
+		}
 
 		Astatine.submit({
 			query: form,
@@ -42,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					response.style.color = 'red';
 					response.innerText = 'Error';
 				} else {
+					form.style.display = 'none';
 					response.style.color = 'green';
 					response.innerText = 'Form Is Submitted';
 				}

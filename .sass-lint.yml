@@ -1,0 +1,21 @@
+#########################
+## Sample Sass Lint File
+#########################
+# Linter Options
+options:
+  # Set the formatter to 'html'
+  formatter: html
+  # Output file instead of logging results
+  output-file: 'sass-lint.html'
+  # Raise an error if more than 50 warnings are generated
+  max-warnings: 50
+# Rule Configuration
+rules:
+    no-warn: 1
+      no-debug: 1
+      no-ids: 2
+      no-important: 2
+      indentation:
+        - 4
+            -
+              size: 4

@@ -1,180 +1,89 @@
 <!-- { "title": "Presenter Registration | Tucson Nurses Week Foundation" } -->
-<style>
-	.contain {
-		border: 1px solid #cacaca;
-		border-radius: 8px;
-		width: 50%;
-	}
-	.contain-head {
-		background: #f8f8f8;
-		padding: 8px;
-		border-radius: 8px;
-	}
-	.contain-body {
-		padding: 8px;
-	}
 
-</style>
 <div class="content">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="contain">
-				<div class="contain-head">
-					<h3>2017 Presenter Registration</h3>
-				</div>
-				<div class="contain-body">
-					<h4>Event Properties</h4>
-					<table>
-						<tbody>
-							<tr>
-								<td>Event Date</td>
-								<td>May-06-2016 12:00 am</td>
-							</tr>
-							<tr>
-								<td>Event End Date</td>
-								<td>May-06-2016 12:00 am</td>
-							</tr>
-						</tbody>
-					</table>
-					<p>Register Below!</p>
-				</div>
-			</div>
+	<h1>Presenter Registration - 2017</h1>
+
+	<br>
+	<h4>Event Properties</h4>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<td>Event Date</td>
+				<td>May-06-2016 12:00 am</td>
+			</tr>
+			<tr>
+				<td>Event End Date</td>
+				<td>May-06-2016 12:00 am</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<br>
+
+	<form class="form" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
+
+		<div class="row">
+			<h4 class="col-xs-12">Primary Presenter</h4>
+			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Last Name" placeholder="Last Name" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Position" placeholder="Position" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Employer" placeholder="Employer" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Credentials" placeholder="Credentials" required>
 		</div>
-	</div>
-</div>
 
-<div class="row">
-	<div class="col-sm-12">
-		<form class="form row" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
-			<div class="col-xs-10">
-				<h4>Primary Presenter &amp; Credentials</h4>
-				<hr width="50%">
-				<div class="row">
-					<div class="col-sm-6">
-						<input type="text" name="First Name" placeholder="First Name" required>
-					</div>
-					<div class="col-sm-6">
-						<input type="text" name="Last Name" placeholder="Last Name" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<input type="text" name="Credentials" placeholder="Credentials" required>
-					</div>
-					<div class="col-sm-4">
-						<input type="text" name="Position Title" placeholder="Position Title" required>
-					</div>
-					<div class="col-sm-4">
-						<input type="text" name="Employer" placeholder="Employer" required>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-10">
-				<h4>Contact</h4>
-				<hr width="50%">
-				<div class="row">
-					<div class="col-sm-12">
-						<input type="text" name="Street" placeholder="Street" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<input type="text" name="City" placeholder="City" required>
-					</div>
-					<div class="col-sm-4">
-						<input type="text" name="State" placeholder="State" required>
-					</div>
-					<div class="col-sm-4">
-						<input type="text" name="Zipcode" placeholder="Zipcode" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<input type="tel" name="Phone Number" placeholder="Phone Number" required>
-					</div>
-					<div class="col-sm-6">
-						<input type="email" name="Email" placeholder="Email Address" required>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-10">
-				<h4>Please fill out the following information about your presentation</h4>
-				<p>(250 words or less):</p>
-				<hr width="75%">
-				<div class="row">
-					<div class="col-sm-12">
-						<input type="text" name="Presentation Title" placeholder="Presentation Title" required>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<label for="Format">- Format -</label>
-						<select name="Format">
-							<option value="Poster">Poster</option>
-							<option value="Podium">Podium</option>
-							<option value="Speaker">Speaker</option>
-							<option value="Panel Presentation">Panel Presentation</option>
-						</select>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<label for="Abstract">Abstract</label>
-						<textarea type="textarea" name="Abstract"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<label for="Purpose/Objective">Purpose/Objective</label>
-						<textarea type="textarea" name="Purpose/Objective"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<label for="Importance to Nursing">Importance to Nursing</label>
-						<textarea type="textarea" name="Importance to Nursing"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<label for="Brief Outline">Brief Outline</label>
-						<textarea type="textarea" name="Brief Outline"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<label for="Methods">Teaching Methods, strategies, materials, and resources for session</label>
-						<textarea type="textarea" name="Methods"></textarea>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-10">
-				<h4>Presentation Support: Please list any options you might need:</h4>
-				<hr width="75%">
-				<div class="row">
-					<div class="col-xs-12">
-						<textarea name="Presentation Support" placeholder="podium&#13;&#10;audo&#13;&#10;chord type&#13;&#10;..."></textarea>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-10">
-				<h4>If your  poster presentation will include more than one presenter, please add them below:</h4>
-				<hr width="75%">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6">
-						<input type="text" name="Presenter Extra 1" placeholder="Presenter #2 - First/ Last Name/ credentials" >
-					</div>
-					<div class="col-xs-12 col-sm-6">
-						<input type="text" name="Presenter Extra 2" placeholder="Presenter #3 - First/ Last Name/ credentials" >
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-10 center-xs">
-				<input class="button blue" type="submit" value="Submit">
-			</div>
-		</form>
+		<div class="row">
+			<h4 class="col-xs-12">Contact</h4>
+			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="City" placeholder="City" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Zipcode" placeholder="Zipcode" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="Phone" placeholder="Phone" required>
+			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
+		</div>
 
-		<div class="response"></div>
+		<div class="row">
+			<h4  class="col-xs-12">Presentation Title</h4>
+			<input class="col-xs-10 col-sm-5" type="text" name="Presentation Title" placeholder="Presentation Title" required>
+		</div>
 
-	</div>
+		<div class="row">
+			<h4 class="col-xs-12">Presentation Format</h4>
+			<select class="col-xs-10 col-sm-5" name="Format">
+				<option value="Poster">Poster</option>
+				<option value="Podium">Podium</option>
+				<option value="Speaker">Speaker</option>
+				<option value="Panel Presentation">Panel Presentation</option>
+			</select>
+		</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Presentation Details</h4>
+			<p class="col-xs-12">Please fill out the following information about your presentation (250 words or less).</p>
+			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Abstract" placeholder="Abstract"></textarea>
+			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Purpose/Objective" placeholder="Purpose/Objective"></textarea>
+			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Importance To Nursing" placeholder="Importance To Nursing"></textarea>
+			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Brief Outline" placeholder="Brief Outline"></textarea>
+			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Methods" placeholder="Teaching Methods, strategies, materials, and resources for session"></textarea>
+		</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Presentation Support</h4>
+			<p class="col-xs-12">Please list any options you might need.</p>
+			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="podium&#13;&#10;audo&#13;&#10;chord type&#13;&#10;..."></textarea>
+		</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Other Presenters</h4>
+			<p class="col-xs-12">If your  poster presentation will include more than one presenter, please add them below.</p>
+			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Other Presenters" placeholder="First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;..."></textarea>
+		</div>
+
+		<div class="row">
+			<input class="button blue col-xs-3" type="submit" value="Submit">
+		</div>
+
+	</form>
+
+	<div class="response"></div>
 </div>
