@@ -2,8 +2,15 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
 
-	var form = document.querySelector('.form');
+	var showFormButton = document.querySelector('.show-form');
+	if (showFormButton) {
+		var form = document.querySelector('.form');
+		showFormButton.addEventListener('click', function () {
+			form.style.display = 'block';
+		});
+	}
 
+	var form = document.querySelector('.form');
 	if (form) {
 
 		var ticket = form.querySelector('.ticket');

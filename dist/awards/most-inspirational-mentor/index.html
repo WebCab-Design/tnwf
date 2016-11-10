@@ -67,159 +67,84 @@
 
 	<main>
 		
+
 <style>
 	em {
 		color: #cacaca;
 	}
+	.form {
+		display: none;
+	}
 </style>
+
 <div class="content">
-	<div class="row">
-		<div class="col-sm-12 col-md-8">
-			<h3>Most Inspirational Mentor</h3>
-			<p>This esteemed award is granted each year during Nurses' Week in honor of Cheryl McGaffic, Barbara Monroe, and Robin Rogers, three of our Nursing coleagues who lost their lives in October 2002. The award promotes the growth and support of professional Nurses in our community and it recognizes a member of the Tucson Nursing community who demonstrates significant leadership, skill, and ability in being a role model, coach, motivator, advocate, teacher, and visionary. Only previous Fabulous 50 Nurses are eligible.</p>
+	<h1>Most Inspirational Mentor</h1>
+	<p class="col-xs-12">This esteemed award is granted each year during Nurses' Week in honor of Cheryl McGaffic, Barbara Monroe, and Robin Rogers, three of our Nursing coleagues who lost their lives in October 2002. The award promotes the growth and support of professional Nurses in our community and it recognizes a member of the Tucson Nursing community who demonstrates significant leadership, skill, and ability in being a role model, coach, motivator, advocate, teacher, and visionary. Only previous Fabulous 50 Nurses are eligible.</p>
+	<button class="show-form button blue" type="button">Nominate Now</button>
 
-			<!-- Form drops in on button click -->
-			<a class="button blue" href="#">Nominate Now</a>
-
-		</div>
-		<div class="col-sm-12 col-md-4">
-			<!-- Partial for sponsors here -->
-		</div>
+	<form class="form" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
 		<div class="row">
-			<div class="col-sm-12">
-				<form class="form row" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
-					<div class="col-xs-10">
-						<h4>Your Info...</h4>
-						<hr width="25%">
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<input type="text" name="First Name" placeholder="First Name" required>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<input type="text" name="Last Name" placeholder="Last Name" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<input type="tel" name="Phone Number" placeholder="Phone Number" required>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<input type="email" name="Email" placeholder="Email Address" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<input type="text" name="Street" placeholder="Street" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-4">
-								<input type="text" name="City" placeholder="City" required>
-							</div>
-							<div class="col-sm-4">
-								<input type="text" name="State" placeholder="State" required>
-							</div>
-							<div class="col-sm-4">
-								<input type="text" name="Zipcode" placeholder="Zipcode" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<input type="tel" name="Phone Number" placeholder="Phone Number" required>
-							</div>
-							<div class="col-sm-6">
-								<input type="email" name="Email" placeholder="Email Address" required>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-10">
-						<h4>Nomination Information</h4>
-						<hr width="35%">
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<input type="text" name="Nominee First Name" placeholder="Nominee First Name" required>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<input type="text" name="Nominee Last Name" placeholder="Nominee Last Name" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<input type="text" name="Nominee Street" placeholder="Street" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-4">
-								<input type="text" name="Nominee City" placeholder="City" required>
-							</div>
-							<div class="col-sm-4">
-								<input type="text" name="Nominee State" placeholder="State" required>
-							</div>
-							<div class="col-sm-4">
-								<input type="text" name="Nominee Zipcode" placeholder="Zipcode" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<input type="tel" name="Nominee Phone Number" placeholder="Nominee Phone Number" required>
-							</div>
-							<div class="col-sm-6">
-								<input type="email" name="Nominee Email" placeholder="Nominee Email Address" required>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<input type="text" name="Nominee Employer" placeholder="Nominee Employer">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-6">
-								<label for="Fab 50 Year Won">What Year was the Fabulous 50 Award Received?</label>
-								<input type="text" name="Fab 50 Year Won" placeholder="">
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-10">
-						<hr>
-						<p>In short, concise paragraphs, please describe how this nurse goes above and beyond their duties in each of these areas. We're looking for the WOW-factor your nurse possesses.</p>
-						<div class="row">
-							<label for="how this nurse is a role model">Describe how this nurse is a role model (250 words or less)</label>
-							<div class="col-xs-12">
-								<textarea name="how this nurse is a role model" maxlength="250" required></textarea>
-							</div>
-							<label for="how this nurse is a coach">Describe how this nurse is a coach (250 words or less)</label>
-							<div class="col-xs-12">
-								<textarea name="how this nurse is a coach" maxlength="250" required></textarea>
-							</div>
-							<label for="how this nurse is a motivator">Describe how this nurse is a motivator (250 words or less)</label>
-							<div class="col-xs-12">
-								<textarea name="how this nurse is a motivator" maxlength="250" required></textarea>
-							</div>
-							<label for="Describe how this nurse is an advocate">Describe how this nurse is an advocate (250 words or less)</label>
-							<div class="col-xs-12">
-								<textarea name="Describe how this nurse is an advocate" maxlength="250" required></textarea>
-							</div>
-							<label for="Describe how this nurse is a teacher">Describe how this nurse is a teacher (250 words or less)</label>
-							<div class="col-xs-12">
-								<textarea name="Describe how this nurse is a teacher" maxlength="250" required></textarea>
-							</div>
-							<label for="Describe how this nurse is a visionary">Describe how this nurse is a visionary (250 words or less)</label>
-							<div class="col-xs-12">
-								<textarea name="Describe how this nurse is a visionary" maxlength="250" required></textarea>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-10">
-						<input class="button blue" type="submit" value="NOMINATE">
-					</div>
-				</form>
-				<div class="response"></div>
-			</div>
+			<h4 class="col-xs-12">Your Information</h4>
+			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Last Name" placeholder="Last Name" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="Phone Number" placeholder="Phone" required>
+			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
 		</div>
-	</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Your Address</h4>
+			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="City" placeholder="City" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Zipcode" placeholder="Zipcode" required>
+		</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Nominee Information</h4>
+			<input class="col-xs-10 col-sm-5" type="text" name="Nominee First Name" placeholder="First Name" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Last Name" placeholder="Last Name" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="Phone Number" placeholder="Phone" required>
+			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Employer" placeholder="Employer">
+		</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Nominee Address</h4>
+			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Street" placeholder="Street" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Nominee City" placeholder="City" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Nominee State" placeholder="State" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Zipcode" placeholder="Zipcode" required>
+		</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Describe</h4>
+			<p class="col-xs-12">In short, concise paragraphs, please describe how this nurse goes above and beyond their duties in each of these areas. We're looking for the WOW-factor your nurse possesses.</p>
+
+			<p class="col-xs-12">Describe how this nurse is a role model (250 words or less)</p>
+			<textarea class="col-xs-10 col-sm-5" name="how this nurse is a role model" maxlength="250" required></textarea>
+
+			<p class="col-xs-12">Describe how this nurse is a coach (250 words or less)</p>
+			<textarea class="col-xs-10 col-sm-5" name="how this nurse is a coach" maxlength="250" required></textarea>
+
+			<p class="col-xs-12">Describe how this nurse is a motivator (250 words or less)</p>
+			<textarea class="col-xs-10 col-sm-5" name="how this nurse is a motivator" maxlength="250" required></textarea>
+
+			<p class="col-xs-12">Describe how this nurse is an advocate (250 words or less)</p>
+			<textarea class="col-xs-10 col-sm-5" name="Describe how this nurse is an advocate" maxlength="250" required></textarea>
+
+			<p class="col-xs-12">Describe how this nurse is a teacher (250 words or less)</p>
+			<textarea class="col-xs-10 col-sm-5" name="Describe how this nurse is a teacher" maxlength="250" required></textarea>
+
+			<p class="col-xs-12">Describe how this nurse is a visionary (250 words or less)</p>
+			<textarea class="col-xs-10 col-sm-5" name="Describe how this nurse is a visionary" maxlength="250" required></textarea>
+		</div>
+
+		<div class="row">
+			<input class="button blue col-xs-3" type="submit" value="Nominate">
+		</div>
+	</form>
+
+	<div class="response"></div>
 </div>
 
 	</main>
