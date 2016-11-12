@@ -231,6 +231,14 @@ table tr:nth-child(2) {
 /*
 	main
 */
+.photo-scroll > div {
+    display: inline-block;
+}
+
+.photo-scroll img {
+    height: 150px;
+}
+
 .content {
     padding: 1rem;
     margin: 1rem auto;
