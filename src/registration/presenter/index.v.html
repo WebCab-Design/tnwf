@@ -21,7 +21,9 @@
 	<br>
 	<br>
 
-	<form class="form" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
+	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
+	<input type="text" name="Form" value="Presenter" hidden>
+	<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
 
 		<div class="row">
 			<h4 class="col-xs-12">Primary Presenter</h4>
@@ -51,7 +53,6 @@
 			<h4 class="col-xs-12">Presentation Format</h4>
 			<select class="col-xs-10 col-sm-5" name="Format">
 				<option value="Poster">Poster</option>
-				<option value="Podium">Podium</option>
 				<option value="Speaker">Speaker</option>
 				<option value="Panel Presentation">Panel Presentation</option>
 			</select>
@@ -70,13 +71,35 @@
 		<div class="row">
 			<h4 class="col-xs-12">Presentation Support</h4>
 			<p class="col-xs-12">Please list any options you might need.</p>
-			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="podium&#13;&#10;audo&#13;&#10;chord type&#13;&#10;..."></textarea>
+			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="audo&#13;&#10;chord type&#13;&#10;..."></textarea>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<h4 class="col-xs-12">Other Presenters</h4>
 			<p class="col-xs-12">If your  poster presentation will include more than one presenter, please add them below.</p>
 			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Other Presenters" placeholder="First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;..."></textarea>
+		</div> -->
+
+		<div class="row center-xs start-sm">
+			<h4 class="col-xs-12">Other Presenters</h4>
+			<p class="col-xs-12">If your poster presentation will include any other presenters besides the priamry presenter, please add them below.</p>
+			<div class="ticket row col-xs-12 center-xs start-sm">
+				<ol class="ticket-list col-xs-10"></ol>
+				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Other Presentors" hidden>
+				<input class="ticket-first col-xs-10 col-sm-3" placeholder="Presentor First Name">
+				<input class="ticket-last col-xs-10 col-sm-3" placeholder="Presentor Last Name">
+				<button class="ticket-add button blue col-xs-2" data-cost="90" type="button">Add</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="total col-xs-12">
+				<strong>
+					<span>Total:</span>
+					<span>&#36;</span>
+					<input class="ticket-total" type="number" name="Total" value="0" readonly>
+				</strong>
+			</div>
 		</div>
 
 		<div class="row">
