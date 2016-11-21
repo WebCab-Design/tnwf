@@ -4,7 +4,7 @@
   "description": "Tucson Nurses Week Foundation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	  "build": "rm -r dist/* && muleify pack -o dist && rm -r docs/* && muleify pack -o docs",
   },
   "repository": {
     "type": "git",

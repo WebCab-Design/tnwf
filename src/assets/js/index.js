@@ -1,40 +1,48 @@
 (function() {
 'use strict';
 
-function offlineButtonRender () {
-	var offlineButton = document.querySelector('.offline-button');
-	var paymentWidget = document.querySelector('.payment-widget');
-	offlineButton.addEventListener('click', function () {
-		paymentWidget.style.display = 'none';
-	});
-}
-
-function onlineButtonRender (total) {
-	var paymentWidget = document.querySelector('.payment-widget');
-	paypal.Button.render({
-		env: 'sandbox', // production, sandbox
-		commit: true,
-		client: {
-			sandbox: 'AYYG8wFherEY7ZmyS1biclrOmhxsNKxdNoyOwk85_sKve83LNTeHjAk2GP4Lxu0nqS5n1v4IZn2CFfZs'
-		},
-		payment: function() {
-			var env    = this.props.env;
-			var client = this.props.client;
-
-			return paypal.rest.payment.create(env, client, {
-				transactions: [{
-					amount: { total: total, currency: 'USD' }
-				}]
-			});
-		},
-		onAuthorize: function(data, actions) {
-			return actions.payment.execute().then(function() {
-				paymentWidget.style.display = 'none';
-			});
-		}
-
-	}, '.paypal-button');
-}
+// function offlineButtonRender () {
+// 	var offlineButton = document.querySelector('.offline-button');
+// 	var paymentWidget = document.querySelector('.payment-widget');
+// 	offlineButton.addEventListener('click', function () {
+// 		paymentWidget.style.display = 'none';
+// 	});
+// }
+//
+// function onlineButtonRender (total) {
+// 	var paymentWidget = document.querySelector('.payment-widget');
+// 	paypal.Button.render({
+// 		env: 'sandbox', // production, sandbox
+// 		commit: true,
+// 		client: {
+// 			sandbox: 'AYYG8wFherEY7ZmyS1biclrOmhxsNKxdNoyOwk85_sKve83LNTeHjAk2GP4Lxu0nqS5n1v4IZn2CFfZs'
+// 		},
+// 		style: {
+// 			shape: 'rect'
+// 		},
+// 		payment: function() {
+// 			var env    = this.props.env;
+// 			var client = this.props.client;
+//
+// 			return paypal.rest.payment.create(env, client, {
+// 				transactions: [{
+// 					amount: { total: total, currency: 'USD' }
+// 				}]
+// 			});
+// 		},
+// 		onAuthorize: function(data, actions) {
+// 			return actions.payment.execute().then(function() {
+// 				paymentWidget.style.display = 'none';
+// 			});
+// 		},
+// 		onCancel: function(data, actions) {
+// 			paymentWidget.style.display = 'none';
+// 		},
+// 		onError: function(error) {
+// 			console.log(error);
+// 		}
+// 	}, '.paypal-button');
+// }
 
 document.addEventListener('DOMContentLoaded', function () {
 	var paymentWidget = document.querySelector('.payment-widget');
@@ -76,16 +84,23 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		}
 
+		var paypalSubmit = document.querySelector('.online-button > input[type="submit"]');
+		if (paypalSubmit) {
+			paypalSubmit.addEventListener('click', function () {
+				this.parentNode.parentNode.parentNode.style.display = 'none';
+			});
+		}
+
 		Astatine.submit({
 			query: form,
 			mimeType: 'json',
-			prepare: function (data) {
-				if (paymentWidget) {
-					offlineButtonRender();
-					onlineButtonRender(data.Total.toString());
-					paymentWidget.style.display = 'block';
-				}
-			},
+			// prepare: function (data) {
+				// if (paymentWidget) {
+				// 	offlineButtonRender();
+				// 	onlineButtonRender(data.Total.toString());
+				// 	paymentWidget.style.display = 'block';
+				// }
+			// },
 			complete: function (error, success) {
 				var response = document.querySelector('.response');
 
@@ -95,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					response.innerText = 'Error';
 				} else {
 					form.style.display = 'none';
-					response.style.color = 'green';
+					response.style.color = '#6db4b1';
 					response.innerText = 'Form Is Submitted';
 				}
 

@@ -53,7 +53,7 @@
 				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Attendees" hidden>
 				<input class="ticket-first col-xs-10 col-sm-3" placeholder="Ticket First Name">
 				<input class="ticket-last col-xs-10 col-sm-3" placeholder="Ticket Last Name">
-				<button class="ticket-add button blue col-xs-2" data-cost="90">Add</button>
+				<div class="ticket-add button blue col-xs-2" data-cost="90">Add</div>
 			</div>
 		</div>
 
@@ -90,12 +90,35 @@
 	<div>
 		<p>Online payments please click the Pay Pal button. You do NOT have to register or have a PayPal account.</p>
 		<p>Offline payments please mail check within 9 days to PO Box 65085 Tucson, AZ 85728</p>
-		<div class="online-button">
+		<form class="online-button" target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="item_name">
+			<input type="hidden" name="item_number">
+			<input TYPE="hidden" name="return">
+			<input type="hidden" name="amount">
+			<input type="hidden" name="custom">
+			<input type="hidden" name="business">
+			<input type="hidden" name="cmd" value="_xclick">
+			<input type="hidden" name="currency_code" value="USD">
+			<input type="submit" name="submit" value="PayPal Pay">
+		</form>
+		<!-- <div class="online-button">
 			<span>PayPal Pay</span>
 			<div class="paypal-button"></div>
-		</div>
+		</div> -->
 		<div class="offline-button">Mail Check</div>
 	</div>
 </div>
 
-<script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
+<!-- <script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
+
+<form class="paypal-form" target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="item_name">
+	<input type="hidden" name="item_number">
+	<input TYPE="hidden" name="return">
+	<input type="hidden" name="amount">
+	<input type="hidden" name="custom">
+	<input type="hidden" name="business">
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="currency_code" value="USD">
+	<input type="submit" name="submit" value="submit">
+</form> -->
