@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Presenter Registration | Tucson Nurses Week Foundation</title>
 
@@ -48,7 +48,7 @@
 					<ul>
 						<li><a href="/awards/fabulous-50/">Fabulous 50</a></li>
 						<li><a href="/awards/most-inspirational-mentor/">Most Inspirational Mentor</a></li>
-						<li><a href="/awards/alex-stutze/">Alex Stutze</a></li>
+						<li><a href="/awards/alex-stutze/">Alex Stuetze</a></li>
 						<li><a href="/awards/research-grant/">Reasearch Grant</a></li>
 						<li><a href="/awards/past-awardees/">Past Awardees</a></li>
 					</ul>
@@ -56,7 +56,7 @@
 				<li>
 					<a href="#!!">Sponsor/Donate</a>
 					<ul>
-						<li><a href="/sponsor-donate/">Sponsor/Donate</a></li>
+						<li><a href="/sponsor-donate/sponsors/">Sponsor/Donate</a></li>
 						<!-- <li><a href="/sponsor-donate/sponsors/">Sponsors</a></li> -->
 						<li><a href="/sponsor-donate/sponsor-zones/">Sponsor Zones</a></li>
 					</ul>
@@ -69,23 +69,12 @@
 		
 
 <div class="content">
-	<h1>Presenter Registration - 2017</h1>
+	<h1>Presenter Abstract Submission - 2017</h1>
 
 	<br>
 	<h4>Event Properties</h4>
-	<br>
-	<table>
-		<tbody>
-			<tr>
-				<td>Event Date</td>
-				<td>May-06-2016 12:00 am</td>
-			</tr>
-			<tr>
-				<td>Event End Date</td>
-				<td>May-06-2016 12:00 am</td>
-			</tr>
-		</tbody>
-	</table>
+		<p><strong>Event Date</strong></p>
+		<p>May-06-2016 12:00 am</p>
 	<br>
 	<br>
 
@@ -121,7 +110,6 @@
 			<h4 class="col-xs-12">Presentation Format</h4>
 			<select class="col-xs-10 col-sm-5" name="Format">
 				<option value="Poster">Poster</option>
-				<option value="Podium">Podium</option>
 				<option value="Speaker">Speaker</option>
 				<option value="Panel Presentation">Panel Presentation</option>
 			</select>
@@ -140,13 +128,35 @@
 		<div class="row">
 			<h4 class="col-xs-12">Presentation Support</h4>
 			<p class="col-xs-12">Please list any options you might need.</p>
-			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="podium&#13;&#10;audo&#13;&#10;chord type&#13;&#10;..."></textarea>
+			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="audo&#13;&#10;chord type&#13;&#10;..."></textarea>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<h4 class="col-xs-12">Other Presenters</h4>
 			<p class="col-xs-12">If your  poster presentation will include more than one presenter, please add them below.</p>
 			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Other Presenters" placeholder="First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;..."></textarea>
+		</div> -->
+
+		<div class="row center-xs start-sm">
+			<h4 class="col-xs-12">Other Presenters</h4>
+			<p class="col-xs-12">If your poster presentation will include any other presenters besides the priamry presenter, please add them below.</p>
+			<div class="ticket row col-xs-12 center-xs start-sm">
+				<ol class="ticket-list col-xs-10"></ol>
+				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Other Presentors" hidden>
+				<input class="ticket-first col-xs-10 col-sm-3" placeholder="Presentor First Name">
+				<input class="ticket-last col-xs-10 col-sm-3" placeholder="Presentor Last Name">
+				<button class="ticket-add button blue col-xs-2" data-cost="90" type="button">Add</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="total col-xs-12">
+				<strong>
+					<span>Total:</span>
+					<span>&#36;</span>
+					<input class="ticket-total" type="number" name="Total" value="0" readonly>
+				</strong>
+			</div>
 		</div>
 
 		<div class="row">
