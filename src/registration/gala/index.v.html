@@ -5,10 +5,26 @@
 
 	<p>All seating requests will be accommodated to the best of our ability, but are not guaranteed. Gala price is <strong>&#36;75</strong> per seat through Apr. 15, 2017, after which the cost is <strong>&#36;85</strong> per seat. Space is limited for the Gala. Seat assignments will be posted outside the ballroom. Don't forget to include yourself if you are also attending.</p>
 
-		<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
-		<input type="text" name="Form" value="Gala" hidden>
-		<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
+	<h4>Event Properties</h4>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<td>Event Date</td>
+				<td>May-06-2016 12:00 am</td>
+			</tr>
+			<tr>
+				<td>Event End Date</td>
+				<td>May-06-2016 12:00 am</td>
+			</tr>
+			<tr>
+				<td>Individual Price</td>
+				<td>&#36;75 - &#36;80</td>
+			</tr>
+		</tbody>
+	</table>
 
+	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
 		<div class="row center-xs start-sm">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -25,7 +41,7 @@
 
 		<div class="row center-xs start-sm">
 			<h4 class="col-xs-12">Attendees</h4>
-			<p class="col-xs-12">Please list first and last names of all attendees you are purchasing Gala tickets for. Once you have added an attendee, click the Add button to add another – don’t forget to include yourself.</p>
+			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
 				<ol class="ticket-list col-xs-10"></ol>
 				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Attendees" hidden>
@@ -45,15 +61,17 @@
 			</div>
 		</div>
 
-		<p>For credit card payments, you will be redirected to the PayPal site. You do NOT have to register or have a PayPal account to use this payment method.</p>
-		<p>For offline payments please mail check within 9 days to <strong>PO Box 65085 Tucson, AZ 85728</strong></p>
+		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
+		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
 
 		<div class="row center-xs">
+			<input type="text" name="Form Name" value="Gala" hidden>
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
-
 	</form>
 
 	<div class="response"></div>
 
 </div>
+
+<!-- { "partial": "partials/payment-widget.html" } -->

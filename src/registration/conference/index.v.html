@@ -26,9 +26,8 @@
 	</table>
 
 	<br>
-	 <!-- action="https://formspree.io/mqkvokom" -->
-	<form class="form" enctype="application/json" method="post" action="https://formspree.io/alex.steven.elias@gmail.com">
 
+	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
 		<div class="row  center-xs start-sm">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -47,7 +46,7 @@
 
 		<div class="row">
 			<h4 class="col-xs-12">Attendees</h4>
-			<p class="col-xs-12">Please list first and last names of all attendees you are purchasing Gala tickets for. Once you have added an attendee, click the Add button to add another – don’t forget to include yourself.</p>
+			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
 				<ol class="ticket-list col-xs-10"></ol>
 				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Attendees" hidden>
@@ -67,58 +66,17 @@
 			</div>
 		</div>
 
-		<p>For credit card payments, you will be redirected to the PayPal site. You do NOT have to register or have a PayPal account to use this payment method.</p>
-		<p>For offline payments please mail check within 9 days to <strong>PO Box 65085 Tucson, AZ 85728</strong></p>
+		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
+		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
 
 		<div class="row">
-			<input type="text-align" name="Form" value="Conference/Healthy Fair" hidden>
-			<!-- <input type="hidden" name="_cc" value="jburns@webcabdesign.com" /> -->
+			<input type="text" name="Form Name" value="Conference/Healthy Fair" hidden>
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
-
 	</form>
 
 	<div class="response"></div>
 
 </div>
 
-<style>
-
-</style>
-
-<div class="payment-widget">
-	<div>
-		<p>Online payments please click the Pay Pal button. You do NOT have to register or have a PayPal account.</p>
-		<p>Offline payments please mail check within 9 days to PO Box 65085 Tucson, AZ 85728</p>
-		<form class="online-button" target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-			<input type="hidden" name="item_name">
-			<input type="hidden" name="item_number">
-			<input TYPE="hidden" name="return">
-			<input type="hidden" name="amount">
-			<input type="hidden" name="custom">
-			<input type="hidden" name="business">
-			<input type="hidden" name="cmd" value="_xclick">
-			<input type="hidden" name="currency_code" value="USD">
-			<input type="submit" name="submit" value="PayPal Pay">
-		</form>
-		<!-- <div class="online-button">
-			<span>PayPal Pay</span>
-			<div class="paypal-button"></div>
-		</div> -->
-		<div class="offline-button">Mail Check</div>
-	</div>
-</div>
-
-<!-- <script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
-
-<form class="paypal-form" target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-	<input type="hidden" name="item_name">
-	<input type="hidden" name="item_number">
-	<input TYPE="hidden" name="return">
-	<input type="hidden" name="amount">
-	<input type="hidden" name="custom">
-	<input type="hidden" name="business">
-	<input type="hidden" name="cmd" value="_xclick">
-	<input type="hidden" name="currency_code" value="USD">
-	<input type="submit" name="submit" value="submit">
-</form> -->
+<!-- { "partial": "partials/payment-widget.html" } -->

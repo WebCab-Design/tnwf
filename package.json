@@ -4,7 +4,7 @@
   "description": "Tucson Nurses Week Foundation",
   "main": "index.js",
   "scripts": {
-	  "build": "rm -r dist/* && muleify pack -o dist && rm -r docs/* && muleify pack -o docs"
+    "build": "rm -r dist/* && muleify pack -o dist && rm -r docs/* && muleify pack -o docs"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/WebCab-Design/tnwf#readme",
   "dependencies": {
-    "astatine": "^1.1.1",
+    "astatine": "^1.1.2",
     "erbium": "^1.3.5"
   }
 }

@@ -16,14 +16,15 @@
 				<td>Event End Date</td>
 				<td>May-06-2016 12:00 am</td>
 			</tr>
+			<tr>
+				<td>Individual Price</td>
+				<td>&#36;150 - &#36;300</td>
+			</tr>
 		</tbody>
 	</table>
 	<br>
 
 	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
-	<input type="text" name="Form" value="Vendor" hidden>
-	<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
-
 		<div class="row">
 			<h4 class="col-xs-12">Vendor Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -92,9 +93,12 @@
 		<p>For offline payments please mail check within 9 days to <strong>PO Box 65085 Tucson, AZ 85728</strong></p>
 
 		<div class="row">
+			<input type="text" name="Form Name" value="Vendor" hidden>
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 	</form>
 
 	<div class="response"></div>
 </div>
+
+<!-- { "partial": "partials/payment-widget.html" } -->

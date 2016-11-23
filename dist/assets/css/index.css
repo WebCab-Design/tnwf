@@ -14,7 +14,7 @@
 	defaults
 */
 body {
-    background: #fff;
+    background: white;
     overflow-x: hidden;
 }
 
@@ -33,7 +33,7 @@ hr {
     display: block;
     margin: 20px 0;
     border-top: solid 1px #eee;
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 1px whitefff;
 }
 
 ul {
@@ -157,12 +157,14 @@ table tr:nth-child(2) {
 
 .button.blue {
     padding: 16px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
     background: #00b3b3;
-    color: #fff;
 }
 
 .button.blue:hover {
-    background: #fff;
+    background: white;
     color: #00b3b3;
     border: 1px solid #00b3b3;
 }
@@ -212,7 +214,7 @@ table tr:nth-child(2) {
 .nav-bar {
     z-index: 1;
     color: #888;
-    background: #fff;
+    background: white;
     width: 70% !important;
     display: inline-block;
     vertical-align: middle;
@@ -223,7 +225,7 @@ table tr:nth-child(2) {
 }
 
 .nav-list-sub {
-    background: #fff;
+    background: white;
     min-width: 175px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 }
@@ -323,7 +325,7 @@ table tr:nth-child(2) {
 }
 
 .online-button > input[type="submit"], .offline-button {
-    color: #fff;
+    color: white;
     cursor: pointer;
     text-align: center;
     position: relative;
@@ -345,7 +347,7 @@ table tr:nth-child(2) {
         width: 100% !important;
     }
     .nav-list-main {
-        background: #fff;
+        background: white;
         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     }
     .foot-tp > div {

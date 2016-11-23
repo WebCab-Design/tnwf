@@ -16,15 +16,16 @@
 				<td>Event End Date</td>
 				<td>May-06-2016 12:00 am</td>
 			</tr>
+			<tr>
+				<td>Individual Price</td>
+				<td>&#36;90</td>
+			</tr>
 		</tbody>
 	</table>
 	<br>
 	<br>
 
 	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
-	<input type="text" name="Form" value="Presenter" hidden>
-	<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
-
 		<div class="row">
 			<h4 class="col-xs-12">Primary Presenter</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -81,8 +82,8 @@
 		</div> -->
 
 		<div class="row center-xs start-sm">
-			<h4 class="col-xs-12">Other Presenters</h4>
-			<p class="col-xs-12">If your poster presentation will include any other presenters besides the priamry presenter, please add them below.</p>
+			<h4 class="col-xs-12">Presenters</h4>
+			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
 				<ol class="ticket-list col-xs-10"></ol>
 				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Other Presentors" hidden>
@@ -102,7 +103,11 @@
 			</div>
 		</div>
 
+		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
+		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
+
 		<div class="row">
+			<input type="text" name="Form Name" value="Presenter" hidden>
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 
@@ -110,3 +115,5 @@
 
 	<div class="response"></div>
 </div>
+
+<!-- { "partial": "partials/payment-widget.html" } -->
