@@ -155,6 +155,22 @@ table tr:nth-child(2) {
     text-align: left !important;
 }
 
+.overlay-button {
+    width: 200px;
+    text-align: center;
+    background: rgba(0, 179, 179, 0.8);
+    padding: 1rem;
+    color: #fff;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.overlay-button:hover {
+    background: #00b3b3;
+    color: #fff !important;
+}
+
 .button.blue {
     padding: 16px;
     background: #00b3b3;
@@ -266,6 +282,7 @@ table tr:nth-child(2) {
 }
 
 .foot-tp > div {
+    vertical-align: top;
     width: 25%;
     padding: 24px;
     display: inline-block;

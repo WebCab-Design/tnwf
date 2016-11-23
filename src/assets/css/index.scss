@@ -130,6 +130,23 @@ table tr:nth-child(2) {
 .row p, .row h4 {
 	text-align: left !important;
 }
+.overlay-button {
+	width: 200px;
+	text-align: center;
+	background: rgba(0,179,179,0.8);
+	padding: 1rem;
+	color: #fff;
+	margin: 1rem auto;
+	font-size: 1.1rem;
+	font-weight: 300;
+	
+
+	&:hover {
+		background: $primary-blue;
+		color: #fff !important;
+	}
+
+}
 .button.blue {
 	padding: 16px;
 	background: $primary-blue;
@@ -223,6 +240,7 @@ table tr:nth-child(2) {
 	background: #262626;
 }
 .foot-tp > div {
+	vertical-align: top;
 	width: 25%;
 	padding: 24px;
 	display: inline-block;
