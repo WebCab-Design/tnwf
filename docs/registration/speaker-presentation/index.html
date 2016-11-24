@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Presenter Registration | Tucson Nurses Week Foundation</title>
+	<title>Speaker Presentation Abstract | Tucson Nurses Week Foundation</title>
 
 	<link rel="stylesheet" href="/assets/css/index.css"/>
 	<link rel="stylesheet" href="/assets/css/flexboxgrid.min.css"/>
@@ -35,7 +35,10 @@
 								<li><a href="/registration/conference">Conference Registration</a></li>
 								<li><a href="/registration/gala">Gala Registration</a></li>
 								<li><a href="/registration/vendor">Vendor Registration</a></li>
-								<li><a href="/registration/presenter">Presenter Registration</a></li>
+								<!-- <li><a href="/registration/presenter">Presenter Registration</a></li> -->
+								<li><a href="/registration/combined-presentation">Combined Presentation Registration</a></li>
+								<li><a href="/registration/poster-presentation">Poster Presentation Registration</a></li>
+								<li><a href="/registration/speaker-presentation">Speaker Presentation Registration</a></li>
 								<li><a href="/upcoming-events/conference/handouts/">TNWF Handouts</a></li>
 							</ul>
 						</li>
@@ -69,77 +72,65 @@
 		
 
 <div class="content">
-	<h1>Presenter Abstract Submission - 2017</h1>
+	<h1>Speaker Presentation Abstract - 2017</h1>
+
+	<p>Every presentation must have at least one presenter who is an RN. Incomplete submissions may not be considered.</p>
+	<p><strong>This required information will be printed in the program and must be included to be considered.</strong></p>
+	<p>Conference fee is waived for the primary presenter only; all other presenters must pay the registration fee if they plan to attend the conference.</p>
 
 	<br>
 	<h4>Event Properties</h4>
-		<p><strong>Event Date</strong></p>
-		<p>May-06-2016 12:00 am</p>
+	<br>
+	<table>
+		<tbody>
+			<tr>
+				<td>Event Date</td>
+				<td>May-06-2016 12:00 am</td>
+			</tr>
+			<tr>
+				<td>Individual Price</td>
+				<td>&#36;90</td>
+			</tr>
+		</tbody>
+	</table>
 	<br>
 	<br>
 
 	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
-	<input type="text" name="Form" value="Presenter" hidden>
-	<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
-
 		<div class="row">
 			<h4 class="col-xs-12">Primary Presenter</h4>
+			<p class="col-xs-12">Presenter name and credentials as it will appear in the program.</p>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Last Name" placeholder="Last Name" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="Position" placeholder="Position" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="Day Phone" placeholder="Day Phone" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="Wrok Phone" placeholder="Wrok Phone" required>
+			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Address" placeholder="Address" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Position/Title" placeholder="Position/Title" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Employer" placeholder="Employer" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Credentials" placeholder="Credentials" required>
 		</div>
 
 		<div class="row">
-			<h4 class="col-xs-12">Contact</h4>
-			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="City" placeholder="City" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="Zipcode" placeholder="Zipcode" required>
-			<input class="col-xs-10 col-sm-5" type="tel" name="Phone" placeholder="Phone" required>
-			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
-		</div>
-
-		<div class="row">
-			<h4  class="col-xs-12">Presentation Title</h4>
-			<input class="col-xs-10 col-sm-5" type="text" name="Presentation Title" placeholder="Presentation Title" required>
-		</div>
-
-		<div class="row">
-			<h4 class="col-xs-12">Presentation Format</h4>
-			<select class="col-xs-10 col-sm-5" name="Format">
-				<option value="Poster">Poster</option>
-				<option value="Speaker">Speaker</option>
-				<option value="Panel Presentation">Panel Presentation</option>
-			</select>
-		</div>
-
-		<div class="row">
-			<h4 class="col-xs-12">Presentation Details</h4>
+			<h4  class="col-xs-12">Presentation Details</h4>
 			<p class="col-xs-12">Please fill out the following information about your presentation (250 words or less).</p>
-			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Abstract" placeholder="Abstract"></textarea>
-			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Purpose/Objective" placeholder="Purpose/Objective"></textarea>
-			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Importance To Nursing" placeholder="Importance To Nursing"></textarea>
-			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Brief Outline" placeholder="Brief Outline"></textarea>
-			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Methods" placeholder="Teaching Methods, strategies, materials, and resources for session"></textarea>
+			<input class="col-xs-10 col-sm-5" type="text" name="Presentation Title" placeholder="Presentation Title" required>
+			<textarea class="col-xs-10" name="Abstract" placeholder="Abstract (Required for CEU and will appear in the program)" required></textarea>
+			<textarea class="col-xs-10" name="Purpose/Objective" placeholder="2-3 measureable outcomes. (Required for CEU and will appear in the program)"></textarea>
+			<textarea class="col-xs-10" name="Importance To Nursing" placeholder="Importance to nursing. (As it will appear in the program)" required></textarea>
+			<textarea class="col-xs-10" name="Brief Outline" placeholder="(Required for CEU and will NOT appear in the program)"></textarea>
+			<textarea class="col-xs-10" name="Teaching Methods" placeholder="Strategies, materials, and resources for session. (Required for CEU and will NOT appear in the program)"></textarea>
 		</div>
 
 		<div class="row">
 			<h4 class="col-xs-12">Presentation Support</h4>
-			<p class="col-xs-12">Please list any options you might need.</p>
-			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="audo&#13;&#10;chord type&#13;&#10;..."></textarea>
+			<p class="col-xs-12">Please list any options you might need. Due note that the rooms are set up in theater style with a screen and PowerPoint projector.</p>
+			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="audo&#13;&#10;podium&#13;&#10;etc&#13;&#10;..."></textarea>
 		</div>
 
-		<!-- <div class="row">
-			<h4 class="col-xs-12">Other Presenters</h4>
-			<p class="col-xs-12">If your  poster presentation will include more than one presenter, please add them below.</p>
-			<textarea class="col-xs-10 col-sm-5" type="textarea" name="Other Presenters" placeholder="First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;First Name Last Name&#13;&#10;..."></textarea>
-		</div> -->
-
 		<div class="row center-xs start-sm">
-			<h4 class="col-xs-12">Other Presenters</h4>
-			<p class="col-xs-12">If your poster presentation will include any other presenters besides the priamry presenter, please add them below.</p>
+			<h4 class="col-xs-12">Presenters</h4>
+			<p class="col-xs-12">Please list the first and last name of each individual who will be included. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
 				<ol class="ticket-list col-xs-10"></ol>
 				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Other Presentors" hidden>
@@ -159,7 +150,11 @@
 			</div>
 		</div>
 
+		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
+		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
+
 		<div class="row">
+			<input type="text" name="Form Name" value="Speaker Presentation" hidden>
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 
@@ -167,6 +162,23 @@
 
 	<div class="response"></div>
 </div>
+
+<div class="payment-widget">
+	<div>
+		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
+		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
+		<form class="online-button" target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr">
+			<input type="hidden" name="amount">
+			<input type="hidden" name="item_name">
+			<input type="hidden" name="cmd" value="_xclick">
+			<input type="hidden" name="currency_code" value="USD">
+			<input type="hidden" name="business" value="tnwf@live.com">
+			<input class="online-button" type="submit" name="submit" value="PayPal Pay">
+		</form>
+		<div class="offline-button">Mail Check</div>
+	</div>
+</div>
+
 
 	</main>
 
