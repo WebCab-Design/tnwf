@@ -156,9 +156,8 @@ table tr:nth-child(2) {
 }
 
 .overlay-button {
-    width: 200px;
-    text-align: center;
     background: rgba(0, 179, 179, 0.8);
+    text-align: center;
     padding: 1rem;
     color: #fff;
     margin: 1rem auto;
@@ -169,6 +168,29 @@ table tr:nth-child(2) {
 .overlay-button:hover {
     background: #00b3b3;
     color: #fff !important;
+}
+
+.brownBg {
+    background: rgba(116, 88, 80, 0.8);
+}
+
+.brownBg:hover {
+    background: #745850;
+    color: #fff;
+}
+
+.overlays-2 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.overlays {
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+    position: absolute;
 }
 
 .button.blue {
@@ -373,5 +395,20 @@ table tr:nth-child(2) {
     }
     .hide-medium {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .overlays-2 {
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%);
+        position: absolute;
+    }
+    .overlays {
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%);
+        position: absolute;
     }
 }
