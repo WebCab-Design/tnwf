@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	var showFormButton = document.querySelector('.show-form');
 	var ticket = document.querySelector('.ticket');
 	var form = document.querySelector('.form');
+	var venderSelect = document.querySelector('.vender-select');
+	var lunchCheck = document.querySelector('input[name="Lunch"]');
 	var total = 0;
 
 	if (showFormButton) {
@@ -48,12 +50,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			mimeType: 'json',
 			prepare: function (data) {
 
+				if (venderSelect) total = venderSelect.value;
+				if (lunchCheck.checked) total = Number(total) + 45;
+
 				if (paymentWidget) {
+					var itemName = document.querySelector('input[name="item_name"]');
+					var handlePayment = function () { paymentWidget.style.display = 'none'; };
 					var onlineButton = document.querySelector('.online-button');
 					var offlineButton = document.querySelector('.offline-button');
 					var formName = document.querySelector('input[name="Form Name"]');
-					var itemName = document.querySelector('input[name="item_name"]');
-					var handlePayment = function () { paymentWidget.style.display = 'none'; };
 
 					if (total == 0) {
 						window.alert('Requires at least one individual.');
