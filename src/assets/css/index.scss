@@ -12,6 +12,13 @@ $primary-white: #e2e2e2;
 	-webkit-transition: all 300ms ease;
 	font-family: Helvetica, sans-serif;
 }
+textarea {
+	transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+}
 /*
 	defaults
 */

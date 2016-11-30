@@ -10,6 +10,14 @@
     font-family: Helvetica, sans-serif;
 }
 
+textarea {
+    transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+}
+
 /*
 	defaults
 */
