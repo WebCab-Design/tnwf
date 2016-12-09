@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			mimeType: 'json',
 			prepare: function (data) {
 
+				if (data._cc) data._cc = data._cc + ',cmactnwf@cox.net';
+				else data._cc = 'cmactnwf@cox.net';
+
 				if (venderSelect) total = venderSelect.value;
 				if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
 
