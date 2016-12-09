@@ -16,8 +16,6 @@
 	<button class="show-form button blue" type="button">Nominate a Nurse Now</button>
 
 	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
-	<input type="text" name="Form" value="Fabulous 50 Award" hidden>
-	<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
 		<div class="row">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -69,7 +67,9 @@
 		</div>
 
 		<div class="row">
-			<input class="button blue col-xs-3" type="submit" value="NOMINATE">
+			<input type="hidden" name="Form" value="Fabulous 50 Award">
+			<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
+			<input class="button blue col-xs-3" type="submit" value="Nominate">
 		</div>
 	</form>
 

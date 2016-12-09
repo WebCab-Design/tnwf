@@ -87,8 +87,6 @@
 	<button class="show-form button blue" type="button">Nominate Now</button>
 
 	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
-	<input type="text" name="_gotcha" style="display: none">
-	<input type="hidden" name="_cc" value="jburns@webcabdesign.com" />
 		<div class="row">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -127,13 +125,13 @@
 			<p class="col-xs-12">In short, concise paragraphs, please describe how this nurse goes above and beyond their duties in each of these areas. We're looking for the WOW-factor your nurse possesses.</p>
 
 			<p class="col-xs-12">Describe how this nurse is a role model (250 words or less)</p>
-			<textarea class="col-xs-10 col-sm-5" name="how this nurse is a role model" e-max-words="250" e-counter="true" required></textarea>
+			<textarea class="col-xs-10 col-sm-5" name="How this nurse is a role model" e-max-words="250" e-counter="true" required></textarea>
 
 			<p class="col-xs-12">Describe how this nurse is a coach (250 words or less)</p>
-			<textarea class="col-xs-10 col-sm-5" name="how this nurse is a coach" e-max-words="250" e-counter="true" required></textarea>
+			<textarea class="col-xs-10 col-sm-5" name="How this nurse is a coach" e-max-words="250" e-counter="true" required></textarea>
 
 			<p class="col-xs-12">Describe how this nurse is a motivator (250 words or less)</p>
-			<textarea class="col-xs-10 col-sm-5" name="how this nurse is a motivator" e-max-words="250" e-counter="true" required></textarea>
+			<textarea class="col-xs-10 col-sm-5" name="How this nurse is a motivator" e-max-words="250" e-counter="true" required></textarea>
 
 			<p class="col-xs-12">Describe how this nurse is an advocate (250 words or less)</p>
 			<textarea class="col-xs-10 col-sm-5" name="Describe how this nurse is an advocate" e-max-words="250" e-counter="true" required></textarea>
@@ -146,6 +144,8 @@
 		</div>
 
 		<div class="row">
+			<input type="hidden" name="Form" value="Most Inspirational Mentor">
+			<input type="hidden" name="_cc" value="jburns@webcabdesign.com"/>
 			<input class="button blue col-xs-3" type="submit" value="Nominate">
 		</div>
 	</form>

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			prepare: function (data) {
 
 				if (venderSelect) total = venderSelect.value;
-				if (lunchCheck.checked) total = Number(total) + 45;
+				if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
 
 				if (paymentWidget) {
 					var itemName = document.querySelector('input[name="item_name"]');
