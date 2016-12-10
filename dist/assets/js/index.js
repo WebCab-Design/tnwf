@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			mimeType: 'json',
 			prepare: function (data) {
 
-				if (data._cc) data._cc = data._cc + ',cmactnwf@cox.net';
-				else data._cc = 'cmactnwf@cox.net';
+				if (data._cc) data._cc = data._cc + ',cmactnwf@cox.net,cmiller2@email.arizona.edu ';
+				else data._cc = 'cmactnwf@cox.net,cmiller2@email.arizona.edu ';
 
 				if (venderSelect) total = venderSelect.value;
 				if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
 					var formName = document.querySelector('input[name="Form Name"]');
 
 					if (total == 0) {
-						window.alert('Requires at least one individual.');
-						throw new Error('Requires at least one individual.');
+						window.alert('Requires at least one individual. Please refresh page. Be sure to save your work first.');
+						throw new Error('Requires at least one individual. Please refresh page. Be sure to save your work first.');
 					} else {
 						itemName.value = formName.value;
 						amount.value = total.toString();
