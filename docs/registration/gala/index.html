@@ -14,7 +14,7 @@
 
 	<script src="/assets/js/nav-bar.js"></script>
 	<script src="/assets/js/slider.min.js"></script>
-	<script src="/assets/js/astatine.js"></script>
+	<script src="/assets/js/astatine.min.js"></script>
 	<script src="/assets/js/input.js"></script>
 	<script src="/assets/js/index.js"></script>
 </head>
@@ -96,7 +96,7 @@
 		</tbody>
 	</table>
 
-	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
+	<form class="form">
 		<div class="row center-xs start-sm">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -116,9 +116,9 @@
 			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
 				<ol class="ticket-list col-xs-10"></ol>
-				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Attendees" hidden>
-				<input class="ticket-first col-xs-10 col-sm-3" placeholder="Ticket First Name">
-				<input class="ticket-last col-xs-10 col-sm-3" placeholder="Ticket Last Name">
+				<input class="ticket-hidden col-xs-10 col-sm-3" type="hidden" name="Names Of Attendees">
+				<input class="ticket-first col-xs-10 col-sm-3" type="text" placeholder="Ticket First Name">
+				<input class="ticket-last col-xs-10 col-sm-3" type="text" placeholder="Ticket Last Name">
 				<button class="ticket-add button blue col-xs-2" data-cost="75" type="button">Add</button>
 			</div>
 		</div>
@@ -137,7 +137,7 @@
 		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
 
 		<div class="row center-xs">
-			<input type="text" name="Form Name" value="Gala" hidden>
+			<input type="hidden" name="*formname" value="Gala">
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 	</form>

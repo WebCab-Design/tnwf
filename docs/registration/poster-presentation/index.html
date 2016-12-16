@@ -14,7 +14,7 @@
 
 	<script src="/assets/js/nav-bar.js"></script>
 	<script src="/assets/js/slider.min.js"></script>
-	<script src="/assets/js/astatine.js"></script>
+	<script src="/assets/js/astatine.min.js"></script>
 	<script src="/assets/js/input.js"></script>
 	<script src="/assets/js/index.js"></script>
 </head>
@@ -96,7 +96,7 @@
 	<br>
 	<br>
 
-	<form class="form" enctype="application/json" method="post" action="https://formspree.io/mqkvokom">
+	<form class="form">
 		<div class="row">
 			<h4 class="col-xs-12">Primary Presenter</h4>
 			<p class="col-xs-12">Presenter name and credentials as it will appear in the program.</p>
@@ -125,9 +125,9 @@
 			<p class="col-xs-12">If your poster or presentation will include more than one presentern please add them below. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
 				<ol class="ticket-list col-xs-10"></ol>
-				<input class="ticket-hidden col-xs-10 col-sm-3" name="Names Of Other Presenters" hidden>
-				<input class="ticket-first col-xs-10 col-sm-3" placeholder="Presenter First Name">
-				<input class="ticket-last col-xs-10 col-sm-3" placeholder="Presenter Last Name">
+				<input class="ticket-hidden col-xs-10 col-sm-3" type="hidden" name="Names Of Other Presenters">
+				<input class="ticket-first col-xs-10 col-sm-3" type="text" placeholder="Presenter First Name">
+				<input class="ticket-last col-xs-10 col-sm-3" type="text" placeholder="Presenter Last Name">
 				<button class="ticket-add button blue col-xs-2" data-cost="90" type="button">Add</button>
 			</div>
 		</div>
@@ -146,7 +146,7 @@
 		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
 
 		<div class="row">
-			<input type="text" name="Form Name" value="Poster Presentation" hidden>
+			<input type="hidden" name="*formname" value="Poster Presentation">
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 

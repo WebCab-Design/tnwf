@@ -47,26 +47,53 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (form) {
 		Astatine.submit({
 			query: form,
-			mimeType: 'json',
-			prepare: function (data) {
+			method: 'post',
+			responseType: 'json',
+			action: 'https://www.enformed.io/zpn17s0',
+			prepare: function (data, resolve, reject) {
+				// data['*default_email'] = 'alex.steven.elias@gmail.com';
+				// data['*cc'] = 'aelias@webcabdesign.com';
 
-				if (data._cc) data._cc = data._cc + ',cmactnwf@cox.net,cmiller2@email.arizona.edu ';
-				else data._cc = 'cmactnwf@cox.net,cmiller2@email.arizona.edu ';
+				if (!data['*default_email']) data['*default_email'] = 'tnwf@live.com';
+				if (!data['*cc']) data['*cc'] = 'cmactnwf@cox.net, cmiller2@email.arizona.edu, jburns@webcabdesign.com';
 
 				if (venderSelect) total = venderSelect.value;
 				if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
 
 				if (paymentWidget) {
-					var itemName = document.querySelector('input[name="item_name"]');
-					var handlePayment = function () { paymentWidget.style.display = 'none'; };
-					var onlineButton = document.querySelector('.online-button');
-					var offlineButton = document.querySelector('.offline-button');
-					var formName = document.querySelector('input[name="Form Name"]');
-
 					if (total == 0) {
-						window.alert('Requires at least one individual. Please refresh page. Be sure to save your work first.');
-						throw new Error('Requires at least one individual. Please refresh page. Be sure to save your work first.');
+						reject('Requires at least one individual.');
 					} else {
+						if (ticketHidden) data[ticketHidden.name] = ticketHidden.value;
+						if (ticketTotal) data[ticketTotal.name] = ticketTotal.value;
+						resolve(data);
+					}
+				} else {
+					resolve(data);
+				}
+			},
+			complete: function (error, success) {
+				var response = document.querySelector('.response');
+				if (error) {
+					if (typeof error === 'string') {
+						response.style.color = 'orange';
+						response.innerText = error;
+					} else {
+						console.log(error);
+						response.style.color = 'red';
+						response.innerText = 'Error Plese See Console';
+					}
+				} else {
+					form.style.display = 'none';
+					response.style.color = '#6db4b1';
+					response.innerText = 'Form Is Submitted';
+
+					if (paymentWidget) {
+						var itemName = document.querySelector('input[name="item_name"]');
+						var handlePayment = function () { paymentWidget.style.display = 'none'; };
+						var onlineButton = document.querySelector('.online-button');
+						var offlineButton = document.querySelector('.offline-button');
+						var formName = document.querySelector('input[name="*formname"]');
 						itemName.value = formName.value;
 						amount.value = total.toString();
 						paymentWidget.style.display = 'block';
@@ -74,23 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						offlineButton.addEventListener('click', handlePayment);
 					}
 				}
-
-			},
-			complete: function (error, success) {
-				var response = document.querySelector('.response');
-
-				if (error) {
-					console.log(error);
-					response.style.color = 'red';
-					response.innerText = 'Error';
-				} else {
-					form.style.display = 'none';
-					response.style.color = '#6db4b1';
-					response.innerText = 'Form Is Submitted';
-				}
-
 			}
 		});
 	}
-
 });
