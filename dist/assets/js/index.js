@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				// data['*cc'] = 'aelias@webcabdesign.com';
 
 				if (!data['*default_email']) data['*default_email'] = 'tnwf@live.com';
-				if (!data['*cc']) data['*cc'] = 'cmactnwf@cox.net, cmiller2@email.arizona.edu, jburns@webcabdesign.com';
+				// if (!data['*cc']) data['*cc'] = 'jburns@webcabdesign.com';
 
 				if (venderSelect) total = venderSelect.value;
 				if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
