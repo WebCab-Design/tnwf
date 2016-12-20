@@ -21,9 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		var ticketHidden = form.querySelector('.ticket-hidden');
 		var ticketAdd = form.querySelector('.ticket-add');
 		var ticketTotal = form.querySelector('.ticket-total');
-		var ticketCost = Number(ticketAdd.getAttribute('data-cost'));
+		var ticketCost = Number(ticketAdd.getAttribute('data-cost')) || 0;
+		var ticketFirstDiscount = Number(ticketAdd.getAttribute('data-first-discount')) || 0;
 
 		ticketAdd.addEventListener('click', function () {
+			var isFirstTicket = ticketList.children.length === 0;
+
 			if (ticketFirst.value.length !== 0 && ticketLast.value.length !== 0) {
 				var li = document.createElement('li');
 				var ticket = ticketFirst.value + ' ' + ticketLast.value;
@@ -36,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				else ticketHidden.value = ticketHidden.value + ', ' + ticket;
 
 				ticketList.appendChild(li);
-				total = Number(total) + ticketCost;
+				total = Number(total) + ticketCost - (isFirstTicket ? ticketFirstDiscount : 0);
 				ticketTotal.value = total.toString();
 			} else {
 				window.alert('First Name and Last Name are required');
