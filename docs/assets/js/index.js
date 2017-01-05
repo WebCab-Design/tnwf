@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			responseType: 'json',
 			action: 'https://www.enformed.io/zpn17s0',
 			prepare: function (data, resolve, reject) {
-				data['*default_email'] = 'alex.steven.elias@gmail.com';
+				// data['*default_email'] = 'alex.steven.elias@gmail.com';
 				// data['*cc'] = 'aelias@webcabdesign.com';
 
-				// if (!data['*default_email']) data['*default_email'] = 'tnwf@live.com';
+				if (!data['*default_email']) data['*default_email'] = 'tnwf@live.com';
 				// if (!data['*cc']) data['*cc'] = 'jburns@webcabdesign.com';
 
 				if (venderSelect) total = venderSelect.value;
