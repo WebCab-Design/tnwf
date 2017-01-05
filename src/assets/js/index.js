@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				ticketList.appendChild(li);
 				total = Number(total) + ticketCost - (isFirstTicket ? ticketFirstDiscount : 0);
-				ticketTotal.value = total.toString();
+				if (ticketTotal) ticketTotal.value = total.toString();
 			} else {
 				window.alert('First Name and Last Name are required');
 			}
@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			responseType: 'json',
 			action: 'https://www.enformed.io/zpn17s0',
 			prepare: function (data, resolve, reject) {
-				// data['*default_email'] = 'alex.steven.elias@gmail.com';
+				data['*default_email'] = 'alex.steven.elias@gmail.com';
 				// data['*cc'] = 'aelias@webcabdesign.com';
 
-				if (!data['*default_email']) data['*default_email'] = 'tnwf@live.com';
+				// if (!data['*default_email']) data['*default_email'] = 'tnwf@live.com';
 				// if (!data['*cc']) data['*cc'] = 'jburns@webcabdesign.com';
 
 				if (venderSelect) total = venderSelect.value;
