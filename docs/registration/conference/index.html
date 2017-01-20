@@ -152,6 +152,15 @@
 
 </div>
 
+
+<style>
+	.payment-widget-iframe {
+		width: 50%;
+		height: 50%;
+		display: none;
+	}
+</style>
+
 <div class="payment-widget">
 	<div>
 		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
@@ -167,6 +176,56 @@
 		<div class="offline-button">Mail Check</div>
 	</div>
 </div>
+
+<!-- <div class="payment-widget">
+	<div>
+		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
+		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
+		<form class="payment-form" target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr">
+			<input type="hidden" name="amount">
+			<input type="hidden" name="item_name">
+			<input type="hidden" name="cmd" value="_xclick">
+			<input type="hidden" name="currency_code" value="USD">
+			<input type="hidden" name="business" value="tnwf@live.com">
+		</form>
+		<div class="offline-button">Mail Check</div>
+	</div>
+</div>
+
+<script>
+function activatePaymentWidget (options) {
+	options = options || {};
+
+	var onlineButton = document.querySelector('.payment-widget .online-button');
+	var offlineButton = document.querySelector('.payment-widget .offline-button');
+	var paymentWidget = document.querySelector('.payment-widget');
+	var paymentForm = document.querySelector('.payment-form');
+
+	var cmd = document.querySelector('.payment-form input[name="cmd');
+	var amount = document.querySelector('.payment-form input[name="amount"]');
+	var name = document.querySelector('.payment-form input[name="item_name"]');
+	var business = document.querySelector('.payment-form input[name="business');
+	var currency = document.querySelector('.payment-form input[name="currency_code');
+
+	options.name = options.name || '';
+	options.cmd = options.cmd || '_xclick';
+	options.amount = options.amount || '0';
+	options.business = options.business || '';
+	options.currency = options.currency || 'USD';
+
+	cmd.setAttribute('value', options.cmd);
+	name.setAttribute('value', options.name);
+	amount.setAttribute('value', options.amount);
+	business.setAttribute('value', options.business);
+	currency.setAttribute('value', options.currency);
+
+	paymentWidget.style.display = 'none';
+
+	offlineButton.addEventListener('click',  function () {
+		paymentWidget.style.display = 'none';
+	});
+}
+</script> -->
 
 
 	</main>
