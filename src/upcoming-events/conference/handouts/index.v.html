@@ -6,11 +6,37 @@
 	<div class="row">
 		<div class="col-sm-12 col-md-8">
 			<h3>Download Conference Handouts</h3>
-			<p>Handouts will be made available on this page after conference.</p>
-			<p>Check back soon!</p>
 		</div>
+		<div class="tiles"></div>
 		<div class="col-sm-12 col-md-4">
 			<!-- Partial for sponsors here -->
 		</div>
 	</div>
 </div>
+
+
+<script>
+	Astatine.ajax({
+		method: 'get',
+		action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/tnwf-handouts.json',
+		success: function (xhr) {
+			var list = JSON.parse(xhr.response);
+			var data = [];
+
+			for (var i = 0, l = list.resources.length; i < l; i++) {
+				var item = list.resources[i];
+				data.push({
+					title: item.public_id.replace('TNWF/handouts/', ''),
+					link: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/' + item.public_id + '.' + item.format,
+					image: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy,f_auto,w_100/' + item.public_id + '.png'
+				});
+			}
+
+			var tilesElement = document.querySelector('.tiles');
+			CreateTiles(tilesElement, data);
+		},
+		error: function (xhr) {
+			console.log(xhr);
+		}
+	});
+</script>

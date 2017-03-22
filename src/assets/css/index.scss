@@ -285,6 +285,45 @@ table tr:nth-child(2) {
 	float: right;
 }
 /*
+Tiles
+*/
+.tiles {
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+.tile {
+	width: 300px;
+	padding: 8px;
+	overflow: hidden;
+	display: inline-block;
+}
+.tile .image {
+	text-align: center;
+}
+.tile .image img {
+	height: 150px;
+	min-width: 150px;
+	background: lightgray;
+}
+.tile .title {
+	padding: 0.5rem;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1rem;
+}
+.tile .description {
+	padding: 0.5rem;
+	padding-top: 0;
+	text-align: left;
+}
+.tile:hover {
+	background: #efefef;
+}
+.tile a {
+	display: block;
+}
+/*
 	payment
 */
 .payment-widget {
