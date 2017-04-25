@@ -107,4 +107,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
+	var bannerAd = document.querySelector('.banner-ad');
+	var image = bannerAd.getElementsByTagName('img');
+	var x = 0;
+
+	function changeImage (x) {
+		for (var i = 0; i < x; i++) {
+			image[x].parentNode.classList.toggle('active');
+			x++;
+			console.log(x);
+		}
+	}
+	setTimeout(changeImage(x), 3000);
 });

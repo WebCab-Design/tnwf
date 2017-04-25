@@ -207,12 +207,12 @@ table tr:nth-child(2) {
     cursor: pointer;
     text-align: center;
     background: #00b3b3;
+    border: 1px solid #00b3b3;
 }
 
 .button.blue:hover {
     background: white;
     color: #00b3b3;
-    border: 1px solid #00b3b3;
 }
 
 .presented {
@@ -436,6 +436,14 @@ Tiles
 */
 .banner-ad img {
     width: 100%;
+}
+
+.banner-ad > a {
+    display: none;
+}
+
+.banner-ad > a.active {
+    display: block;
 }
 
 /*

@@ -176,11 +176,12 @@ table tr:nth-child(2) {
 	cursor: pointer;
 	text-align: center;
 	background: $primary-blue;
+	border: 1px solid $primary-blue;
 }
 .button.blue:hover {
 	background: white;
 	color: $primary-blue;
-	border: 1px solid $primary-blue;
+
 }
 .presented {
 	margin: auto;
