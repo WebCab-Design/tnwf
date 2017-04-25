@@ -376,8 +376,17 @@ Tiles
 
 /* Banner Ads
 */
-.banner-ad img {
-	width: 100%;
+.banner-ad {
+	img {
+		width: 100%;
+	}
+	> a {
+		display: none;
+	}
+
+}
+.banner-ad > a.active {
+	display: block;
 }
 /*
 	mobile
