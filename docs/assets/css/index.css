@@ -438,14 +438,6 @@ Tiles
     width: 100%;
 }
 
-.banner-ad > a {
-    display: none;
-}
-
-.banner-ad > a.active {
-    display: block;
-}
-
 /*
 	mobile
 */
