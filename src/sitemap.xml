@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>http://tucsonnursesweekfoundation.org/404.html</loc>
+		<lastmod>2017-08-16</lastmod>
+	</url>
+	<url>
 		<loc>http://tucsonnursesweekfoundation.org/CNAME</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
 		<loc>http://tucsonnursesweekfoundation.org/about/index.html</loc>
-		<lastmod>2017-08-16</lastmod>
-	</url>
-	<url>
-		<loc>http://tucsonnursesweekfoundation.org/about/terms-conditions/index.html</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
@@ -69,6 +69,18 @@
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
+		<loc>http://tucsonnursesweekfoundation.org/events/conference/index.html</loc>
+		<lastmod>2017-08-16</lastmod>
+	</url>
+	<url>
+		<loc>http://tucsonnursesweekfoundation.org/events/gala/index.html</loc>
+		<lastmod>2017-08-16</lastmod>
+	</url>
+	<url>
+		<loc>http://tucsonnursesweekfoundation.org/handouts/index.html</loc>
+		<lastmod>2017-08-16</lastmod>
+	</url>
+	<url>
 		<loc>http://tucsonnursesweekfoundation.org/index.css</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
@@ -101,10 +113,6 @@
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
-		<loc>http://tucsonnursesweekfoundation.org/registration/presenter/index.html</loc>
-		<lastmod>2017-08-16</lastmod>
-	</url>
-	<url>
 		<loc>http://tucsonnursesweekfoundation.org/registration/speaker-presentation/index.html</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
@@ -113,35 +121,23 @@
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
-		<loc>http://tucsonnursesweekfoundation.org/sitemap.html</loc>
+		<loc>http://tucsonnursesweekfoundation.org/sitemap/index.html</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
-		<loc>http://tucsonnursesweekfoundation.org/sponsor-donate/index.html</loc>
+		<loc>http://tucsonnursesweekfoundation.org/sitemap.xml</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
-		<loc>http://tucsonnursesweekfoundation.org/sponsor-donate/sponsor-zones/index.html</loc>
+		<loc>http://tucsonnursesweekfoundation.org/sponsor/donate/index.html</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
-		<loc>http://tucsonnursesweekfoundation.org/sponsor-donate/sponsors/index.html</loc>
+		<loc>http://tucsonnursesweekfoundation.org/sponsor/zones/index.html</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
 	<url>
-		<loc>http://tucsonnursesweekfoundation.org/upcoming-events/conference/handouts/index.html</loc>
-		<lastmod>2017-08-16</lastmod>
-	</url>
-	<url>
-		<loc>http://tucsonnursesweekfoundation.org/upcoming-events/conference/index.html</loc>
-		<lastmod>2017-08-16</lastmod>
-	</url>
-	<url>
-		<loc>http://tucsonnursesweekfoundation.org/upcoming-events/gala/index.html</loc>
-		<lastmod>2017-08-16</lastmod>
-	</url>
-	<url>
-		<loc>http://tucsonnursesweekfoundation.org/upcoming-events/index.html</loc>
+		<loc>http://tucsonnursesweekfoundation.org/terms-conditions/index.html</loc>
 		<lastmod>2017-08-16</lastmod>
 	</url>
 </urlset>
