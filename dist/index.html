@@ -13,7 +13,6 @@
 	<script src="/assets/js/nav-bar.js" defer></script>
 	<script src="/assets/js/tiles.js" defer></script>
 	<script src="/assets/js/slider.min.js" defer></script>
-	<script src="/assets/js/gallery.min.js" defer></script>
 	<script src="/assets/js/astatine.min.js" defer></script>
 	<script src="/assets/js/input.js" defer></script>
 	<script src="/index.js" defer></script>
@@ -76,60 +75,18 @@
 	<main>
 		
 
-<style>
-	.section {
-		margin: 24px auto;
-	}
-	.quote {
-		padding: 24px;
-		text-align: center;
-		background: #e2e2e2;
-	}
-	.quote > div {
-		width: 60%;
-		margin: auto;
-	}
-	.social-wrap {
-		border: 1px solid #cacaca;
-		border-radius: 8px;
-		padding: 16px;
-		max-width: 320px;
-		min-width: 300px;
-	}
-	.f-head {
-		border-radius: 8px 8px 0 0;
-		color: #3B5998;
-		padding: 8px;
-	}
-	.banner img {
-		position: relative;
-		z-index: -1;
-	}
-
-	.more-sponsors {
-		margin: auto;
-	}
-	.more-sponsors > div {
-		display: inline-block;
-		margin: 16px 16px auto;
-
-	}
-	.more-sponsors img {
-		max-width: 200px;
-		max-height: 150px;
-	}
-
-</style>
-
 <div id="fb-root"></div>
+<style>#fb-root {overflow: hidden;}</style>
 <script>
-	(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
+	window.addEventListener('DOMContentLoaded', function () {
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	});
 </script>
 
 <div class="banner">
@@ -147,7 +104,17 @@
 	<img src="http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,fl_any_format.lossy,h_400,w_1920/v1446919520/arizona_nature3_yg71aa.png" alt="image of desert" no-repeat fixed />
 </div>
 <div class="content">
-	<div class="slider banner-ad" data-index="0" data-interval="5000">
+	
+<style>
+	.sponsor-banner {
+		margin-bottom: 3rem;
+		img {
+			width: 100%;
+		}
+	}
+</style>
+
+<div class="slider sponsor-banner" data-index="0" data-interval="5000">
 	<a href="http://jobs.tmcaz.com/" target="_blank">
 		<img src="https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy/v1490385010/TNWF/Ruby-up/TMC-082_Fab_50_Nurses_2017_1000x125_Web_Ad.jpg" alt="Tmc banner ad">
 	</a>
@@ -234,9 +201,8 @@
 	<div class="section">
 		<h2>2017 Fabulous 50 Winners</h2>
 		<hr>
-		<div class="photo-scroll">
-	<div class="gallery-fab50"></div>
-</div>
+		<div class="gallery-fab50"></div>
+<script src="/assets/js/gallery.min.js"></script>
 
 	</div>
 </div>
@@ -268,20 +234,14 @@
 				</ul>
 			</div>
 			<div>
-				<img src="/assets/images/logo.svg" alt="tucson nurses week foundation logo" />
+				<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
 				<p>Po Box 65085, Tucson, AZ 85728</p>
 				<p><a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a></p>
 			</div>
 		</div>
 		<div class="foot-bp">
-			<div>
-				<p>Tucson Nurses Week Foundation | Copyright 2016 | Sitemap</p>
-			</div>
-			<div>
-				<p>
-					<a href="http://webcabdesign.com/">Powered by WebCAB</a>
-				</p>
-			</div>
+			<p>Copyright 2016 Tucson Nurses Week Foundation</p>
+			<a href="http://webcab.site/">Powered by WebCAB</a>
 		</div>
 	</footer>
 

@@ -13,7 +13,6 @@
 	<script src="/assets/js/nav-bar.js" defer></script>
 	<script src="/assets/js/tiles.js" defer></script>
 	<script src="/assets/js/slider.min.js" defer></script>
-	<script src="/assets/js/gallery.min.js" defer></script>
 	<script src="/assets/js/astatine.min.js" defer></script>
 	<script src="/assets/js/input.js" defer></script>
 	<script src="/index.js" defer></script>
@@ -76,6 +75,7 @@
 	<main>
 		
 
+
 <style>
 	.form {
 		display: none;
@@ -83,6 +83,7 @@
 </style>
 
 <div class="content">
+
 	<div class="row">
 		<div class="col-xs-12 col-sm-3">
 			<h3>More Awards</h3>
@@ -95,17 +96,13 @@
 		</div>
 		<div class="col-xs-12 col-sm-9 first-sm">
 			<h1>Fabulous 50</h1>
+			<h3>Nominations Closed</h3>
 			<p>During the annual Tucson Nurses Week events the Foundation recognizes, publicizes, and supports the accomplishments, innovations, and contributions of Nurses to the health of our community by honoring 50 outstanding nurses.</p>
 			<!-- <button class="show-form button blue" type="button">Nominate a Nurse Now</button> -->
-			<h3>Nominations Closed!</h3>
-			<h5>Thank you!</h5>
 		</div>
 	</div>
-	<!-- Form drops in on button click -->
-
 
 	<form class="form">
-		<input type="hidden" name="*cc" value="cmactnwf@cox.net" />
 		<div class="row">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -113,7 +110,6 @@
 			<input class="col-xs-10 col-sm-5" type="tel" name="Phone" placeholder="Phone" required>
 			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Your Address</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street" required>
@@ -121,7 +117,6 @@
 			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Zipcode" placeholder="Zipcode" required>
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Nomination Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee First Name" placeholder="First Name" required>
@@ -130,7 +125,6 @@
 			<input class="col-xs-10 col-sm-5" type="email" name="Nominee Email" placeholder="Email" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Employer" placeholder="Employer">
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Nomination Address</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Street" placeholder="Street" required>
@@ -138,7 +132,6 @@
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee State" placeholder="State" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Zipcode" placeholder="Zipcode" required>
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Details</h4>
 			<p class="col-xs-12">In short, concise paragraphs, please describe how this nurse goes above and beyond their duties in each of these areas. We're looking for the WOW-factor your nurse possesses. Please do not use names, instead use "HE" or "SHE".</p>
@@ -155,15 +148,16 @@
 			<p class="col-xs-12">Describe their role modeling and mentoring service to others (250 words or less)</p>
 			<textarea class="col-xs-10 col-sm-5" name="Describe role modeling and mentoring service" e-max-words="250" e-counter="true" required></textarea>
 		</div>
-
 		<div class="row">
+			<input type="hidden" name="*cc" value="cmactnwf@cox.net" />
 			<input type="hidden" name="Form Name" value="Fabulous 50 Award">
-			<input type="hidden" name="*formname" value="Fabulous 50 Award">
+			<input type="hidden" name="*formname" value="tucsonnursesweekfoundation.org: Fabulous 50 Award">
 			<input class="button blue col-xs-3" type="submit" value="Nominate">
 		</div>
 	</form>
 
 	<div class="response"></div>
+
 </div>
 
 	</main>
@@ -186,20 +180,14 @@
 				</ul>
 			</div>
 			<div>
-				<img src="/assets/images/logo.svg" alt="tucson nurses week foundation logo" />
+				<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
 				<p>Po Box 65085, Tucson, AZ 85728</p>
 				<p><a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a></p>
 			</div>
 		</div>
 		<div class="foot-bp">
-			<div>
-				<p>Tucson Nurses Week Foundation | Copyright 2016 | Sitemap</p>
-			</div>
-			<div>
-				<p>
-					<a href="http://webcabdesign.com/">Powered by WebCAB</a>
-				</p>
-			</div>
+			<p>Copyright 2016 Tucson Nurses Week Foundation</p>
+			<a href="http://webcab.site/">Powered by WebCAB</a>
 		</div>
 	</footer>
 

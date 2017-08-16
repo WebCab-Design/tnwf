@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
-	
+
 	var gallery = document.querySelector('.gallery-fab50');
 	if (gallery) {
 		Astatine.ajax({
