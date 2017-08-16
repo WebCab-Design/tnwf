@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 394 108" xml:space="preserve">
+<style type="text/css">
+.st0{fill:#745850;}
+.st1{font-family:'Cochin';}
+.st2{font-size:70px;}
+.st3{fill:#00B3B3;}
+.st4{font-family:'LucidaGrande';}
+.st5{font-size:35px;}
+.st6{fill:#755950;}
+.st7{font-size:25px;}
+</style>
+<text transform="matrix(1 0 0 1 5 75)" class="st0 st1 st2">Nurses</text>
+<text transform="matrix(1 0 0 1 203 75)" class="st3 st4 st2">Week</text>
+<text transform="matrix(1 0 0 1 60 31)" class="st3 st4 st5">Tucson</text>
+<text transform="matrix(1 0 0 1 230 100)" class="st6 st4 st7">Foundation</text>
+<rect x="209" y="89" class="st3" width="20" height="5"/>
+<rect x="217" y="81" class="st3" width="5" height="20"/>
+</svg>

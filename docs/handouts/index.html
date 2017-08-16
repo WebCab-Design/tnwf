@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Houndouts | Tucson Nurses Week Foundation</title>
+
+	<link rel="stylesheet" href="/index.css"/>
+	<link rel="stylesheet" href="/assets/css/flexboxgrid.min.css"/>
+
+	<script src="/assets/js/nav-bar.js" defer></script>
+	<script src="/assets/js/tiles.js" defer></script>
+	<script src="/assets/js/slider.min.js" defer></script>
+	<script src="/assets/js/astatine.min.js" defer></script>
+	<script src="/assets/js/input.js" defer></script>
+	<script src="/index.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
+		</div>
+		<nav class="nav-bar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about/">About</a></li>
+				<li>
+					<a>Events</a>
+					<ul>
+						<li><a href="/events/conference/">Conference &amp; Health Fair</a></li>
+						<li><a href="/events/gala/">Gala</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>Registration</a>
+					<ul>
+						<li><a href="/registration/conference/">Conference &amp; Health Fair</a></li>
+						<li><a href="/registration/gala/">Gala</a></li>
+						<li><a href="/registration/vendor/">Vendor</a></li>
+						<li><a href="/registration/poster-presentation/">Poster Presentation</a></li>
+						<li><a href="/registration/speaker-presentation/">Speaker Presentation</a></li>
+						<li><a href="/handouts/">TNWF Handouts</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>Awards</a>
+					<ul>
+						<li><a href="/awards/fabulous-50/">Fabulous 50</a></li>
+						<li><a href="/awards/most-inspirational-mentor/">Most Inspirational Mentor</a></li>
+						<li><a href="/awards/alex-stutze/">Alex Stuetze</a></li>
+						<li><a href="/awards/research-grant/">Reasearch Grant</a></li>
+						<li><a href="/awards/past-awardees/">Past Awardees</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>Sponsor</a>
+					<ul>
+						<li><a href="/sponsor/donate/">Donate</a></li>
+						<li><a href="/sponsor/zones/">Zones</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		
+
+
+
+<div class="content">
+	<div class="row">
+		<div class="col-sm-12 col-md-8">
+			<h3>Download Conference Handouts</h3>
+		</div>
+		<!-- <div class="tiles"></div> -->
+		<div class="col-sm-12 col-md-4">
+			<!-- Partial for sponsors here -->
+		</div>
+	</div>
+</div>
+
+<script>
+	Astatine.ajax({
+		method: 'get',
+		action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/tnwf-handouts.json',
+		success: function (xhr) {
+			var list = JSON.parse(xhr.response);
+			var data = [];
+
+			for (var i = 0, l = list.resources.length; i < l; i++) {
+				var item = list.resources[i];
+				data.push({
+					title: item.public_id.replace('TNWF/handouts/', ''),
+					link: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/' + item.public_id + '.' + item.format,
+					image: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy,f_auto,w_100/' + item.public_id + '.png'
+				});
+			}
+
+			var tilesElement = document.querySelector('.tiles');
+			CreateTiles(tilesElement, data);
+		},
+		error: function (xhr) {
+			console.log(xhr);
+		}
+	});
+</script>
+
+	</main>
+
+	<footer>
+		<div class="row">
+		<!-- <div class="foot-tp"> -->
+			<div class="col-xs">
+				<div class="hide-medium">
+					<h3>About Us</h3>
+					<hr>
+					<p>Tucson Nurses Week Foundation is a 501©(3) tax exempt organization located in Tucson, Arizona.</p>
+					<a class="button blue" href="https://res.cloudinary.com/dbc2wlvk8/image/upload/v1493149016/TNWF/TNW-brochure2017.pdf" target="_blank" rel="noopener">Our Brochure</a>
+				</div>
+				<div class="hide-medium">
+					<h3>Useful Links</h3>
+					<hr>
+					<ul>
+						<li><a href="/about/">About Tucson Nurses Week</a></li>
+						<li><a href="/terms-conditions/">Term &amp; Conditions</a></li>
+						<li><a href="/sitemap/">Sitemap</a></li>
+					</ul>
+				</div>
+				<div>
+					<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
+					<p>Po Box 65085, Tucson, AZ 85728</p>
+					<p><a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		<!-- <div class="foot-bp"> -->
+			<div class="col-xs">
+				<p>Copyright 2016 Tucson Nurses Week Foundation</p>
+				<a href="http://webcab.site/" target="_blank" rel="noopener">Powered by WebCAB</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://use.typekit.net/ssi5zbk.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+</body>
+</html>
