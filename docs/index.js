@@ -1,4 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', function () {
+
 	var amount = document.querySelector('.payment-widget input[name=amount]');
 	var paymentWidget = document.querySelector('.payment-widget');
 	var showFormButton = document.querySelector('.show-form');
@@ -105,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
+
 	var gallery = document.querySelector('.gallery-fab50');
 	if (gallery) {
 		Astatine.ajax({
@@ -128,7 +131,5 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
-
-
 
 });

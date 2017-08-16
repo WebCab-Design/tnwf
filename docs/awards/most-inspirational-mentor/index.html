@@ -4,57 +4,48 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Most Inspirational Mentor | Awards | Tucson Nurses Week Foundation</title>
 
 	<link rel="stylesheet" href="/index.css"/>
 	<link rel="stylesheet" href="/assets/css/flexboxgrid.min.css"/>
 
-	<script src="/assets/js/tiles.js" charset="utf-8"></script>
-	<script src="/assets/js/nav-bar.js"></script>
-	<script src="/assets/js/slider.min.js"></script>
-	<script src="/assets/js/gallery.min.js"></script>
-	<script src="/assets/js/astatine.min.js"></script>
-	<script src="/assets/js/input.js"></script>
-	<script src="/index.js"></script>
-
-	<script src="https://use.typekit.net/ssi5zbk.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<script src="/assets/js/nav-bar.js" defer></script>
+	<script src="/assets/js/tiles.js" defer></script>
+	<script src="/assets/js/slider.min.js" defer></script>
+	<script src="/assets/js/astatine.min.js" defer></script>
+	<script src="/assets/js/input.js" defer></script>
+	<script src="/index.js" defer></script>
 </head>
 <body>
 	<header>
 		<div class="logo">
-			<img src="/assets/images/logo.svg" alt="tucson nurses week foundation logo" />
+			<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
 		</div>
 		<nav class="nav-bar">
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/about/">About</a></li>
 				<li>
-					<a href="#!!">Upcoming Events</a>
+					<a>Events</a>
 					<ul>
-						<li>
-							<a href="#!!">Registration</a>
-							<ul>
-								<li><a href="/registration/conference">Conference Registration</a></li>
-								<li><a href="/registration/gala">Gala Registration</a></li>
-								<li><a href="/registration/vendor">Vendor Registration</a></li>
-								<!-- <li><a href="/registration/presenter">Presenter Registration</a></li> -->
-								<li>
-									<a href="#!!">Presenter</a>
-									<ul>
-										<li><a href="/registration/poster-presentation">Poster Presentation Registration</a></li>
-										<li><a href="/registration/speaker-presentation">Speaker Presentation Registration</a></li>
-									</ul>
-								</li>
-								<li><a href="/upcoming-events/conference/handouts/">TNWF Handouts</a></li>
-							</ul>
-						</li>
-						<li><a href="/upcoming-events/conference/">Conference/Health Fair</a></li>
-						<li><a href="/upcoming-events/gala/">Gala</a></li>
+						<li><a href="/events/conference/">Conference &amp; Health Fair</a></li>
+						<li><a href="/events/gala/">Gala</a></li>
 					</ul>
 				</li>
 				<li>
-					<a href="#!!">Awards</a>
+					<a>Registration</a>
+					<ul>
+						<li><a href="/registration/conference/">Conference &amp; Health Fair</a></li>
+						<li><a href="/registration/gala/">Gala</a></li>
+						<li><a href="/registration/vendor/">Vendor</a></li>
+						<li><a href="/registration/poster-presentation/">Poster Presentation</a></li>
+						<li><a href="/registration/speaker-presentation/">Speaker Presentation</a></li>
+						<li><a href="/handouts/">TNWF Handouts</a></li>
+					</ul>
+				</li>
+				<li>
+					<a>Awards</a>
 					<ul>
 						<li><a href="/awards/fabulous-50/">Fabulous 50</a></li>
 						<li><a href="/awards/most-inspirational-mentor/">Most Inspirational Mentor</a></li>
@@ -64,11 +55,10 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#!!">Sponsor/Donate</a>
+					<a>Sponsor</a>
 					<ul>
-						<li><a href="/sponsor-donate/sponsors/">Sponsor/Donate</a></li>
-						<!-- <li><a href="/sponsor-donate/sponsors/">Sponsors</a></li> -->
-						<li><a href="/sponsor-donate/sponsor-zones/">Sponsor Zones</a></li>
+						<li><a href="/sponsor/donate/">Donate</a></li>
+						<li><a href="/sponsor/zones/">Zones</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -77,6 +67,7 @@
 
 	<main>
 		
+
 
 <style>
 	em {
@@ -88,6 +79,7 @@
 </style>
 
 <div class="content">
+
 	<div class="row">
 		<div class="col-xs-12 col-sm-3">
 			<h3>More Awards</h3>
@@ -95,18 +87,20 @@
 	<li><a href="../fabulous-50/">Fabulous 50</a></li>
 	<li><a href="../most-inspirational-mentor/">Most Inspirational Mentor</a></li>
 	<li><a href="../alex-stutze/">Alex Stuetze Award</a></li>
+	<li><a href="../research-grant/">Research Grant</a></li>
+	<li><a href="../past-awardees/">Past Awardees</a></li>
 </ul>
 
 		</div>
 		<div class="col-xs-12 col-sm-9 first-sm">
 			<h1>Most Inspirational Mentor</h1>
-			<p>During the annual Tucson Nurses Week events the Foundation recognizes, publicizes, and supports the accomplishments, innovations, and contributions of Nurses to the health of our community by honoring 50 outstanding nurses.</h3>
-			<h5>Thank you!</h5>
-			<!-- <button class="show-form button blue" type="button">Nominate Now</button> -->
+			<p>During the annual Tucson Nurses Week events the Foundation recognizes, publicizes, and supports the accomplishments, innovations, and contributions of Nurses to the health of our community by honoring 50 outstanding nurses.</p>
+			<!-- <h3>Nominations Closed</h3> -->
+			<button class="show-form button blue" type="button">Nominate</button>
 		</div>
 	</div>
+
 	<form class="form">
-		<input type="hidden" name="*cc" value="cmactnwf@cox.net" />
 		<div class="row">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -114,7 +108,6 @@
 			<input class="col-xs-10 col-sm-5" type="tel" name="Phone Number" placeholder="Phone" required>
 			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Your Address</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street" required>
@@ -122,7 +115,6 @@
 			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Zipcode" placeholder="Zipcode" required>
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Nominee Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee First Name" placeholder="First Name" required>
@@ -131,7 +123,6 @@
 			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Employer" placeholder="Employer">
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Nominee Address</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Street" placeholder="Street" required>
@@ -139,7 +130,6 @@
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee State" placeholder="State" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Nominee Zipcode" placeholder="Zipcode" required>
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Describe</h4>
 			<p class="col-xs-12">In short, concise paragraphs, please describe how this nurse goes above and beyond their duties in each of these areas. We're looking for the WOW-factor your nurse possesses. Please do not use names, instead use "HE" or "SHE".</p>
@@ -162,52 +152,56 @@
 			<p class="col-xs-12">Describe how this nurse is a visionary (250 words or less)</p>
 			<textarea class="col-xs-10 col-sm-5" name="Describe how this nurse is a visionary" e-max-words="250" e-counter="true" required></textarea>
 		</div>
-
 		<div class="row">
+			<input type="hidden" name="*cc" value="cmactnwf@cox.net" />
 			<input type="hidden" name="Form Name" value="Most Inspirational Mentor">
-			<input type="hidden" name="*formname" value="Most Inspirational Mentor">
+			<input type="hidden" name="*formname" value="tucsonnursesweekfoundation.org: Most Inspirational Mentor">
 			<input class="button blue col-xs-3" type="submit" value="Nominate">
 		</div>
 	</form>
 
 	<div class="response"></div>
+
 </div>
 
 	</main>
 
 	<footer>
-		<div class="foot-tp">
-			<div class="hide-medium">
-				<h3>About Us</h3>
-				<hr>
-				<p>Tucson Nurses Week Foundation is a 501©(3) tax exempt organization located in Tucson, Arizona.</p>
-				<a class="button blue" target="-_blank" href="https://res.cloudinary.com/dbc2wlvk8/image/upload/v1493149016/TNWF/TNW-brochure2017.pdf">Our Brochure</a>
-			</div>
-			<div class="hide-medium">
-				<h3>Useful Links</h3>
-				<hr>
-				<ul>
-					<li><a href="/about/">Tucson Nurses Week</a></li>
-					<li><a href="/about/terms-conditions/">Term &amp; Conditions</a></li>
-					<li><a href="/sitemap.html">Sitemap</a></li>
-				</ul>
-			</div>
-			<div>
-				<img src="/assets/images/logo.svg" alt="tucson nurses week foundation logo" />
-				<p>Po Box 65085, Tucson, AZ 85728</p>
-				<p><a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a></p>
+		<div class="row">
+		<!-- <div class="foot-tp"> -->
+			<div class="col-xs">
+				<div class="hide-medium">
+					<h3>About Us</h3>
+					<hr>
+					<p>Tucson Nurses Week Foundation is a 501©(3) tax exempt organization located in Tucson, Arizona.</p>
+					<a class="button blue" href="https://res.cloudinary.com/dbc2wlvk8/image/upload/v1493149016/TNWF/TNW-brochure2017.pdf" target="_blank" rel="noopener">Our Brochure</a>
+				</div>
+				<div class="hide-medium">
+					<h3>Useful Links</h3>
+					<hr>
+					<ul>
+						<li><a href="/about/">About Tucson Nurses Week</a></li>
+						<li><a href="/terms-conditions/">Term &amp; Conditions</a></li>
+						<li><a href="/sitemap/">Sitemap</a></li>
+					</ul>
+				</div>
+				<div>
+					<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
+					<p>Po Box 65085, Tucson, AZ 85728</p>
+					<p><a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a></p>
+				</div>
 			</div>
 		</div>
-		<div class="foot-bp">
-			<div>
-				<p>Tucson Nurses Week Foundation | Copyright 2016 | Sitemap</p>
-			</div>
-			<div>
-				<p>
-					<a href="http://webcabdesign.com/">Powered by WebCAB</a>
-				</p>
+		<div class="row">
+		<!-- <div class="foot-bp"> -->
+			<div class="col-xs">
+				<p>Copyright 2016 Tucson Nurses Week Foundation</p>
+				<a href="http://webcab.site/" target="_blank" rel="noopener">Powered by WebCAB</a>
 			</div>
 		</div>
 	</footer>
+
+	<script src="https://use.typekit.net/ssi5zbk.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>
