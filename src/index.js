@@ -82,38 +82,46 @@ if (form) {
 
 		},
 		complete: function (error, success) {
-			var response = document.querySelector('.response');
-			if (error) {
-				console.log(error);
+			var responses = document.querySelectorAll('.response');
 
-				if (typeof error === 'string') {
-					response.style.color = 'orange';
-					response.innerText = error;
+			for (var i = 0; i < responses.length; i++) {
+				var response = responses[i];
+
+				if (error) {
+
+					console.log(error);
+
+					if (typeof error === 'string') {
+						response.style.color = 'orange';
+						response.innerText = error;
+					} else {
+						response.style.color = 'red';
+						response.innerText = 'Error Please See Console';
+					}
+
 				} else {
-					response.style.color = 'red';
-					response.innerText = 'Error Please See Console';
+
+					form.style.display = 'none';
+					response.style.color = '#6db4b1';
+					response.innerText = 'Form Is Submitted';
+
+					if (paymentWidget) {
+						var itemName = document.querySelector('input[name="item_name"]');
+						var handlePayment = function () { paymentWidget.style.display = 'none'; };
+						var onlineButton = document.querySelector('.online-button');
+						var offlineButton = document.querySelector('.offline-button');
+						var formName = document.querySelector('input[name="*formname"]');
+						itemName.value = formName.value;
+						amount.value = total.toString();
+						paymentWidget.style.display = 'block';
+						onlineButton.addEventListener('click', handlePayment);
+						offlineButton.addEventListener('click', handlePayment);
+					}
+
 				}
-
-			} else {
-
-				form.style.display = 'none';
-				response.style.color = '#6db4b1';
-				response.innerText = 'Form Is Submitted';
-
-				if (paymentWidget) {
-					var itemName = document.querySelector('input[name="item_name"]');
-					var handlePayment = function () { paymentWidget.style.display = 'none'; };
-					var onlineButton = document.querySelector('.online-button');
-					var offlineButton = document.querySelector('.offline-button');
-					var formName = document.querySelector('input[name="*formname"]');
-					itemName.value = formName.value;
-					amount.value = total.toString();
-					paymentWidget.style.display = 'block';
-					onlineButton.addEventListener('click', handlePayment);
-					offlineButton.addEventListener('click', handlePayment);
-				}
-
+				
 			}
+
 		}
 	});
 }
