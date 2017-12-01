@@ -7,6 +7,7 @@ var form = document.querySelector('.form');
 var venderSelect = document.querySelector('.vender-select');
 var lunchCheck = document.querySelector('input[name="Lunch"]');
 var total = 0;
+var ticketList;
 
 if (showFormButton) {
 	showFormButton.addEventListener('click', function () {
@@ -15,7 +16,7 @@ if (showFormButton) {
 }
 
 if (ticket) {
-	var ticketList = form.querySelector('.ticket-list');
+	ticketList = form.querySelector('.ticket-list');
 	var ticketFirst = form.querySelector('.ticket-first');
 	var ticketLast = form.querySelector('.ticket-last');
 	var ticketHidden = form.querySelector('.ticket-hidden');
@@ -67,8 +68,8 @@ if (form) {
 
 			if (paymentWidget) {
 
-			// if (ticketList.children.length === 0) {
-			if (total == 0) {
+				if (ticketList && ticketList.children && ticketList.children.length === 0) {
+					// if (total == 0) {
 					reject('Requires at least one individual.');
 				} else {
 					if (ticketHidden) data[ticketHidden.name] = ticketHidden.value;
@@ -119,7 +120,7 @@ if (form) {
 					}
 
 				}
-				
+
 			}
 
 		}
