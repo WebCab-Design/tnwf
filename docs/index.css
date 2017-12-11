@@ -104,9 +104,6 @@ a:hover {
 textarea {
   transition: none;
 }
-form {
-  margin: 32px auto;
-}
 form > div {
   margin: 32px auto;
 }
