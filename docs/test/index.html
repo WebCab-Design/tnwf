@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Conference And Health Fair Registration | Registration | Tucson Nurses Week Foundation</title>
+	<title>Speaker Presentation | Registration | Tucson Nurses Week Foundation</title>
 
 	<link rel="stylesheet" href="/index.css"/>
 	<link rel="stylesheet" href="/assets/css/flexboxgrid.min.css"/>
@@ -70,28 +70,53 @@
 
 
 <div class="content">
-	<h1>Conference And Health Fair Registration - 2018</h1>
-	<!-- <h3>Registration Closed</h3> -->
+	<h1>Speaker Presentation - 2018</h1>
+	<!-- <h3>Submission Closed</h3> -->
+
+	<p>Every presentation must have at least one presenter who is an RN. Incomplete submissions may not be considered.</p>
+	<p><strong>This required information will be printed in the program and must be included to be considered.</strong></p>
+	<p>Conference fee is waived for the primary presenter only; all other presenters must pay the registration fee if they plan to attend the conference. There is no fee required to submit the abstract.</p>
 
 	<form class="form">
-		<div class="row center-xs start-sm">
-			<h4 class="col-xs-12">Your Information</h4>
+		<div class="row">
+			<h4 class="col-xs-12">Primary Presenter</h4>
+			<p class="col-xs-12">Presenter name and credentials as it will appear in the program.</p>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Last Name" placeholder="Last Name" required>
-			<input class="col-xs-10 col-sm-5" type="tel" name="Phone Number" placeholder="Phone Number" required>
-			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email Address" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="Company" placeholder="Company" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="Day Phone" placeholder="Day Phone" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="Work Phone" placeholder="Work Phone" required>
+			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Address" placeholder="Address" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Position/Title" placeholder="Position/Title" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Employer" placeholder="Employer" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="Credentials" placeholder="Credentials" required>
 		</div>
 
 		<div class="row">
-			<h4 class="col-xs-12">Attendees</h4>
-			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
+			<h4  class="col-xs-12">Presentation Details</h4>
+			<p class="col-xs-12">Please fill out the following information about your presentation (250 words or less).</p>
+			<input class="col-xs-10 col-sm-5" type="text" name="Presentation Title" placeholder="Presentation Title" required>
+			<textarea class="col-xs-10" name="Purpose/Objective" placeholder="2-3 measureable outcomes. (Required for CEU and will appear in the program)" e-max-words="250" e-counter="true"></textarea>
+			<textarea class="col-xs-10" name="Importance To Nursing" placeholder="Importance to nursing. (As it will appear in the program)" e-max-words="250" e-counter="true" required></textarea>
+			<textarea class="col-xs-10" name="Brief Outline" placeholder="Brief outline. (Required for CEU and will NOT appear on the program)" e-max-words="250" e-counter="true"></textarea>
+			<textarea class="col-xs-10" name="Teaching Methods" placeholder="Teaching methods, strategies, materials, and resources for session. (Required for CEU and will NOT appear in the program)" e-max-words="250" e-counter="true"></textarea>
+		</div>
+
+		<div class="row">
+			<h4 class="col-xs-12">Presentation Support</h4>
+			<p class="col-xs-12">Please list any options you might need. Due note that the rooms are set up in theater style with a screen and PowerPoint projector.</p>
+			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="audio, &#13;&#10;podium, &#13;&#10;etc..."></textarea>
+		</div>
+
+		<div class="row center-xs start-sm">
+			<h4 class="col-xs-12">Presenters</h4>
+			<p class="col-xs-12">Please list the first and last name of each individual who will be included. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
 				<ol class="ticket-list col-xs-10"></ol>
-				<input class="ticket-hidden col-xs-10 col-sm-3" type="hidden" name="Names Of Attendees">
-				<input class="ticket-first col-xs-10 col-sm-3" type="text" placeholder="Ticket First Name">
-				<input class="ticket-last col-xs-10 col-sm-3" type="text" placeholder="Ticket Last Name">
-				<div class="ticket-add button blue col-xs-2" data-cost="80">Add</div>
+				<input class="ticket-hidden col-xs-10 col-sm-3" type="hidden" name="Names Of Other Presentors">
+				<input class="ticket-first col-xs-10 col-sm-3" type="text" placeholder="Presentor First Name">
+				<input class="ticket-last col-xs-10 col-sm-3" type="text" placeholder="Presentor Last Name">
+				<button class="ticket-add button blue col-xs-2" data-cost="90" data-first-discount="90" type="button">Add</button>
 			</div>
 		</div>
 
@@ -113,10 +138,12 @@
 		</div>
 
 		<div class="row">
-			<input type="hidden" name="Form Name" value="Conference/Healthy Fair">
-			<input type="hidden" name="*formname" value="tucsonnursesweekfoundation.org: Conference/Healthy Fair">
+			<input type="hidden" name="Form Name" value="Speaker Presentation">
+			<input type="hidden" name="*default_email" value="alex.steven.elias@gmail.com" />
+			<input type="hidden" name="*formname" value="tucsonnursesweekfoundation.org: test">
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
+
 	</form>
 
 	<div class="response"></div>

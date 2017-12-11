@@ -4,7 +4,7 @@
   "description": "Tucson Nurses Week Foundation",
   "main": "index.js",
   "scripts": {
-    "serve": "rm -r dist && muleify serve -wc src dist",
+    "s": "rm -r dev && muleify serve -wc src dev",
     "build": "rm -r docs/* && muleify pack src docs"
   },
   "repository": {

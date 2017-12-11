@@ -40,10 +40,13 @@ if (ticket) {
 
 			ticketList.appendChild(li);
 			total = Number(total) + ticketCost - (isFirstTicket ? ticketFirstDiscount : 0);
+
 			if (ticketTotal) ticketTotal.value = total.toString();
+
 		} else {
 			window.alert('First Name and Last Name are required');
 		}
+
 	});
 }
 
@@ -54,54 +57,71 @@ if (form) {
 		responseType: 'json',
 		action: 'https://www.enformed.io/zpn17s0',
 		prepare: function (data, resolve, reject) {
-			// data['*default_email'] = 'alex.steven.elias@gmail.com';
 
-			if (!data['*default_email']) data['*default_email'] = 'tnwf@live.com';
+			if (!data['*default_email']) {
+				data['*default_email'] = 'tnwf@live.com';
+			}
 
 			if (venderSelect) total = venderSelect.value;
 			if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
 
 			if (paymentWidget) {
-				if (total == 0) {
+
+			// if (ticketList.children.length === 0) {
+			if (total == 0) {
 					reject('Requires at least one individual.');
 				} else {
 					if (ticketHidden) data[ticketHidden.name] = ticketHidden.value;
 					if (ticketTotal) data[ticketTotal.name] = ticketTotal.value;
 					resolve(data);
 				}
+
 			} else {
 				resolve(data);
 			}
+
 		},
 		complete: function (error, success) {
-			var response = document.querySelector('.response');
-			if (error) {
-				console.log(error);
-				if (typeof error === 'string') {
-					response.style.color = 'orange';
-					response.innerText = error;
-				} else {
-					response.style.color = 'red';
-					response.innerText = 'Error Please See Console';
-				}
-			} else {
-				form.style.display = 'none';
-				response.style.color = '#6db4b1';
-				response.innerText = 'Form Is Submitted';
+			var responses = document.querySelectorAll('.response');
 
-				if (paymentWidget) {
-					var itemName = document.querySelector('input[name="item_name"]');
-					var handlePayment = function () { paymentWidget.style.display = 'none'; };
-					var onlineButton = document.querySelector('.online-button');
-					var offlineButton = document.querySelector('.offline-button');
-					var formName = document.querySelector('input[name="*formname"]');
-					itemName.value = formName.value;
-					amount.value = total.toString();
-					paymentWidget.style.display = 'block';
-					onlineButton.addEventListener('click', handlePayment);
-					offlineButton.addEventListener('click', handlePayment);
+			for (var i = 0; i < responses.length; i++) {
+				var response = responses[i];
+
+				if (error) {
+
+					console.log(error);
+
+					if (typeof error === 'string') {
+						response.style.color = 'orange';
+						response.innerText = error;
+					} else {
+						response.style.color = 'red';
+						response.innerText = 'Error Please See Console';
+					}
+
+				} else {
+
+					form.style.display = 'none';
+					response.style.color = '#6db4b1';
+					response.innerText = 'Form Is Submitted';
+
+					if (paymentWidget) {
+						var itemName = document.querySelector('input[name="item_name"]');
+						var handlePayment = function () { paymentWidget.style.display = 'none'; };
+						var onlineButton = document.querySelector('.online-button');
+						var offlineButton = document.querySelector('.offline-button');
+						var formName = document.querySelector('input[name="*formname"]');
+						itemName.value = formName.value;
+						amount.value = total.toString();
+						paymentWidget.style.display = 'block';
+						onlineButton.addEventListener('click', handlePayment);
+						offlineButton.addEventListener('click', handlePayment);
+					}
+
 				}
+				
 			}
+
 		}
 	});
 }
