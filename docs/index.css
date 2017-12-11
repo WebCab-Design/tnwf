@@ -15,12 +15,7 @@ body {
   overflow-x: hidden;
 }
 body {
-  display: flex;
   background: white;
-  flex-direction: column;
-}
-main {
-  flex: 1;
 }
 header {
   display: flex;
@@ -236,7 +231,6 @@ table tr:nth-child(2) {
   flex: 1;
   z-index: 1;
   color: #888;
-  display: flex;
   background: white;
   display: inline-block;
   vertical-align: middle;
