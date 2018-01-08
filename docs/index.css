@@ -15,12 +15,7 @@ body {
   overflow-x: hidden;
 }
 body {
-  display: flex;
   background: white;
-  flex-direction: column;
-}
-main {
-  flex: 1;
 }
 header {
   display: flex;
@@ -30,12 +25,9 @@ header {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 footer > div:nth-child(1) > div {
-  display: flex;
   padding: 1rem;
   color: #e2e2e2;
-  align-items: flex-start;
   background-color: #262626;
-  justify-content: space-around;
 }
 footer > div:nth-child(2) > div {
   padding: 1rem;
@@ -107,9 +99,6 @@ a:hover {
 textarea {
   transition: none;
 }
-form {
-  margin: 32px auto;
-}
 form > div {
   margin: 32px auto;
 }
@@ -155,6 +144,13 @@ td {
 table tr:nth-child(2) {
   background: #f8f8f8;
 }
+.slide {
+  padding: 10rem;
+  background: url('http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,fl_any_format.lossy/v1446919520/arizona_nature3_yg71aa.png') no-repeat;
+}
+.slide a {
+  margin: 0.5rem;
+}
 /*
 	globals
 */
@@ -168,14 +164,6 @@ table tr:nth-child(2) {
 .brownBg:hover {
   background: #745850;
   color: #fff;
-}
-.banner {
-  display: flex;
-  overflow: hidden;
-  max-height: 400px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
 }
 .overlay {
   position: absolute;
@@ -243,7 +231,6 @@ table tr:nth-child(2) {
   flex: 1;
   z-index: 1;
   color: #888;
-  display: flex;
   background: white;
   display: inline-block;
   vertical-align: middle;
