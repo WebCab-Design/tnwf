@@ -127,6 +127,60 @@ if (form) {
 	});
 }
 
+var data;
+var donateForm = document.querySelector('.donate-form');
+if (donateForm) {
+	Astatine.submit({
+		method: 'post',
+		responseType: 'json',
+		query: donateForm,
+		action: 'https://www.enformed.io/zpn17s0',
+		prepare: function (d, resolve, reject) {
+			data = d;
+
+			if (!data['*default_email']) {
+				data['*default_email'] = 'tnwf@live.com';
+			}
+			
+			if (data['Amount'] == 0) {
+				reject('Error: requires a donation amount');
+			} else {
+				resolve(data);
+			}
+		},
+		complete: function (error, success) {
+			var response = document.querySelector('.response');
+			if (error) {
+				if (typeof error === 'string') {
+					response.style.color = 'orange';
+					response.innerText = error;
+				} else {
+					response.style.color = 'red';
+					response.innerText = 'Error: please see console';
+					console.error(error);
+				}
+			} else {
+				response.style.color = '#6db4b1';
+				response.innerText = 'Donation Is Sent';
+
+				var paymentWidget = document.querySelector('.payment-widget');
+				var itemName = document.querySelector('.payment-widget input[name="item_name"]');
+				var amount = document.querySelector('.payment-widget input[name="amount"]');
+				var handlePayment = function () { paymentWidget.style.display = 'none'; };
+				var onlineButton = document.querySelector('.online-button');
+				var offlineButton = document.querySelector('.offline-button');
+
+				itemName.value = data['Form Name'];
+				amount.value = data['Amount'].toString();
+
+				paymentWidget.style.display = 'block';
+				onlineButton.addEventListener('click', handlePayment);
+				offlineButton.addEventListener('click', handlePayment);
+			}
+		}
+	});
+}
+
 var gallery = document.querySelector('.gallery-fab50');
 if (gallery) {
 	Astatine.ajax({
