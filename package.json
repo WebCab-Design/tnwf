@@ -1,24 +1,24 @@
 {
-  "name": "tnwf",
-  "version": "1.0.0",
-  "description": "Tucson Nurses Week Foundation",
-  "main": "index.js",
-  "scripts": {
-    "s": "rm -r dev && muleify serve -wc src dev",
-    "build": "rm -r docs/* && muleify pack src docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WebCab-Design/tnwf.git"
-  },
-  "author": "",
-  "license": "SEE LICENSE IN LICENSE",
-  "bugs": {
-    "url": "https://github.com/WebCab-Design/tnwf/issues"
-  },
-  "homepage": "https://github.com/WebCab-Design/tnwf#readme",
-  "dependencies": {
-    "astatine": "^1.2.0",
-    "erbium": "^1.4.6"
-  }
+	"name": "tnwf",
+	"version": "1.0.0",
+	"description": "Tucson Nurses Week Foundation",
+	"main": "index.js",
+	"scripts": {
+		"s": "rm -r dev/* && muleify serve -w src dev",
+		"b": "rm -r docs/* && muleify pack src docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/WebCab-Design/tnwf.git"
+	},
+	"author": "",
+	"license": "SEE LICENSE IN LICENSE",
+	"bugs": {
+		"url": "https://github.com/WebCab-Design/tnwf/issues"
+	},
+	"homepage": "https://github.com/WebCab-Design/tnwf#readme",
+	"dependencies": {
+		"astatine": "^1.2.0",
+		"erbium": "^1.4.6"
+	}
 }
