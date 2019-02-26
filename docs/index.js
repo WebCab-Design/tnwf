@@ -62,6 +62,7 @@ if (form) {
 			if (!data['*default_email']) {
 				data['*default_email'] = 'tnwf@live.com';
 			}
+			// data['*default_email'] = 'jonburns10@gmail.com';
 
 			if (venderSelect) total = venderSelect.value;
 			if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
@@ -141,7 +142,7 @@ if (donateForm) {
 			if (!data['*default_email']) {
 				data['*default_email'] = 'tnwf@live.com';
 			}
-			
+
 			if (data['Amount'] == 0) {
 				reject('Error: requires a donation amount');
 			} else {
