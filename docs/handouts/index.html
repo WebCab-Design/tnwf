@@ -70,15 +70,52 @@
 		
 
 
+<script src="/assets/js/astatine.min.js" charset="utf-8"></script>
 
 <div class="content">
+	
+<style>
+	.sponsor-banner {
+		margin-bottom: 3rem;
+	}
+	.sponsor-banner img {
+			width: 100%;
+	}
+</style>
+
+<div class="slider sponsor-banner" data-index="0" data-interval="5000">
+	<a href="http://jobs.tmcaz.com/" target="_blank">
+		<img src="https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto/v1521236662/TNWF/TMC-291_Fab_50_Nurses_2018_Web_Ad.jpg" alt="Tmc banner ad">
+	</a>
+	<a href="https://www.carondelet.org/about-us/careers" target="_blank">
+		<img src="https://res.cloudinary.com/dbc2wlvk8/image/upload/c_scale,fl_any_format.lossy,w_1000/v1493139115/TNWF/Ruby-up/CHN_Fab_50_1000x125px.jpg" alt="CHN banner ad">
+	</a>
+	<a href="http://jobs.northwestmedicalcenter.com/nurses" target="_blank">
+		<img src="https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy/v1493139115/TNWF/Ruby-up/NMC-fab50WebAd2017_3.jpg" alt="NMC banner ad">
+	</a>
+</div>
+
+
 	<div class="row">
-		<div class="col-sm-12 col-md-8">
-			<h3>Download Conference Handouts</h3>
+		<div class="col-xs-12 col-sm-9">
+			<h1>Download Conference Handouts</h1>
+			<div class="tiles"></div>
 		</div>
-		<!-- <div class="tiles"></div> -->
-		<div class="col-sm-12 col-md-4">
-			<!-- Partial for sponsors here -->
+		<div class="col-xs-12 col-sm-3">
+			<div class="presented">
+	<h3>Thank you Sponsors!</h3>
+	<hr/>
+	<div class="more-sponsors">
+		<img src="http://res.cloudinary.com/dbc2wlvk8/image/upload/c_scale,fl_any_format.lossy,w_200/v1477600318/TNWF/Ruby-up/Logo_TMC.jpg" alt="Tucson Medical Center, TMC" />
+
+		<img src="https://res.cloudinary.com/dbc2wlvk8/image/upload/c_scale,f_auto,fl_lossy,w_250/v1518645961/TNWF/Ruby-up/Carondelet-Final-Logos_Carondelet-Health-Network-Primary.jpg" alt="Carondelet" />
+
+		<img class="float-left" src="http://res.cloudinary.com/dbc2wlvk8/image/upload/c_scale,fl_any_format.lossy,w_200/v1490374869/TNWF/Ruby-up/CHSlogos.png" alt="Northwest Medical Center" />
+
+		<img src="http://res.cloudinary.com/dbc2wlvk8/image/upload/c_scale,fl_any_format.lossy,h_120/v1477600318/TNWF/Ruby-up/ARIZHealthNtwk_0.jpg" alt="Banner – University Medical Center Tucson" />
+	</div>
+</div>
+
 		</div>
 	</div>
 </div>
@@ -90,7 +127,7 @@
 		success: function (xhr) {
 			var list = JSON.parse(xhr.response);
 			var data = [];
-
+			console.log(list);
 			for (var i = 0, l = list.resources.length; i < l; i++) {
 				var item = list.resources[i];
 				data.push({

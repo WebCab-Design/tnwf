@@ -3,15 +3,18 @@
 	"title": "Houndouts | Tucson Nurses Week Foundation"
 } -->
 
+<script src="/assets/js/astatine.min.js" charset="utf-8"></script>
 
 <div class="content">
+	<!-- { "partial": "/partials/sponsor-banner.p.html" } -->
+
 	<div class="row">
-		<div class="col-sm-12 col-md-8">
-			<h3>Download Conference Handouts</h3>
+		<div class="col-xs-12 col-sm-9">
+			<h1>Download Conference Handouts</h1>
+			<div class="tiles"></div>
 		</div>
-		<!-- <div class="tiles"></div> -->
-		<div class="col-sm-12 col-md-4">
-			<!-- Partial for sponsors here -->
+		<div class="col-xs-12 col-sm-3">
+			<!-- { "partial": "partials/sponsor-sidebar.p.html" } -->
 		</div>
 	</div>
 </div>
@@ -23,7 +26,7 @@
 		success: function (xhr) {
 			var list = JSON.parse(xhr.response);
 			var data = [];
-
+			console.log(list);
 			for (var i = 0, l = list.resources.length; i < l; i++) {
 				var item = list.resources[i];
 				data.push({
