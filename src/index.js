@@ -56,11 +56,13 @@ if (form) {
 		query: form,
 		method: 'post',
 		responseType: 'json',
-		action: 'https://www.enformed.io/zpn17s0',
+		// action: 'https://www.enformed.io/zpn17s0',
+		action: '#', //lamda function url
 		prepare: function (data, resolve, reject) {
+			console.log(data);
 
-			if (!data['*default_email']) {
-				data['*default_email'] = 'tnwf@live.com';
+			if (!data['*to']) {
+				data['*to'] = 'tnwf@live.com';
 			}
 			// data['*default_email'] = 'jonburns10@gmail.com';
 
@@ -75,11 +77,11 @@ if (form) {
 				} else {
 					if (ticketHidden) data[ticketHidden.name] = ticketHidden.value;
 					if (ticketTotal) data[ticketTotal.name] = ticketTotal.value;
-					resolve(data);
+					// resolve(data);
 				}
 
 			} else {
-				resolve(data);
+				// resolve(data);
 			}
 
 		},
