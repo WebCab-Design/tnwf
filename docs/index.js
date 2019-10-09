@@ -57,12 +57,14 @@ if (form) {
 		method: 'post',
 		responseType: 'json',
 		action: 'https://www.enformed.io/zpn17s0',
+		// action: ' https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit', //lamda function url
 		prepare: function (data, resolve, reject) {
+			console.log(data);
 
-			if (!data['*default_email']) {
-				data['*default_email'] = 'tnwf@live.com';
-			}
-			// data['*default_email'] = 'jonburns10@gmail.com';
+			// if (!data['*to']) {
+			// 	data['*to'] = 'tnwf@live.com';
+			// }
+			data['*default_email'] = 'jonburns10@gmail.com';
 
 			if (venderSelect) total = venderSelect.value;
 			if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
@@ -77,7 +79,7 @@ if (form) {
 					if (ticketTotal) data[ticketTotal.name] = ticketTotal.value;
 					resolve(data);
 				}
-
+				console.log(data);
 			} else {
 				resolve(data);
 			}
@@ -85,7 +87,7 @@ if (form) {
 		},
 		complete: function (error, success) {
 			var responses = document.querySelectorAll('.response');
-
+			console.log(success);
 			for (var i = 0; i < responses.length; i++) {
 				var response = responses[i];
 
