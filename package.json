@@ -1,24 +1,25 @@
 {
-	"name": "tnwf",
+    "private": true,
+	"name": "tucsonnursesweekfoundation.org",
 	"version": "1.0.0",
 	"description": "Tucson Nurses Week Foundation",
 	"main": "index.js",
 	"scripts": {
-		"s": "rm -r dev/* && muleify -sw src dev",
-		"b": "rm -r docs/* && muleify -p src docs"
+		"test": "muleify -pw src dev -s dev",
+		"build": "rm -r docs/* && muleify -p src docs"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/WebCab-Design/tnwf.git"
+		"url": "git+https://github.com/arcdevio/tucsonnursesweekfoundation.org.git"
 	},
-	"author": "",
+	"author": "Arc IO",
 	"license": "SEE LICENSE IN LICENSE",
 	"bugs": {
-		"url": "https://github.com/WebCab-Design/tnwf/issues"
+		"url": "https://github.com/arcdevio/tucsonnursesweekfoundation.org/issues"
 	},
-	"homepage": "https://github.com/WebCab-Design/tnwf#readme",
+	"homepage": "https://github.com/arcdevio/tucsonnursesweekfoundation.org#readme",
 	"dependencies": {
 		"astatine": "^1.2.0",
 		"erbium": "^1.4.6"
-	}
+    }
 }

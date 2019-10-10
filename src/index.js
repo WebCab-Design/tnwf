@@ -55,15 +55,11 @@ if (form) {
 	Astatine.submit({
 		query: form,
 		method: 'post',
+		requestType: 'json',
 		responseType: 'json',
-		action: 'https://www.enformed.io/zpn17s0',
-		// action: ' https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit', //lamda function url
+		action: ' https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit',
 		prepare: function (data, resolve, reject) {
-			if (!data['*to']) {
-				data['*to'] = 'tnwf@live.com';
-			}
-
-			data['*default_email'] = 'jonburns10@gmail.com';
+			data['$to'] = 'tnwf@live.com';
 
 			if (venderSelect) total = venderSelect.value;
 			if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
@@ -112,7 +108,7 @@ if (form) {
 						var handlePayment = function () { paymentWidget.style.display = 'none'; };
 						var onlineButton = document.querySelector('.online-button');
 						var offlineButton = document.querySelector('.offline-button');
-						var formName = document.querySelector('input[name="*formname"]');
+						var formName = document.querySelector('input[name="$name"]');
 						itemName.value = formName.value;
 						amount.value = total.toString();
 						paymentWidget.style.display = 'block';
@@ -133,15 +129,14 @@ var donateForm = document.querySelector('.donate-form');
 if (donateForm) {
 	Astatine.submit({
 		method: 'post',
-		responseType: 'json',
 		query: donateForm,
-		action: 'https://www.enformed.io/zpn17s0',
+		requestType: 'json',
+		responseType: 'json',
+		action: ' https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit',
 		prepare: function (d, resolve, reject) {
 			data = d;
 
-			if (!data['*default_email']) {
-				data['*default_email'] = 'tnwf@live.com';
-			}
+			data['$to'] = 'tnwf@live.com';
 
 			if (data['Amount'] == 0) {
 				reject('Error: requires a donation amount');
@@ -151,6 +146,7 @@ if (donateForm) {
 		},
 		complete: function (error, success) {
 			var response = document.querySelector('.response');
+
 			if (error) {
 				if (typeof error === 'string') {
 					response.style.color = 'orange';

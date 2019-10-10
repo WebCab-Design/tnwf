@@ -26,7 +26,7 @@
 		success: function (xhr) {
 			var list = JSON.parse(xhr.response);
 			var data = [];
-			console.log(list);
+
 			for (var i = 0, l = list.resources.length; i < l; i++) {
 				var item = list.resources[i];
 				data.push({
