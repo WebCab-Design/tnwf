@@ -1,5 +1,5 @@
 {
-    "private": true,
+	"private": true,
 	"name": "tucsonnursesweekfoundation.org",
 	"version": "1.0.0",
 	"description": "Tucson Nurses Week Foundation",
@@ -18,8 +18,10 @@
 		"url": "https://github.com/arcdevio/tucsonnursesweekfoundation.org/issues"
 	},
 	"homepage": "https://github.com/arcdevio/tucsonnursesweekfoundation.org#readme",
-	"dependencies": {
+	"dependencies": {},
+	"devDependencies": {
+		"erbium": "^1.4.6",
 		"astatine": "^1.2.0",
-		"erbium": "^1.4.6"
-    }
+		"analytic": "github:arcdevio/analytic"
+	}
 }
