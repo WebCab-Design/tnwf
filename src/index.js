@@ -59,7 +59,9 @@ if (form) {
 		responseType: 'json',
 		action: ' https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit',
 		prepare: function (data, resolve, reject) {
-			data['$to'] = 'tnwf@live.com';
+			// data['$to'] = 'tnwf@live.com';
+			data['$to'] = 'jon@arcdev.io';
+
 
 			if (venderSelect) total = venderSelect.value;
 			if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
