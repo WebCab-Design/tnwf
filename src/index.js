@@ -5,7 +5,7 @@ var showFormButton = document.querySelector('.show-form');
 var ticket = document.querySelector('.ticket');
 var form = document.querySelector('.form');
 var venderSelect = document.querySelector('.vender-select');
-var lunchCheck = document.querySelector('input[name="Lunch"]');
+var wifi = document.querySelector('input[name="Wifi"]');
 var total = 0;
 var ticketList;
 
@@ -59,12 +59,10 @@ if (form) {
 		responseType: 'json',
 		action: ' https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit',
 		prepare: function (data, resolve, reject) {
-			// data['$to'] = 'tnwf@live.com';
-			data['$to'] = 'jon@arcdev.io';
-
+			data['$to'] = 'tnwf@live.com, angie.bush@tmcaz.com';
 
 			if (venderSelect) total = venderSelect.value;
-			if (lunchCheck && lunchCheck.checked) total = Number(total) + 45;
+			if (wifi && wifi.checked) total = Number(total) + 45;
 
 			if (paymentWidget) {
 
@@ -83,7 +81,7 @@ if (form) {
 		},
 		complete: function (error, success) {
 			var responses = document.querySelectorAll('.response');
-			console.log(success);
+
 			for (var i = 0; i < responses.length; i++) {
 				var response = responses[i];
 
@@ -138,7 +136,7 @@ if (donateForm) {
 		prepare: function (d, resolve, reject) {
 			data = d;
 
-			data['$to'] = 'tnwf@live.com';
+			data['$to'] = 'tnwf@live.com, angie.bush@tmcaz.com';
 
 			if (data['Amount'] == 0) {
 				reject('Error: requires a donation amount');
