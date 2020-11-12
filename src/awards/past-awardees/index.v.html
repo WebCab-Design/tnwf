@@ -33,3 +33,24 @@
 <div class="content">
 	<!-- { "partial": "/partials/past-awardees.p.html" } -->
 </div>
+<!-- 
+<script>
+	const lists = document.querySelector('.lists');
+	const listItems = Array.prototype.slice.call(lists.querySelectorAll('li'));
+	const newList = [];
+	
+	for (const item of listItems) {
+		const newListItem = {};
+		const split = item.innerText.split(' ');
+		const year = Number(split[0]);
+		const shift = split.slice(1);
+		const name = shift.join(' ');
+		
+		newListItem.year = year;
+		newListItem.name = name;
+
+		newList.push(newListItem);
+	}
+	
+	// console.log(newList);
+</script> -->
