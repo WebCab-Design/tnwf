@@ -178,26 +178,26 @@ if (donateForm) {
 	});
 }
 
-var gallery = document.querySelector('.gallery-fab50');
-if (gallery) {
-	Astatine.ajax({
-		method: 'get',
-		action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/fab50_2017.json',
-		success: function (xhr) {
-			var list = JSON.parse(xhr.response);
-			var largeImages = [];
-			var smallImages = [];
+// var gallery = document.querySelector('.gallery-fab50');
+// if (gallery) {
+// 	Astatine.ajax({
+// 		method: 'get',
+// 		action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/fab50_2017.json',
+// 		success: function (xhr) {
+// 			var list = JSON.parse(xhr.response);
+// 			var largeImages = [];
+// 			var smallImages = [];
 
-			for (var i = 0, l = list.resources.length; i < l; i++) {
-				var item = list.resources[i];
-				largeImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto/' + item.public_id + '.' + item.format);
-				smallImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/w_150,f_auto/' + item.public_id + '.' + item.format);
-			}
+// 			for (var i = 0, l = list.resources.length; i < l; i++) {
+// 				var item = list.resources[i];
+// 				largeImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto/' + item.public_id + '.' + item.format);
+// 				smallImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/w_150,f_auto/' + item.public_id + '.' + item.format);
+// 			}
 
-			erbium.gallery.create('.gallery-fab50', largeImages, smallImages);
-		},
-		error: function (xhr) {
-			console.log(xhr);
-		}
-	});
-}
+// 			erbium.gallery.create('.gallery-fab50', largeImages, smallImages);
+// 		},
+// 		error: function (xhr) {
+// 			console.log(xhr);
+// 		}
+// 	});
+// }

@@ -14,61 +14,76 @@
 	<script src="/assets/js/input.js" defer></script>
 	<script src="/index.js" defer></script>
 
-	<link rel="stylesheet" href="/index.css"/>
 	<link rel="stylesheet" href="/assets/css/flexboxgrid.min.css"/>
+	<link rel="stylesheet" href="/index.css"/>
 </head>
 <body>
 	<header>
-		<div class="logo">
-			<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
+		<div class="row center-xs">
+			<div class="logo col-xs-6 col-sm-3">
+				<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
+			</div>
 		</div>
-		<nav class="nav-bar">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/about/">About</a></li>
-				<li>
-					<a>Events</a>
+		<div class="row center-xs">
+			<div class="col-xs-12">
+				<nav class="nav-bar">
 					<ul>
-						<li><a href="/events/conference/">Conference &amp; Health Fair</a></li>
-						<li><a href="/events/gala/">Gala</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/about/">About</a></li>
+						<li>
+							<a>Events</a>
+							<ul>
+								<li><a href="/events/conference/">Conference &amp; Health Fair</a></li>
+								<li><a href="/events/gala/">Gala</a></li>
+							</ul>
+						</li>
+						<li>
+							<a>Registration</a>
+							<ul>
+								<li><a href="/registration/conference/">Conference &amp; Health Fair</a></li>
+								<li><a href="/registration/gala/">Gala</a></li>
+								<li><a href="/registration/vendor/">Vendor</a></li>
+								<li><a href="/registration/poster-presentation/">Poster Presentation</a></li>
+								<li><a href="/registration/speaker-presentation/">Speaker Presentation</a></li>
+								<li><a href="/handouts/">TNWF Handouts</a></li>
+							</ul>
+						</li>
+						<li>
+							<a>Awards</a>
+							<ul>
+								<li><a href="/awards/fabulous-50/">Fabulous 50</a></li>
+								<li><a href="/awards/lpn/">Top 5</a></li>
+								<li><a href="/awards/most-inspirational-mentor/">Most Inspirational Mentor</a></li>
+								<li><a href="/awards/alex-stutze/">Alex Stuetze</a></li>
+								<li><a href="/awards/research-grant/">Reasearch Grant</a></li>
+								<li><a href="/awards/past-awardees/">Past Awardees</a></li>
+							</ul>
+						</li>
+						<li>
+							<a>Sponsor</a>
+							<ul>
+								<li><a href="/sponsor/donate/">Donate</a></li>
+								<li><a href="/sponsor/zones/">Zones</a></li>
+							</ul>
+						</li>
 					</ul>
-				</li>
-				<li>
-					<a>Registration</a>
-					<ul>
-						<li><a href="/registration/conference/">Conference &amp; Health Fair</a></li>
-						<li><a href="/registration/gala/">Gala</a></li>
-						<li><a href="/registration/vendor/">Vendor</a></li>
-						<li><a href="/registration/poster-presentation/">Poster Presentation</a></li>
-						<li><a href="/registration/speaker-presentation/">Speaker Presentation</a></li>
-						<li><a href="/handouts/">TNWF Handouts</a></li>
-					</ul>
-				</li>
-				<li>
-					<a>Awards</a>
-					<ul>
-						<li><a href="/awards/fabulous-50/">Fabulous 50</a></li>
-						<li><a href="/awards/lpn/">Top 5</a></li>
-						<li><a href="/awards/most-inspirational-mentor/">Most Inspirational Mentor</a></li>
-						<li><a href="/awards/alex-stutze/">Alex Stuetze</a></li>
-						<li><a href="/awards/research-grant/">Reasearch Grant</a></li>
-						<li><a href="/awards/past-awardees/">Past Awardees</a></li>
-					</ul>
-				</li>
-				<li>
-					<a>Sponsor</a>
-					<ul>
-						<li><a href="/sponsor/donate/">Donate</a></li>
-						<li><a href="/sponsor/zones/">Zones</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+				</nav>
+			</div>
+		</div>
 	</header>
-
+		
 	<main>
 		
 
+<style>
+	.main {
+		width: 1920px;
+		height: 500px;
+		background-repeat: no-repeat;
+		background-image: url('http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,fl_any_format.lossy/v1446919520/arizona_nature3_yg71aa.png');
+		margin: auto;
+	}
+</style>
 <div id="fb-root"></div>
 <style>#fb-root {overflow: hidden;}</style>
 <script>
@@ -83,7 +98,8 @@
 	});
 </script>
 
-<div class="row center-xs slide">
+<div class="row center-xs">
+	<div class="main">
 		<!-- Add Register for Conference and Gala buttons -->
 		<div class="row">
 			<!-- <a class="button blue" href="/awards/fabulous-50/">Nominate a Nurse Today</a> -->
@@ -96,6 +112,7 @@
 		</div> -->
 		<!-- <a class="button blue" href="/registration/conference/">Register for Conference</a>
 		<a class="button blue" href="/registration/gala/">Register for Gala</a> -->
+	</div>
 </div>
 <div class="content">
 	<p style="background-color: rgba(255,165,0,0.3);  padding: 6px;">As we evaluate the current COVID-19 situation and make decisions about the 2020 event we are suspending the registration of the conference and gala events. We will communicate an update when the board has reached a final determination. Thank you for your understanding.</p>
@@ -222,115 +239,34 @@
 	<div class="section">
 		<h2>2019 Winners</h2>
 		<hr>
-		<div class="gallery-fab50">
-	<div class="row">
+		
+<div class="row">
+	<div class="col-xs">
 		<h3>Fabulous 50 Awardees</h3>
 	</div>
-	<div class="row">
-		<div class="col-xs">
-			<ul>
-				<li>Amy Ostertag | Oro Valley Hospital</li>
-				<li>Ana Cardenas | SAVAMC</li>
-				<li>Angela Brown | CON</li>
-				<li>Angela Westergard | Northwest Medical Center</li>
-				<li>Angela Wright | Banner University Medical Center</li>
-				<li>Anita Taylor | Northwest Medical Center</li>
-				<li>Anna Bourquet | SAVAMC</li>
-				<li>Ardea Davis | Carondelet</li>
-				<li>Ashley Adams | Banner University Medical Center</li>
-				<li>Beverly Bias | CON</li>
-				<li>Beverly Heasley | Fairmount Assisted Living Tucson</li>
-				<li>Bianca Bracamontes | Banner University Medical Center</li>
-				<li>Brad Jobe | SAVAMC</li>
-			</ul>
-		</div>
-		<div class="col-xs">
-			<ul>
-				<li>Candice Ben | Banner University Medical Center</li>
-				<li>Charlotte Maduram Moore | Banner University Medical Center</li>
-				<li>Cheryl Nelson | Northwest Medical Center</li>
-				<li>Christine Krtek | Casa Hospice</li>
-				<li>Corinne Steiger | Banner University Medical Center</li>
-				<li>Diane Ramirez | Banner University Medical Center</li>
-				<li>Elaine Hernandez | Oro Valley Hospital</li>
-				<li>Gail Bradford | SAVAMC</li>
-				<li>Gina Sargent | Carondelet</li>
-				<li>Grace Ravicchio | Banner University Medical Center</li>
-				<li>Jayne Stephens | Northwest Medical Center</li>
-			</ul>
-		</div>
-		<div class="col-xs">
-			<ul>
-				<li>Jennifer Qualls | St Marys</li>
-				<li>Jenny Teppett | Tucson Medical Center</li>
-				<li>Jodi Prosser | Davis Monthan Air Force Base</li>
-				<li>Jonathan Ryan | Northwest Medical Center</li>
-				<li>Karen  Gutierrez | Casa Hospice</li>
-				<li>Karen Murphy | Pima County Health Department</li>
-				<li>Katie Lobato | Banner University Medical Center</li>
-				<li>Kendra Keith | Interim Healthcare</li>
-				<li>Kristin Hertzog | Northwest Medical Center</li>
-				<li>Laurie Block | Tucson Medical Center</li>
-				<li>Lisa Chrismer | Casa Hospice</li>
-				<li>Lisa Myers | Tucson Medical Center</li>
-			</ul>
-		</div>
-		<div class="col-xs">
-			<ul>
-				<li>Lorraine Pipkin | SAVAMC</li>
-				<li>Lyton Fernandez | SAVAMC</li>
-				<li>Mary Cavecche | Tucson Medical Center</li>
-				<li>Megan Munson | Marana Health Care</li>
-				<li>Monica Gouker | PCC</li>
-				<li>Rachel Myers | Davis Monthan Air Force Base</li>
-				<li>Ronald Zack | SAVAMC</li>
-				<li>Sasha Bean | SAVAMC</li>
-				<li>Susan Cooper | St Marys</li>
-				<li>Terese Briggs-Klee | Oro Valley Hospital</li>
-				<li>Thanhthut Nguyen Martin | SAVAMC</li>
-				<li>Patricia (Trish) Lee | Oro Valley Hospital</li>
-				<li>Victoria McArdle | Tucson Medical Center</li>
-				<li>Wendi Sears | St Marys</li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
+	<div class="row fab50 container"></div>
+</div>
+<div class="row">
+	<div class="col-xs">
 		<h3>Top 5 Awardees</h3>
 	</div>
-	<div class="row">
-		<div class="col-xs">
-			<ul>
-				<li>Margariet May | SAVAHCS</li>
-				<li>Rednette Czapiewski | Patient Care Adv</li>
-				<li>Sally  Vande berg | SAVAHCS</li>
-				<li>Silvia Galan 355th | Medical Clinic, davis-Monthan AFB</li>
-				<li>Susie Dowling | SAVAHCS</li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
+	<div class="row top5 container"></div>
+</div>
+<div class="row">
+	<div class="col-xs">
 		<h3>Most Inspirational Mentor</h3>
 	</div>
-	<div class="row">
-		<div class="col-xs">
-			<ul>
-				<li>Agnes Poore | Casa Hospice</li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
+	<div class="row mentor container"></div>
+</div>
+<div class="row">
+	<div class="col-xs">
 		<h3>Alex Stuetze</h3>
 	</div>
-	<div class="row">
-		<div class="col-xs">
-			<ul>
-				<li>Pam Spencer | Banner University Medical Center</li>
-			</ul>
-		</div>
-	</div>
+	<div class="row stuetze container"></div>
 </div>
-<!-- <script src="/assets/js/gallery.min.js"></script> -->
 
+
+<script src="/awards/past-awardees/index.js"></script>
 	</div>
 </div>
 

@@ -18,11 +18,12 @@ body {
   background: white;
 }
 header {
-  display: flex;
-  padding: 1rem 0;
-  align-items: center;
   border-top: solid 10px #00b3b3;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+header > div {
+  margin: auto;
+  align-items: center;
 }
 footer > div:nth-child(1) > div {
   padding: 1rem;
@@ -144,17 +145,6 @@ td {
 table tr:nth-child(2) {
   background: #f8f8f8;
 }
-.slide {
-  padding: 10rem;
-  background: url('http://res.cloudinary.com/dbc2wlvk8/image/upload/c_fill,fl_any_format.lossy/v1446919520/arizona_nature3_yg71aa.png') no-repeat;
-}
-.slide a {
-  margin: 0.5rem;
-}
-.slide h2 {
-  color: white;
-  text-shadow: 1px 1px 5px black;
-}
 /*
 	globals
 */
@@ -226,10 +216,9 @@ table tr:nth-child(2) {
 	header
 */
 .logo {
-  width: 25%;
-  max-width: 400px;
-  display: inline-block;
-  vertical-align: middle;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
 }
 .nav-bar {
   flex: 1;
@@ -239,12 +228,10 @@ table tr:nth-child(2) {
   display: inline-block;
   vertical-align: middle;
 }
-.nav-bar a {
-  padding: 24px 32px !important;
-}
 .nav-list-sub {
-  background: white;
+  z-index: 1;
   min-width: 175px;
+  background: white;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 }
 .e-gallery img {
@@ -257,6 +244,9 @@ table tr:nth-child(2) {
 /*
 	index
 */
+.container img {
+  width: 100%;
+}
 .section {
   margin: 24px auto;
 }
