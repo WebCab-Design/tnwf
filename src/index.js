@@ -52,6 +52,31 @@ if (ticket) {
 }
 
 if (form) {
+
+    form.addEventListener('submit', function (e) {
+		e.preventDefault();
+
+		var body = Object.fromEntries(new FormData(form));
+
+		body.$name = body.$name || 'Contact';
+		body.$domain = 'tucsonnursesweekfoundation.org';
+		body.$to = 'tnwf@live.com, angie.bush@tmcaz.com';
+
+		var url = '';
+		var options = {
+			mode: 'cors',
+			method: 'POST',
+			body: JSON.stringify(body)
+		};
+
+		window.fetch(url, options)
+			.then(function (response) { response.json(); })
+			.then(function (data) { console.log(data); })
+			.then(function () { form.reset(); })
+			.catch(function (error) { console.log(error); });
+
+   });
+
 	Astatine.submit({
 		query: form,
 		method: 'post',
@@ -79,7 +104,7 @@ if (form) {
 			}
 
 		},
-		complete: function (error, success) {
+		complete: function (error) {
 			var responses = document.querySelectorAll('.response');
 
 			for (var i = 0; i < responses.length; i++) {
@@ -127,36 +152,36 @@ if (form) {
 var data;
 var donateForm = document.querySelector('.donate-form');
 if (donateForm) {
-	Astatine.submit({
-		method: 'post',
-		query: donateForm,
-		requestType: 'json',
-		responseType: 'json',
-		action: ' https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit',
-		prepare: function (d, resolve, reject) {
-			data = d;
 
-			data['$to'] = 'tnwf@live.com, angie.bush@tmcaz.com';
+	donateForm.addEventListener('submit', function (e) {
+		e.preventDefault();
 
-			if (data['Amount'] == 0) {
-				reject('Error: requires a donation amount');
-			} else {
-				resolve(data);
-			}
-		},
-		complete: function (error, success) {
-			var response = document.querySelector('.response');
+		var response = document.querySelector('.response');
+		var body = Object.fromEntries(new FormData(form));
 
-			if (error) {
-				if (typeof error === 'string') {
-					response.style.color = 'orange';
-					response.innerText = error;
-				} else {
-					response.style.color = 'red';
-					response.innerText = 'Error: please see console';
-					console.error(error);
-				}
-			} else {
+		if (body.Amount == 0) {
+			response.style.color = 'orange';
+			response.innerText = 'Error: donation amount required';
+			return;
+		}
+
+		body.$name = body.$name || 'Contact';
+		body.$domain = 'tucsonnursesweekfoundation.org';
+		body.$to = 'alex.steven.elias@gmail.com';
+		// body.$to = 'tnwf@live.com, angie.bush@tmcaz.com';
+
+		var url = 'https://eboi4z4mni.execute-api.us-west-2.amazonaws.com/default/submit';
+		var options = {
+			mode: 'cors',
+			method: 'POST',
+			body: JSON.stringify(body)
+		};
+
+		window.fetch(url, options).then(function (result) {
+				return result.json();
+			}).then(function (data) {
+				console.log(data);
+			}).then(function () {
 				response.style.color = '#6db4b1';
 				response.innerText = 'Donation Is Sent';
 
@@ -167,37 +192,20 @@ if (donateForm) {
 				var onlineButton = document.querySelector('.online-button');
 				var offlineButton = document.querySelector('.offline-button');
 
-				itemName.value = data['Form Name'];
-				amount.value = data['Amount'].toString();
+				itemName.value = body['Form Name'];
+				amount.value = body['Amount'].toString();
 
 				paymentWidget.style.display = 'block';
 				onlineButton.addEventListener('click', handlePayment);
 				offlineButton.addEventListener('click', handlePayment);
-			}
-		}
+
+				form.reset();
+			}).catch(function (error) {
+				response.style.color = 'red';
+				response.innerText = 'Error: please see console';
+				console.error(error);
+			});
+
 	});
+
 }
-
-// var gallery = document.querySelector('.gallery-fab50');
-// if (gallery) {
-// 	Astatine.ajax({
-// 		method: 'get',
-// 		action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/fab50_2017.json',
-// 		success: function (xhr) {
-// 			var list = JSON.parse(xhr.response);
-// 			var largeImages = [];
-// 			var smallImages = [];
-
-// 			for (var i = 0, l = list.resources.length; i < l; i++) {
-// 				var item = list.resources[i];
-// 				largeImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/f_auto/' + item.public_id + '.' + item.format);
-// 				smallImages.push('https://res.cloudinary.com/dbc2wlvk8/image/upload/w_150,f_auto/' + item.public_id + '.' + item.format);
-// 			}
-
-// 			erbium.gallery.create('.gallery-fab50', largeImages, smallImages);
-// 		},
-// 		error: function (xhr) {
-// 			console.log(xhr);
-// 		}
-// 	});
-// }
