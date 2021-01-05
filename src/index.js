@@ -51,7 +51,6 @@ if (ticket) {
 }
 
 if (form) {
-
     form.addEventListener('submit', function (e) {
 		e.preventDefault();
 
@@ -124,7 +123,6 @@ if (form) {
 			target.reset();
 		});
    });
-
 }
 
 var donateForm = document.querySelector('.donate-form');
