@@ -45,19 +45,24 @@
 			<h4 class="col-xs-12">Presenters</h4>
 			<p class="col-xs-12">Please list the first and last name of each individual who will be included. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="ticket row col-xs-12 center-xs start-sm">
+				<!--
 				<ol class="ticket-list col-xs-10"></ol>
 				<input class="ticket-hidden col-xs-10 col-sm-3" type="hidden" name="Names Of Other Presentors">
 				<input class="ticket-first col-xs-10 col-sm-3" type="text" placeholder="Presentor First Name">
 				<input class="ticket-last col-xs-10 col-sm-3" type="text" placeholder="Presentor Last Name">
+				<button class="ticket-add button blue col-xs-2" data-cost="90" data-first-discount="90" type="button">Add</button>
+				-->
+				<input class="ticket-last col-xs-10 col-sm-3" type="text" name="Presentor 1" placeholder="Full Name" required>
 				<button class="ticket-add button blue col-xs-2" data-cost="90" data-first-discount="90" type="button">Add</button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="total col-xs-12">
 				<strong>
-					<span>Total:</span>
+					<!-- <span>Total:</span> -->
 					<span>&#36;</span>
-					<input class="ticket-total" type="number" name="Total" value="0" readonly>
+					<input class="ticket-total" type="number" name="amount" value="0" disabled>
+					<!-- <input class="ticket-total" type="number" name="Total" value="0" readonly> -->
 				</strong>
 			</div>
 		</div>
@@ -69,9 +74,8 @@
 			<div class="response"></div>
 		</div>
 		<div class="row">
-			<input type="hidden" name="Form Name" value="Speaker Presentation">
-			<input type="hidden" name="$cc" value="stephanie.shoemaker@bannerhealth.com">
-			<input type="hidden" name="$name" value="tucsonnursesweekfoundation.org: Speaker Presentation">
+			<!-- <input type="hidden" name="$cc" value="stephanie.shoemaker@bannerhealth.com"> -->
+			<input type="hidden" name="$name" value="Speaker Presentation">
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 	</form>
