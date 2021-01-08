@@ -1,7 +1,8 @@
 
 // var amount = document.querySelector('.payment-widget input[name=amount]');
 // var paymentWidget = document.querySelector('.payment-widget');
-var form = document.querySelector('.form');
+var form = document.querySelector('form');
+// var form = document.querySelector('.form');
 var ticketList;
 var total = 0;
 
@@ -39,44 +40,46 @@ if (showFormButton) {
 
 var ticket = document.querySelector('.ticket');
 if (ticket) {
-	ticketList = form.querySelector('.ticket-list');
-	var ticketFirst = form.querySelector('.ticket-first');
-	var ticketLast = form.querySelector('.ticket-last');
-	var ticketHidden = form.querySelector('.ticket-hidden');
+	var amount = form.querySelector('.amount');
 	var ticketAdd = form.querySelector('.ticket-add');
-	var ticketTotal = form.querySelector('.ticket-total');
+	var ticketList = form.querySelector('.ticket-list');
+	var ticketInput = form.querySelector('.ticket-input');
+	var ticketRemove = form.querySelector('.ticket-remove');
 	var ticketCost = Number(ticketAdd.getAttribute('data-cost')) || 0;
-	var ticketFirstDiscount = Number(ticketAdd.getAttribute('data-first-discount')) || 0;
+	var ticketFree = Number(ticketAdd.getAttribute('data-free')) || 0;
 
-	ticket.addEventListener('click', function (e) {
-		var target = e.target;
-		var isAdd = target.classList.contains('ticket-add');
-		var isRemove = target.classList.contains('ticket-remove');
+	ticketAdd.addEventListener('click', function () {
+		var ticketListItem = document.createElement('li');
+		var ticketListInput = ticketInput.cloneNode();
+		ticketListInput.value = '';
+		ticketListInput.name = ticketListInput.name.replace(/\d+$/, ticketList.children.length+1);
+		ticketListItem.appendChild(ticketListInput);
+		ticketList.appendChild(ticketListItem);
+		amount.value = (ticketList.children.length * ticketCost) - (ticketFree * ticketCost);
+	});
 
-		if (isAdd) {
-			var isFirstTicket = ticketList.children.length === 0;
+	ticketRemove.addEventListener('click', function () {
+		console.log(ticketList.lastElementChild, ticketList.firstElementChild);
+		if (ticketList.lastElementChild === ticketList.firstElementChild) return;
+		ticketList.removeChild(ticketList.lastElementChild);
+		amount.value = (ticketList.children.length * ticketCost) - (ticketFree * ticketCost);
+	});
+}
 
-			if (ticketFirst.value.length !== 0 && ticketLast.value.length !== 0) {
-				var li = document.createElement('li');
-				var ticketValue = ticketFirst.value + ' ' + ticketLast.value;
+var registration = document.querySelector('.registration');
+if (registration) {
+	registration.addEventListener('change', function () {
+		var wifi = document.querySelector('.wifi');
+		var amount = document.querySelector('.amount');
+		amount.value = ((wifi.checked ? 45 : 0) + Number(registration.selectedOptions[0].value));
+	});
+}
 
-				li.innerText = ticketValue;
-				ticketFirst.value = '';
-				ticketLast.value = '';
-
-				if (ticketHidden.value.length === 0) ticketHidden.value = ticketValue;
-				else ticketHidden.value = ticketHidden.value + ', ' + ticketValue;
-
-				ticketList.appendChild(li);
-				total = Number(total) + ticketCost - (isFirstTicket ? ticketFirstDiscount : 0);
-
-				if (ticketTotal) ticketTotal.value = total.toString();
-
-			} else {
-				window.alert('First Name and Last Name are required');
-			}
-		}
-
+var wifi = document.querySelector('.wifi');
+if (wifi) {
+	wifi.addEventListener('input', function () {
+		var amount = document.querySelector('.amount');
+		amount.value = ((wifi.checked ? 45 : 0) + Number(registration.selectedOptions[0].value));
 	});
 }
 
@@ -96,24 +99,24 @@ if (form) {
 		body.$to = 'alex.steven.elias@gmail.com';
 		// body.$to = 'tnwf@live.com, angie.bush@tmcaz.com';
 
-		if (HasPay) {
+		// if (HasPay) {
 
-			var vender = document.querySelector('.vender-select');
-			if (vender) total = vender.value;
+			// var vender = document.querySelector('.vender-select');
+			// if (vender) total = Number(vender.value);
 
-			var wifi = document.querySelector('input[name="Wifi"]');
-			if (wifi && wifi.checked) total = Number(total) + 45;
+			// var wifi = document.querySelector('input[name="Wifi"]');
+			// if (wifi && wifi.checked) total = total + 45;
 
-			if (ticketList && ticketList.children && ticketList.children.length === 0) {
-				response.style.color = 'orange';
-				response.innerText = 'Requires at least one individual.';
-				return;
-			} else {
-				if (ticketHidden) body[ticketHidden.name] = ticketHidden.value;
-				if (ticketTotal) body[ticketTotal.name] = ticketTotal.value;
-			}
+		// 	if (ticketList && ticketList.children && ticketList.children.length === 0) {
+		// 		response.style.color = 'orange';
+		// 		response.innerText = 'Requires at least one individual.';
+		// 		return;
+		// 	} else {
+		// 		if (ticketHidden) body[ticketHidden.name] = ticketHidden.value;
+		// 		if (ticketTotal) body[ticketTotal.name] = ticketTotal.value;
+		// 	}
 
-		}
+		// }
 
 		if (body.amount == 0) {
 			response.style.color = 'orange';

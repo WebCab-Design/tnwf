@@ -39,31 +39,25 @@
 		<div class="row">
 			<h4 class="col-xs-12">Presentation Support</h4>
 			<p class="col-xs-12">Please list any options you might need. Due note that the rooms are set up in theater style with a screen and PowerPoint projector.</p>
-			<textarea class="col-xs-10 col-sm-5" name="Presentation Support" placeholder="audio, &#13;&#10;podium, &#13;&#10;etc..."></textarea>
+			<textarea class="col-xs-10 col-sm-5" name="presentation support" placeholder="audio, &#13;&#10;podium, &#13;&#10;etc..."></textarea>
 		</div>
-		<div class="row center-xs start-sm">
+		<div class="row ticket">
 			<h4 class="col-xs-12">Presenters</h4>
 			<p class="col-xs-12">Please list the first and last name of each individual who will be included. <strong> Don’t forget to include yourself.</strong></p>
-			<div class="ticket row col-xs-12 center-xs start-sm">
-				<!--
-				<ol class="ticket-list col-xs-10"></ol>
-				<input class="ticket-hidden col-xs-10 col-sm-3" type="hidden" name="Names Of Other Presentors">
-				<input class="ticket-first col-xs-10 col-sm-3" type="text" placeholder="Presentor First Name">
-				<input class="ticket-last col-xs-10 col-sm-3" type="text" placeholder="Presentor Last Name">
-				<button class="ticket-add button blue col-xs-2" data-cost="90" data-first-discount="90" type="button">Add</button>
-				-->
-				<input class="ticket-last col-xs-10 col-sm-3" type="text" name="Presentor 1" placeholder="Full Name" required>
-				<button class="ticket-add button blue col-xs-2" data-cost="90" data-first-discount="90" type="button">Add</button>
+			<div class="col-xs-12">
+				<ol class="ticket-list">
+					<li><input class="ticket-input" name="presentor 1" placeholder="Full Name" required></li>
+				</ol>
 			</div>
-		</div>
-		<div class="row">
-			<div class="total col-xs-12">
-				<strong>
-					<!-- <span>Total:</span> -->
+			<div class="col-xs-3">
+				<strong class="total">
 					<span>&#36;</span>
-					<input class="ticket-total" type="number" name="amount" value="0" disabled>
-					<!-- <input class="ticket-total" type="number" name="Total" value="0" readonly> -->
+					<input class="amount" type="number" name="amount" value="0" min="0" disabled>
 				</strong>
+			</div>
+			<div class="col-xs-9">
+				<button class="ticket-add button blue" data-cost="90" data-free="1" type="button">Add</button>
+				<button class="ticket-remove button blue" type="button">Remove</button>
 			</div>
 		</div>
 

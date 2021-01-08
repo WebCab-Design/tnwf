@@ -196,11 +196,17 @@ table tr:nth-child(2) {
 	padding: 1rem;
 	text-align: center;
 }
+.total input  {
+	margin: 0;
+	padding: 0;
+	width: calc(100% - 3.5rem);
+	display: inline-block;
+}
 .total span, .total input  {
 	border: none;
-	color: var(--primary-blue);
 	background: none;
 	font-size: 1.5rem;
+	color: var(--primary-blue);
 }
 .response {
 	padding: 2rem;
