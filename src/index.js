@@ -31,13 +31,6 @@ var Post = function (url, body) {
 	});
 };
 
-var showFormButton = document.querySelector('.show-form');
-if (showFormButton) {
-	showFormButton.addEventListener('click', function () {
-		form.style.display = 'block';
-	});
-}
-
 var ticket = document.querySelector('.ticket');
 if (ticket) {
 	var amount = form.querySelector('.amount');
@@ -83,6 +76,13 @@ if (wifi) {
 	});
 }
 
+var showFormButton = document.querySelector('.show-form');
+if (showFormButton) {
+	showFormButton.addEventListener('click', function () {
+		form.style.display = 'block';
+	});
+}
+
 if (form) {
 	form.addEventListener('submit', function (e) {
 		e.preventDefault();
@@ -99,28 +99,9 @@ if (form) {
 		body.$to = 'alex.steven.elias@gmail.com';
 		// body.$to = 'tnwf@live.com, angie.bush@tmcaz.com';
 
-		// if (HasPay) {
-
-			// var vender = document.querySelector('.vender-select');
-			// if (vender) total = Number(vender.value);
-
-			// var wifi = document.querySelector('input[name="Wifi"]');
-			// if (wifi && wifi.checked) total = total + 45;
-
-		// 	if (ticketList && ticketList.children && ticketList.children.length === 0) {
-		// 		response.style.color = 'orange';
-		// 		response.innerText = 'Requires at least one individual.';
-		// 		return;
-		// 	} else {
-		// 		if (ticketHidden) body[ticketHidden.name] = ticketHidden.value;
-		// 		if (ticketTotal) body[ticketTotal.name] = ticketTotal.value;
-		// 	}
-
-		// }
-
 		if (body.amount == 0) {
 			response.style.color = 'orange';
-			response.innerText = 'Error: donation amount required';
+			response.innerText = 'Error: amount required';
 			return;
 		}
 
@@ -129,66 +110,9 @@ if (form) {
 		}).then(function () {
 			return Post(EmailUrl, body);
 		}).then(function () {
-
 			response.style.color = '#6db4b1';
 			response.innerText = 'Form Is Submitted';
-
-			// if (paymentWidget) {
-			// 	var itemName = document.querySelector('input[name="item_name"]');
-			// 	var handlePayment = function () { paymentWidget.style.display = 'none'; };
-			// 	var onlineButton = document.querySelector('.online-button');
-			// 	var offlineButton = document.querySelector('.offline-button');
-			// 	var formName = document.querySelector('input[name="$name"]');
-			// 	itemName.value = formName.value;
-			// 	amount.value = total.toString();
-			// 	paymentWidget.style.display = 'block';
-			// 	onlineButton.addEventListener('click', handlePayment);
-			// 	offlineButton.addEventListener('click', handlePayment);
-			// }
-
 			target.reset();
 		});
    });
 }
-
-// var donateForm = document.querySelector('.donate-form');
-// if (donateForm) {
-// 	donateForm.addEventListener('submit', function (e) {
-// 		e.preventDefault();
-
-// 		var response = document.querySelector('.response');
-// 		var target = e.target;
-// 		var body = Object.fromEntries(new FormData(target));
-
-// 		if (body.Amount == 0) {
-// 			response.style.color = 'orange';
-// 			response.innerText = 'Error: donation amount required';
-// 			return;
-// 		}
-
-// 		body.$name = 'Donate';
-// 		body.$domain = 'tucsonnursesweekfoundation.org';
-// 		body.$to = 'alex.steven.elias@gmail.com';
-// 		// body.$to = 'tnwf@live.com, angie.bush@tmcaz.com';
-
-// 		Post(EmailUrl, body).then(function () {
-// 			response.style.color = '#6db4b1';
-// 			response.innerText = 'Donation Is Sent';
-
-// 			var itemName = document.querySelector('.payment-widget input[name="item_name"]');
-// 			var amount = document.querySelector('.payment-widget input[name="amount"]');
-// 			var handlePayment = function () { paymentWidget.style.display = 'none'; };
-// 			var onlineButton = document.querySelector('.online-button');
-// 			var offlineButton = document.querySelector('.offline-button');
-
-// 			itemName.value = body['Form Name'];
-// 			amount.value = body['Amount'].toString();
-
-// 			paymentWidget.style.display = 'block';
-// 			onlineButton.addEventListener('click', handlePayment);
-// 			offlineButton.addEventListener('click', handlePayment);
-
-// 			target.reset();
-// 		});
-// 	});
-// }

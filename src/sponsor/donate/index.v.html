@@ -81,7 +81,6 @@
 		<li>Inclusion in sponsor list with linkable feed on the TNWF website</li>
 	</ul>
 
-	<p>*All artwork to be forwarded to jburns@webcabdesign.com. All artwork must be in .EPS/.AI format. Please see the <a href="/sponsor-donate/sponsor-zones/">zone example</a> for examples of placement on the site.</p>
 	<p>In addition to these, we gladly accept donations of any amount. All monies go directly into paying for the events and supporting Tucson Nurses' Week Foundation. Fabulous 50 Alumni donations go directly to paying for student lunches at the Conference and Healthy Fair as well as the Clinical Nursing Research Grant.</p>
 
 	<br>
@@ -90,34 +89,33 @@
 
 	<form class="donate-form" data-pay="yes">
 		<div class="row center-xs middle-xs">
-			<input class="col-xs-10 col-sm-5" type="text" name="first name" placeholder="First Name">
-			<input class="col-xs-10 col-sm-5" type="text" name="last name" placeholder="Last Name">
+			<input class="col-xs-10 col-sm-5" type="text" name="first name" placeholder="First Name" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="last name" placeholder="Last Name" required>
 		</div>
 		<div class="row center-xs middle-xs">
-			<input class="col-xs-10 col-sm-5" type="text" name="organization" placeholder="Organization">
-			<input class="col-xs-10 col-sm-5" type="text" name="country" placeholder="Country">
+			<input class="col-xs-10 col-sm-5" type="text" name="organization" placeholder="Organization" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="country" placeholder="Country" required>
 		</div>
 		<div class="row center-xs middle-xs">
-			<input class="col-xs-10 col-sm-5" type="text" name="street" placeholder="Street">
-			<input class="col-xs-10 col-sm-5" type="text" name="city" placeholder="City">
+			<input class="col-xs-10 col-sm-5" type="text" name="street" placeholder="Street" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="city" placeholder="City" required>
 		</div>
 		<div class="row center-xs middle-xs">
-			<input class="col-xs-10 col-sm-5" type="text" name="zip" placeholder="Zip">
-			<input class="col-xs-10 col-sm-5" type="text" name="state" placeholder="State">
+			<input class="col-xs-10 col-sm-5" type="text" name="zip" placeholder="Zip" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="state" placeholder="State" required>
 		</div>
 		<div class="row center-xs middle-xs">
-			<input class="col-xs-10 col-sm-5" type="tel" name="phone" placeholder="Phone">
-			<input class="col-xs-10 col-sm-5" type="email" name="email" placeholder="Email">
+			<input class="col-xs-10 col-sm-5" type="tel" name="phone" placeholder="Phone" required>
+			<input class="col-xs-10 col-sm-5" type="email" name="email" placeholder="Email" required>
 		</div>
 		<div class="row center-xs middle-xs">
 			<textarea class="col-xs-10" type="text" name="comment" placeholder="Comment"></textarea>
 		</div>
-
-		<!-- { "partial": "partials/card.p.html" } -->
-
 		<div class="row center-xs middle-xs">
-			<strong class="col-xs-10 col-sm-5">Dontation Amount</strong>
-			<input class="col-xs-10 col-sm-5 amount" type="number" name="amount" value="0" min="0">
+			<input class="col-xs-10 amount" type="number" name="Amount" placeholder="Donation Amount" min="1" required>
+		</div>
+		<div class="row center-xs middle-xs">
+			<!-- { "partial": "partials/card.p.html" } -->
 		</div>
 		<div class="row center-xs middle-xs">
 			<input type="hidden" name="$name" value="Sponsor Donation">

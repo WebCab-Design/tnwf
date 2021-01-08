@@ -98,17 +98,13 @@ a {
 a:hover {
 	color: #888;
 }
-textarea {
-	transition: none;
-}
 form > div {
-	margin: 32px auto;
+	margin: 1rem auto;
 }
-form input, form textarea {
+form input, form textarea, form select {
+	margin: 0.5rem;
 	padding: 0.5rem;
-	box-sizing: border-box;
-	margin: 0.5rem 0.5rem;
-	font-size: 0.9rem;
+	background: none;
     border: 1px solid #cacaca;
 }
 button, input[type="submit"], input[type="button"] {
@@ -124,6 +120,7 @@ textarea {
 	display: block;
 	max-width: 100%;
 	min-height: 80px;
+	transition: none;
 }
 label {
 	display: block;
@@ -193,7 +190,7 @@ table tr:nth-child(2) {
 	margin: 24px auto;
 }
 .total {
-	padding: 1rem;
+	padding: 1rem 0;
 	text-align: center;
 }
 .total input  {

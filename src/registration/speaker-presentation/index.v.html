@@ -49,21 +49,19 @@
 					<li><input class="ticket-input" name="presentor 1" placeholder="Full Name" required></li>
 				</ol>
 			</div>
-			<div class="col-xs-3">
-				<strong class="total">
-					<span>&#36;</span>
-					<input class="amount" type="number" name="amount" value="0" min="0" disabled>
-				</strong>
-			</div>
-			<div class="col-xs-9">
-				<button class="ticket-add button blue" data-cost="90" data-free="1" type="button">Add</button>
+			<div class="col-xs-10 center-xs middle-xs">
+				<button class="ticket-add button blue" type="button" data-cost="90" data-free="1">Add</button>
 				<button class="ticket-remove button blue" type="button">Remove</button>
 			</div>
 		</div>
-
-		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. <strong>You do NOT have to register or have a PayPal account.</strong></p>
-		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
-
+		<div class="row">
+			<strong class="col-xs-10 col-sm-2 total">
+				<span>&#36;</span>
+				<input class="amount" type="number" name="amount" value="0" min="0" disabled>
+			</strong>
+			<!-- { "partial": "partials/card.p.html" } -->
+		</div>
+		<!-- <p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p> -->
 		<div class="row">
 			<div class="response"></div>
 		</div>

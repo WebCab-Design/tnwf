@@ -42,21 +42,19 @@
 					<li><input class="ticket-input" name="presentor 1" placeholder="Full Name" required></li>
 				</ol>
 			</div>
-			<div class="col-xs-3">
-				<strong class="total">
-					<span>&#36;</span>
-					<input class="amount" type="number" name="amount" value="90" min="0" disabled>
-				</strong>
-			</div>
-			<div class="col-xs-9">
+			<div class="col-xs-10 center-xs middle-xs">
 				<button class="ticket-add button blue" data-cost="90" type="button">Add</button>
 				<button class="ticket-remove button blue" type="button">Remove</button>
 			</div>
 		</div>
-
-		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
-		<p>To complete your application, please email your CV to <a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a>. CV must be received to be considered.</p>
-
+		<div class="row">
+			<strong class="col-xs-10 col-sm-2 total">
+				<span>&#36;</span>
+				<input class="amount" type="number" name="amount" value="90" min="90" disabled>
+			</strong>
+			<!-- { "partial": "partials/card.p.html" } -->
+		</div>
+		<!-- <p>To complete your application, please email your CV to <a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a>. CV must be received to be considered.</p> -->
 		<div class="row">
 			<div class="response"></div>
 		</div>
