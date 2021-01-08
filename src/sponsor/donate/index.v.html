@@ -87,7 +87,7 @@
 	<h2>Donation Form</h2>
 	<hr>
 
-	<form class="donate-form" data-pay="yes">
+	<form>
 		<div class="row center-xs middle-xs">
 			<input class="col-xs-10 col-sm-5" type="text" name="first name" placeholder="First Name" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="last name" placeholder="Last Name" required>
@@ -118,13 +118,12 @@
 			<!-- { "partial": "partials/card.p.html" } -->
 		</div>
 		<div class="row center-xs middle-xs">
+			<div class="response"></div>
+		</div>
+		<div class="row center-xs middle-xs">
 			<input type="hidden" name="$name" value="Sponsor Donation">
 			<input class="button blue" type="submit" value="Submit">
 		</div>
 	</form>
 
-	<div class="response"></div>
-
 </div>
-
-<!-- { "partial": "partials/payment-widget.p.html" } -->

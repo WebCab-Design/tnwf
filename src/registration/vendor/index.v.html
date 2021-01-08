@@ -9,7 +9,7 @@
 	<h1>Vendor Registration - 2019</h1>
 	<!-- <h3>Submission Closed</h3> -->
 
-	<form class="form">
+	<form>
 		<div class="row">
 			<h4 class="col-xs-12">Vendor Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -18,10 +18,10 @@
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">Address</h4>
-			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street">
-			<input class="col-xs-10 col-sm-5" type="text" name="City" placeholder="City">
-			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State">
-			<input class="col-xs-10 col-sm-5" type="number" name="Zip" placeholder="Zip">
+			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="City" placeholder="City" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State" required>
+			<input class="col-xs-10 col-sm-5" type="number" name="Zip" placeholder="Zip" required>
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">Contact</h4>
@@ -30,14 +30,13 @@
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">Type Of Registration</h4>
-			<select class="registration" class="col-xs-10 col-sm-5" name="Registration">
+			<select class="registration" class="col-xs-10 col-sm-5" name="Registration" required>
 				<option value="300" selected>Vendor - &#36;300</option>
 				<option value="150">Vendor of a nurse-owned company - &#36;150</option>
 			</select>
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">If Nurse-Owned - Please provide license number</h4>
-
 			<div class="col-xs-10 col-sm-5">
 				<input type="text" name="License Number" placeholder="License Number">
 			</div>
@@ -89,5 +88,3 @@
 	</form>
 
 </div>
-
-<!-- { "partial": "partials/payment-widget.p.html" } -->

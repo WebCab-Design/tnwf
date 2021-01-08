@@ -1,8 +1,5 @@
 
-// var amount = document.querySelector('.payment-widget input[name=amount]');
-// var paymentWidget = document.querySelector('.payment-widget');
 var form = document.querySelector('form');
-// var form = document.querySelector('.form');
 var ticketList;
 var total = 0;
 
