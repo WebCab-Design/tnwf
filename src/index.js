@@ -1,12 +1,8 @@
 
+var response = document.querySelector('.response');
 var form = document.querySelector('form');
 var ticketList;
 var total = 0;
-
-var HasPay = form && form.dataset.pay === 'yes';
-
-var PayUrl = '/pay';
-var EmailUrl = '/email';
 
 var Post = function (url, body) {
 	return window.fetch(url, {
@@ -49,7 +45,7 @@ if (ticket) {
 	});
 
 	ticketRemove.addEventListener('click', function () {
-		console.log(ticketList.lastElementChild, ticketList.firstElementChild);
+		// console.log(ticketList.lastElementChild, ticketList.firstElementChild);
 		if (ticketList.lastElementChild === ticketList.firstElementChild) return;
 		ticketList.removeChild(ticketList.lastElementChild);
 		amount.value = (ticketList.children.length * ticketCost) - (ticketFree * ticketCost);
@@ -84,11 +80,10 @@ if (form) {
 	form.addEventListener('submit', function (e) {
 		e.preventDefault();
 
-		var response = document.querySelector('.response');
 		var target = e.target;
 		var body = Object.fromEntries(new FormData(target));
 
-		if (body.$name) {
+		if (!body.$name) {
 			throw new Error('$name required');
 		}
 
@@ -96,16 +91,51 @@ if (form) {
 		body.$to = 'alex.steven.elias@gmail.com';
 		// body.$to = 'tnwf@live.com, angie.bush@tmcaz.com';
 
-		if (body.amount == 0) {
-			response.style.color = 'orange';
-			response.innerText = 'Error: amount required';
-			return;
+		var payBody, emailBody;
+		if ('amount' in body) {
+			var error;
+
+			if (!body.cvc) error = 'Error: missing cvc';
+			if (!body.name) error = 'Error: missing name';
+			if (!body.year) error = 'Error: missing year';
+			if (!body.email) error = 'Error: missing email';
+			if (!body.month) error = 'Error: missing month';
+			if (!body.number) error = 'Error: missing number';
+			if (body.amount == 0) error = 'Error: amount required';
+
+			if (error) {
+				response.style.color = 'orange';
+				response.innerText = error;
+				return;
+			}
+
+			payBody = {
+				item: body.$name,
+				cvc: body.cvc,
+				name: body.name,
+				year: body.year,
+				email: body.email,
+				month: body.month,
+				number: body.number,
+				amount: body.amount
+			};
+
+			delete body.cvc;
+			delete body.name;
+			delete body.year;
+			delete body.email;
+			delete body.month;
+			delete body.number;
+
+			emailBody = Object.keys(body).length ? body : null;
+		} else {
+			emailBody = body;
 		}
 
 		Promise.resolve().then(function () {
-			return HasPay ? Post(PayUrl, body) : undefined;
+			if (payBody) return Post('/pay', payBody);
 		}).then(function () {
-			return Post(EmailUrl, body);
+			if (emailBody) return Post('/email', emailBody);
 		}).then(function () {
 			response.style.color = '#6db4b1';
 			response.innerText = 'Form Is Submitted';

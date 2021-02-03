@@ -12,25 +12,25 @@
 	<form>
 		<div class="row">
 			<h4 class="col-xs-12">Vendor Information</h4>
-			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="Last Name" placeholder="Last Name" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="Company" placeholder="Company" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="first Name" placeholder="First Name" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="last Name" placeholder="Last Name" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="company" placeholder="Company" required>
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">Address</h4>
-			<input class="col-xs-10 col-sm-5" type="text" name="Street" placeholder="Street" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="City" placeholder="City" required>
-			<input class="col-xs-10 col-sm-5" type="text" name="State" placeholder="State" required>
-			<input class="col-xs-10 col-sm-5" type="number" name="Zip" placeholder="Zip" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="street" placeholder="Street" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="city" placeholder="City" required>
+			<input class="col-xs-10 col-sm-5" type="text" name="state" placeholder="State" required>
+			<input class="col-xs-10 col-sm-5" type="number" name="zip" placeholder="Zip" required>
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">Contact</h4>
-			<input class="col-xs-10 col-sm-5" type="tel" name="Phone" placeholder="Phone" required>
-			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email" required>
+			<input class="col-xs-10 col-sm-5" type="tel" name="phone" placeholder="Phone" required>
+			<input class="col-xs-10 col-sm-5" type="email" name="email" placeholder="Email" required>
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">Type Of Registration</h4>
-			<select class="registration" class="col-xs-10 col-sm-5" name="Registration" required>
+			<select class="registration" class="col-xs-10 col-sm-5" name="registration" required>
 				<option value="300" selected>Vendor - &#36;300</option>
 				<option value="150">Vendor of a nurse-owned company - &#36;150</option>
 			</select>
@@ -38,19 +38,19 @@
 		<div class="row">
 			<h4 class="col-xs-12">If Nurse-Owned - Please provide license number</h4>
 			<div class="col-xs-10 col-sm-5">
-				<input type="text" name="License Number" placeholder="License Number">
+				<input type="text" name="license number" placeholder="License Number">
 			</div>
 		</div>
 		<div class="row">
 			<h4 class="col-xs-12">Exhibit Requirements</h4>
 
 			<div class="col-xs-10 col-sm-5">
-				<input type="checkbox" name="Exhibit- 6ft Table" value="6ft Table">
+				<input type="checkbox" name="exhibit - 6ft table" value="6ft Table">
 				<span>6ft Table</span>
 			</div>
 
 			<div class="col-xs-10 col-sm-5">
-				<input type="checkbox" name="Exhibit- Electrical Outlet" value="Electrical Outlet">
+				<input type="checkbox" name="exhibit - electrical outlet" value="Electrical Outlet">
 				<span>Electrical Outlet</span>
 			</div>
 
@@ -72,7 +72,7 @@
 		<div class="row">
 			<strong class="col-xs-10 col-sm-2 total">
 				<span>&#36;</span>
-				<input class="amount" type="number" name="amount" value="300" min="0" disabled>
+				<input class="amount" type="number" name="amount" value="300" min="0" readonly>
 			</strong>
 			<!-- { "partial": "partials/card.p.html" } -->
 		</div>
