@@ -1,0 +1,12 @@
+{
+	"profile": "host-cli",
+	"domain": "pigeoner.io",
+	"orginSlash" : true,
+	"originProtocol": "http-only",
+	"origin": "tnfw.s3-website-us-east-1.amazonaws.com/sponsor/donate",
+	"to": [
+		"alex.steven.elias@gmail.com"
+	],
+	"cc": [],
+	"redirects": []
+}

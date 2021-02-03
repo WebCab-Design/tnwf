@@ -5,8 +5,8 @@ var total = 0;
 
 var HasPay = form && form.dataset.pay === 'yes';
 
-var PayUrl = 'https://2vaid6dwk1.execute-api.us-west-2.amazonaws.com/pay';
-var EmailUrl = 'https://2vaid6dwk1.execute-api.us-west-2.amazonaws.com/submit';
+var PayUrl = '/pay';
+var EmailUrl = '/email';
 
 var Post = function (url, body) {
 	return window.fetch(url, {
