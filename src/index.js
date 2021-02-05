@@ -88,8 +88,9 @@ if (form) {
 		}
 
 		body.$domain = 'tucsonnursesweekfoundation.org';
-		body.$to = 'alex.steven.elias@gmail.com';
-		// body.$to = 'tnwf@live.com, angie.bush@tmcaz.com';
+		// body.$to = 'alex.steven.elias@gmail.com';
+		body.$to = 'tnwf@live.com';
+		body.$cc = 'angie.bush@tmcaz.com';
 
 		var payBody, emailBody;
 		if ('amount' in body) {
