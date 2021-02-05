@@ -21,7 +21,6 @@
 	"dependencies": {},
 	"devDependencies": {
 		"erbium": "^1.4.6",
-		"astatine": "^1.2.0",
 		"analytic": "github:arcdevio/analytic"
 	}
 }

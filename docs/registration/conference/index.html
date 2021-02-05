@@ -7,14 +7,14 @@
 
 	<title>Conference And Health Fair Registration | Registration | Tucson Nurses Week Foundation</title>
 
-	<script src="/assets/js/nav-bar.js" defer></script>
-	<script src="/assets/js/tiles.js" defer></script>
-	<script src="/assets/js/slider.min.js" defer></script>
-	<script src="/assets/js/astatine.min.js" defer></script>
-	<script src="/assets/js/input.js" defer></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2CPromise%2CObject.fromEntries" defer></script>
+	<script src="/assets/slider.min.js" defer></script>
+	<script src="/assets/nav-bar.js" defer></script>
+	<script src="/assets/tiles.js" defer></script>
+	<script src="/assets/input.js" defer></script>
 	<script src="/index.js" defer></script>
 
-	<link rel="stylesheet" href="/assets/css/flexboxgrid.min.css"/>
+	<link rel="stylesheet" href="/assets/flexboxgrid.min.css"/>
 	<link rel="stylesheet" href="/index.css"/>
 </head>
 <body>
@@ -71,20 +71,17 @@
 			</div>
 		</div>
 	</header>
-		
+
 	<main>
 		
 
 
 <div class="content">
 
-
 	<h1>Conference And Health Fair Registration - 2021</h1>
-		<p style="background-color: rgba(255,165,0,0.3);  padding: 6px;">As we work through the current COVID-19 situation, we are working to make decisions about the 2021 events. If physical distancing continues to be the safest option, we will plan to hold the Conference virtually. We will communicate an update when the board has reached a final determination. Thank you for your understanding.
+	<p style="background-color: rgba(255,165,0,0.3);  padding: 6px;">As we work through the current COVID-19 situation, we are working to make decisions about the 2021 events. If physical distancing continues to be the safest option, we will plan to hold the Conference virtually. We will communicate an update when the board has reached a final determination. Thank you for your understanding.</p>
 
-
-	<!-- <h3>Registration Closed</h3>
-
+	<!--
 	<form class="form">
 		<div class="row center-xs start-sm">
 			<h4 class="col-xs-12">Your Information</h4>
@@ -94,7 +91,6 @@
 			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email Address" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Company" placeholder="Company" required>
 		</div>
-
 		<div class="row">
 			<h4 class="col-xs-12">Attendees</h4>
 			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
@@ -106,7 +102,6 @@
 				<div class="ticket-add button blue col-xs-2" data-cost="80">Add</div>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="total col-xs-12">
 				<strong>
@@ -117,112 +112,33 @@
 			</div>
 		</div>
 
-		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. <strong>You do NOT have to register or have a PayPal account.</strong></p>
 		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
 
 		<div class="row">
 			<div class="response"></div>
 		</div>
-
 		<div class="row">
 			<input type="hidden" name="Form Name" value="Conference/Healthy Fair">
 			<input type="hidden" name="$name" value="tucsonnursesweekfoundation.org: Conference/Healthy Fair">
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 	</form>
-
-	<div class="response"></div> -->
+	-->
 
 </div>
-
-
-<style>
-	.payment-widget-iframe {
-		width: 50%;
-		height: 50%;
-		display: none;
-	}
-</style>
-
-<div class="payment-widget">
-	<div>
-		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
-		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
-		<form class="online-button" target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr">
-			<input type="hidden" name="amount">
-			<input type="hidden" name="item_name">
-			<input type="hidden" name="cmd" value="_xclick">
-			<input type="hidden" name="currency_code" value="USD">
-			<input type="hidden" name="business" value="tnwf@live.com">
-			<input class="online-button" type="submit" name="submit" value="PayPal Pay">
-		</form>
-		<div class="offline-button">Mail Check</div>
-	</div>
-</div>
-
-<!-- <div class="payment-widget">
-	<div>
-		<p>For online payments please click the PayPal button, you will be redirected to the PayPal website. You do NOT have to register or have a PayPal account.</p>
-		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
-		<form class="payment-form" target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr">
-			<input type="hidden" name="amount">
-			<input type="hidden" name="item_name">
-			<input type="hidden" name="cmd" value="_xclick">
-			<input type="hidden" name="currency_code" value="USD">
-			<input type="hidden" name="business" value="tnwf@live.com">
-		</form>
-		<div class="offline-button">Mail Check</div>
-	</div>
-</div>
-
-<script>
-function activatePaymentWidget (options) {
-	options = options || {};
-
-	var onlineButton = document.querySelector('.payment-widget .online-button');
-	var offlineButton = document.querySelector('.payment-widget .offline-button');
-	var paymentWidget = document.querySelector('.payment-widget');
-	var paymentForm = document.querySelector('.payment-form');
-
-	var cmd = document.querySelector('.payment-form input[name="cmd');
-	var amount = document.querySelector('.payment-form input[name="amount"]');
-	var name = document.querySelector('.payment-form input[name="item_name"]');
-	var business = document.querySelector('.payment-form input[name="business');
-	var currency = document.querySelector('.payment-form input[name="currency_code');
-
-	options.name = options.name || '';
-	options.cmd = options.cmd || '_xclick';
-	options.amount = options.amount || '0';
-	options.business = options.business || '';
-	options.currency = options.currency || 'USD';
-
-	cmd.setAttribute('value', options.cmd);
-	name.setAttribute('value', options.name);
-	amount.setAttribute('value', options.amount);
-	business.setAttribute('value', options.business);
-	currency.setAttribute('value', options.currency);
-
-	paymentWidget.style.display = 'none';
-
-	offlineButton.addEventListener('click',  function () {
-		paymentWidget.style.display = 'none';
-	});
-}
-</script> -->
 
 
 	</main>
 
 	<footer>
 		<div class="row">
-		<!-- <div class="foot-tp"> -->
-			<div class="col-xs hide-medium">
+			<div class="col-xs-12 col-sm-4">
 				<h3>About Us</h3>
 				<hr>
 				<p>Tucson Nurses Week Foundation is a 501©(3) tax exempt organization located in Tucson, Arizona.</p>
 				<a class="button blue" href="https://res.cloudinary.com/dbc2wlvk8/image/upload/v1556907259/TNWF/TNW_broch_2019_v4.pdf" target="_blank" rel="noopener">Our Brochure</a>
 			</div>
-			<div class="col-xs hide-medium">
+			<div class="col-xs-12 col-sm-4">
 				<h3>Useful Links</h3>
 				<hr>
 				<ul>
@@ -231,21 +147,18 @@ function activatePaymentWidget (options) {
 					<li><a href="/sitemap/">Sitemap</a></li>
 				</ul>
 			</div>
-			<div class="col-xs">
+			<div class="col-xs-12 col-sm-4">
 				<object type="image/svg+xml" data="/assets/images/logo.svg" >Tucson Nurses Week Foundation Logo</object>
 				<p>Po Box 65085, Tucson, AZ 85728</p>
 				<p><a href="mailto:info@tucsonnursesweekfoundation.org">info@tucsonnursesweekfoundation.org</a></p>
 			</div>
 		</div>
 		<div class="row">
-		<!-- <div class="foot-bp"> -->
 			<div class="col-xs">
 				<p>Copyright 2016 Tucson Nurses Week Foundation</p>
 			</div>
 		</div>
 	</footer>
 
-	<script src="https://use.typekit.net/ssi5zbk.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>

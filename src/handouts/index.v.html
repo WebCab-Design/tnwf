@@ -3,11 +3,8 @@
 	"title": "Houndouts | Tucson Nurses Week Foundation"
 } -->
 
-<script src="/assets/js/astatine.min.js" charset="utf-8"></script>
-
 <div class="content">
 	<!-- { "partial": "/partials/sponsor-banner.p.html" } -->
-
 	<div class="row">
 		<div class="col-xs-12 col-sm-9">
 			<h1>Download Conference Handouts</h1>
@@ -20,27 +17,24 @@
 </div>
 
 <script>
-	Astatine.ajax({
-		method: 'get',
-		action: 'https://res.cloudinary.com/dbc2wlvk8/image/list/tnwf-handouts.json',
-		success: function (xhr) {
-			var list = JSON.parse(xhr.response);
-			var data = [];
 
-			for (var i = 0, l = list.resources.length; i < l; i++) {
-				var item = list.resources[i];
-				data.push({
-					title: item.public_id.replace('TNWF/handouts/', ''),
-					link: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/' + item.public_id + '.' + item.format,
-					image: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy,f_auto,w_100/' + item.public_id + '.png'
-				});
-			}
+	window.fetch('https://res.cloudinary.com/dbc2wlvk8/image/list/tnwf-handouts.json')
+	.then(function (result) {
+		return result.json();
+	}).then(function (list) {
+		var data = [];
 
-			var tilesElement = document.querySelector('.tiles');
-			CreateTiles(tilesElement, data);
-		},
-		error: function (xhr) {
-			console.log(xhr);
+		for (var i = 0; i < list.resources.length; i++) {
+			var item = list.resources[i];
+			data.push({
+				title: item.public_id.replace('TNWF/handouts/', ''),
+				link: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/' + item.public_id + '.' + item.format,
+				image: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy,f_auto,w_100/' + item.public_id + '.png'
+			});
 		}
+
+		var tilesElement = document.querySelector('.tiles');
+		CreateTiles(tilesElement, data);
 	});
+
 </script>
