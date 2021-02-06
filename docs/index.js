@@ -15,9 +15,10 @@ var Post = function (url, body) {
 		});
 	}).then(function (result) {
 		if (result.status !== 200) {
+			var message = result.body.message || 'Error: ' + result.status;
 			response.style.color = 'orange';
-			response.innerText = result.body.message || 'Error: ' + result.status;
-			throw new Error(response.innerText);
+			response.innerText = message;
+			throw new Error(message);
 		} else {
 			return result;
 		}
@@ -133,14 +134,18 @@ if (form) {
 			emailBody = body;
 		}
 
+		response.innerText = 'Please Wait...';
+
 		Promise.resolve().then(function () {
 			if (payBody) return Post('/pay', payBody);
+		}).then(function () {
+			target.reset();
 		}).then(function () {
 			if (emailBody) return Post('/email', emailBody);
 		}).then(function () {
 			response.style.color = '#6db4b1';
 			response.innerText = 'Form Is Submitted';
-			target.reset();
 		});
+
    });
 }
