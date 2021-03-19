@@ -8,7 +8,7 @@
 	<h1>Conference And Health Fair Registration - 2021</h1>
 	<p style="background-color: rgba(255,165,0,0.3);  padding: 6px;">As we work through the current COVID-19 situation, we are working to make decisions about the 2021 events. If physical distancing continues to be the safest option, we will plan to hold the Conference virtually. We will communicate an update when the board has reached a final determination. Thank you for your understanding.</p>
 
-	<form class="form">
+	<form class="form" hidden>
 		<div class="row center-xs start-sm">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -22,7 +22,7 @@
 			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
 			<div class="col-xs-12">
 				<ol class="ticket-list">
-					<li><input style="min-width: 30%;" class="ticket-input" name="presentor 1" placeholder="Full Name & Email" required></li>
+					<li><input style="min-width: 35%;" class="ticket-input" name="attendees 1" placeholder="Full Name & Email" required></li>
 				</ol>
 			</div>
 			<div class="col-xs-10 center-xs middle-xs">
@@ -50,6 +50,9 @@
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 	</form>
+	<script>
+		if (window.location.search === '?dev') document.querySelector('form').hidden = false;
+	</script>
 
 </div>
 
