@@ -81,8 +81,7 @@
 	<h1>Conference And Health Fair Registration - 2021</h1>
 	<p style="background-color: rgba(255,165,0,0.3);  padding: 6px;">As we work through the current COVID-19 situation, we are working to make decisions about the 2021 events. If physical distancing continues to be the safest option, we will plan to hold the Conference virtually. We will communicate an update when the board has reached a final determination. Thank you for your understanding.</p>
 
-	<!--
-	<form class="form">
+	<form class="form" hidden>
 		<div class="row center-xs start-sm">
 			<h4 class="col-xs-12">Your Information</h4>
 			<input class="col-xs-10 col-sm-5" type="text" name="First Name" placeholder="First Name" required>
@@ -91,39 +90,47 @@
 			<input class="col-xs-10 col-sm-5" type="email" name="Email" placeholder="Email Address" required>
 			<input class="col-xs-10 col-sm-5" type="text" name="Company" placeholder="Company" required>
 		</div>
-		<div class="row">
+		<div class="row ticket">
 			<h4 class="col-xs-12">Attendees</h4>
 			<p class="col-xs-12">Please list the first and last name of each individual that you are purchasing tickets for. <strong> Don’t forget to include yourself.</strong></p>
-			<div class="ticket row col-xs-12 center-xs start-sm">
-				<ol class="ticket-list col-xs-10"></ol>
-				<input class="ticket-hidden col-xs-10 col-sm-3" type="hidden" name="Names Of Attendees">
-				<input class="ticket-first col-xs-10 col-sm-3" type="text" placeholder="Ticket First Name">
-				<input class="ticket-last col-xs-10 col-sm-3" type="text" placeholder="Ticket Last Name">
-				<div class="ticket-add button blue col-xs-2" data-cost="80">Add</div>
+			<div class="col-xs-12">
+				<ol class="ticket-list">
+					<li><input style="min-width: 35%;" class="ticket-input" name="attendees 1" placeholder="Full Name & Email" required></li>
+				</ol>
+			</div>
+			<div class="col-xs-10 center-xs middle-xs">
+				<button class="ticket-add button blue" data-cost="80" type="button">Add</button>
+				<button class="ticket-remove button blue" type="button">Remove</button>
 			</div>
 		</div>
 		<div class="row">
-			<div class="total col-xs-12">
-				<strong>
-					<span>Total:</span>
-					<span>&#36;</span>
-					<input class="ticket-total" type="number" name="Total" value="0" readonly>
-				</strong>
-			</div>
+			<strong class="col-xs-10 col-sm-2 total">
+				<span>&#36;</span>
+				<input class="amount" type="number" name="amount" value="80" min="80" readonly>
+			</strong>
+		</div>
+		<div class="row">
+			
+<input class="col-xs-10 col-sm-2" type="text" name="name" placeholder="Card Name" required>
+<input class="col-xs-10 col-sm-2" type="number" name="number" placeholder="Card Number" required>
+<input class="col-xs-10 col-sm-1" type="number" name="cvc" placeholder="CVC" min="0" max="999" required>
+<input class="col-xs-10 col-sm-1" type="number" name="month" placeholder="Month" min="1" max="12" required>
+<input class="col-xs-10 col-sm-1" type="number" name="year" placeholder="Year" min="2021" max="9999" required>
 		</div>
 
-		<p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p>
+		<!-- <p>For offline payments please mail check within <strong>9 days to PO Box 65085 Tucson, AZ 85728</strong></p> -->
 
 		<div class="row">
 			<div class="response"></div>
 		</div>
 		<div class="row">
-			<input type="hidden" name="Form Name" value="Conference/Healthy Fair">
-			<input type="hidden" name="$name" value="tucsonnursesweekfoundation.org: Conference/Healthy Fair">
+			<input type="hidden" name="$name" value="Conference/Healthy Fair">
 			<input class="button blue col-xs-3" type="submit" value="Submit">
 		</div>
 	</form>
-	-->
+	<script>
+		if (window.location.search === '?dev') document.querySelector('form').hidden = false;
+	</script>
 
 </div>
 
