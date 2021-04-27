@@ -8,7 +8,26 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-9">
 			<h1>Download Conference Handouts</h1>
-			<div class="tiles"></div>
+			<div class="tiles">
+				<div class="tile">
+					<a class="link" target="_blank" href="./handouts/2021/JNP_OGRADY_Article_2021.pdf">
+						<img class="image" src="/handouts/2021/JNP_OGRADY_Article_2021-thumb.png">
+						<div class="title">OGRADY Article 2021</div>
+					</a>
+				</div>
+				<div class="tile">
+					<a class="link" target="_blank" href="./handouts/2021/OGRADY_Resources_Favorites.pdf">
+						<img class="image" src="/handouts/2021/OGRADY_Resources_Favorites-thumb.png">
+						<div class="title">OGRADY Resources Favorites</div>
+					</a>
+				</div>
+				<div class="tile">
+					<a class="link" target="_blank" href="./handouts/2021/TUCSON_NURSES_FOUNDATION_MAY7_OGRADY_2021_Description.docx">
+						<img class="image" src="./handouts/2021/TUCSON_NURSES_FOUNDATION_MAY7_OGRADY_2021_Description-thumb.png">
+						<div class="title">TUCSON NURSES FOUNDATION MAY 7 Description</div>
+					</a>
+				</div>
+			</div>
 		</div>
 		<div class="col-xs-12 col-sm-3">
 			<!-- { "partial": "partials/sponsor-sidebar.p.html" } -->
@@ -18,23 +37,23 @@
 
 <script>
 
-	window.fetch('https://res.cloudinary.com/dbc2wlvk8/image/list/tnwf-handouts.json')
-	.then(function (result) {
-		return result.json();
-	}).then(function (list) {
-		var data = [];
+	// window.fetch('https://res.cloudinary.com/dbc2wlvk8/image/list/tnwf-handouts.json')
+	// .then(function (result) {
+	// 	return result.json();
+	// }).then(function (list) {
+	// 	var data = [];
 
-		for (var i = 0; i < list.resources.length; i++) {
-			var item = list.resources[i];
-			data.push({
-				title: item.public_id.replace('TNWF/handouts/', ''),
-				link: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/' + item.public_id + '.' + item.format,
-				image: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy,f_auto,w_100/' + item.public_id + '.png'
-			});
-		}
+	// 	for (var i = 0; i < list.resources.length; i++) {
+	// 		var item = list.resources[i];
+	// 		data.push({
+	// 			title: item.public_id.replace('TNWF/handouts/', ''),
+	// 			link: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/' + item.public_id + '.' + item.format,
+	// 			image: 'https://res.cloudinary.com/dbc2wlvk8/image/upload/fl_any_format.lossy,f_auto,w_100/' + item.public_id + '.png'
+	// 		});
+	// 	}
 
-		var tilesElement = document.querySelector('.tiles');
-		CreateTiles(tilesElement, data);
-	});
+	// 	var tilesElement = document.querySelector('.tiles');
+	// 	CreateTiles(tilesElement, data);
+	// });
 
 </script>
