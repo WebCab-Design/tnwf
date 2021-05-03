@@ -260,7 +260,7 @@ var awardees = [
         img: '/assets/images/awardees2020/TeraSchuetta.jpg'
     },
     {
-        name: 'Alexander Serwe-Montoya',
+        name: 'Alexandria Serwe-Montoya',
         facility: 'Banner University Medical Center Tucson',
         year: 2020,
         type: 'fab50',
@@ -383,14 +383,14 @@ var awardees = [
         img: '/assets/images/awardees2020/PriscillaWilkinson.jpg'
 
     },
-      {
+    {
         name: 'Nanette Tamaray',
         facility: 'Banner University Medical Center Tucson',
         year: 2020,
         type: 'fab50',
         img: '/assets/images/awardees2020/no-image.jpg'
     },
-        {
+    {
         name: 'Pamela G. Reed',
         facility: 'University of Arizona College of Nursing',
         year: 2020,
@@ -404,13 +404,13 @@ var containers = {
     fab50Container: document.querySelector('.fab50'),
     mentorContainer: document.querySelector('.mentor'),
     stuetzeContainer: document.querySelector('.stuetze'),
-}
+};
 
 for (var awardee of awardees) {
-    var container = containers[awardee.type + 'Container'];
+    var container = containers[ awardee.type + 'Container' ];
 
     if (!container) continue;
-    
+
     var org = document.createElement('p');
     var img = document.createElement('img');
     var title = document.createElement('h4');
@@ -424,6 +424,6 @@ for (var awardee of awardees) {
     column.appendChild(img);
     column.appendChild(title);
     column.appendChild(org);
-    
+
     container.appendChild(column);
 }
