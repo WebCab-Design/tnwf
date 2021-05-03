@@ -141,6 +141,9 @@ td {
 table tr:nth-child(2) {
 	background: #f8f8f8;
 }
+iframe {
+	width: 100%;
+}
 
 /*
 	globals
